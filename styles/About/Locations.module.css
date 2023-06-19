@@ -1,0 +1,37 @@
+.locBox{
+    position: relative;
+    overflow: hidden;
+}
+
+.locBoxText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px 30px;
+}
+
+.locBoxText span{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 30px;    
+    color: #fff;
+}
+
+.locBoxText p{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.locBoxText h4{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #fff;
+}

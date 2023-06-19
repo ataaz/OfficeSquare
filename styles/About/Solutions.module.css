@@ -1,0 +1,36 @@
+.col3{
+    position: relative;
+}
+
+.col3 img{
+    object-fit: contain;
+}
+
+.col3Text h3{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #000;
+    margin:25px 0 20px 0;
+}
+
+.col3Text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+}
+
+.col3Text a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgba(227, 91, 91, 1);
+    border-bottom:1px solid rgba(227, 91, 91, 1);
+    transition: 0.5s;
+}
+
+.col3Text a:hover{
+    border-bottom: 1px solid transparent;
+    transition: 0.5s;
+}

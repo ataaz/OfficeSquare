@@ -1,14 +1,17 @@
 
 .homeBanner{
   height: 750px;
-  padding-top: 60px;
+  padding-top: 180px;
   overflow: hidden;
 }
-@media (min-width:1400px){
+/* @media (min-width:1400px){
   .homeBanner{
     height: 100vh;
   }
-}
+  .homeBanner.default-pt{
+    padding-top: 0 !important;
+  }
+} */
 
 .homeBanner h1{
   font-size: 250px;
@@ -61,7 +64,7 @@
   .homeBanner h1{font-size:84px;margin-left:0;line-height:80px;}
   .homeBanner h2{font-size:28px;line-height:36px;margin-top:15px;}
   .vdoText video{width:575px;height:310px;}
-  .homeBanner{height:330px;}
+  .homeBanner{height:350px;}
   .lighterText h2{font-size:20px;line-height:30px;}
 }
 
@@ -69,21 +72,21 @@
   .homeBanner h1{font-size:84px;margin-left:0;line-height:80px;}
   .homeBanner h2{font-size:28px;line-height:36px;margin-top:15px;}
   .vdoText video{width:575px;height:310px;}
-  .homeBanner{height:330px;}
+  .homeBanner{height:350px;}
   .lighterText h2{font-size:20px;line-height:30px;}
 }
 
 @media (min-width:768px) and (max-width:991.98px){
   .homeBanner h1{font-size:170px;}
   .homeBanner h2{font-size:52px;line-height:67px;}
-  .homeBanner{height:400px;}
+  .homeBanner{height:450px;}
   .lighterText h2{font-size:38px;line-height:46px;}
 }
 
 @media (min-width:992px) and (max-width:1199.98px){
   .homeBanner h1{font-size:170px;line-height:160px;}
   .homeBanner h2{font-size:42px;line-height:57px;}
-  .homeBanner{height:400px;}
+  .homeBanner{height:450px;}
   .lighterText h2{font-size:32px;line-height:52px;}
   .serBoxImg img{height:360px;}
   .vdoText video{height:500px;width:900px;}
@@ -92,7 +95,7 @@
 @media (min-width:1200px) and (max-width:1499.98px){
   .homeBanner h1{font-size:170px;line-height:160px;}
   .homeBanner h2{font-size:42px;line-height:57px;}
-  .homeBanner{height:400px;}
+  .homeBanner{height:450px;}
   .lighterText h2{font-size:32px;line-height:52px;}
   .serBoxImg img{height:360px;}
   .vdoText video{height:500px;width:900px;}

@@ -2,14 +2,16 @@ import styles from '../../styles/Home.module.css';
 import Image from 'next/image'
 import Discover1 from "../../public/disocver-workspace-1.jpg";
 import Discover2 from "../../public/disocver-workspace-2.jpg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeText1() {
-    return <section className='default-pb posRev'>
+    const { scroll } = useLocomotiveScroll()
+    return <section className='default-pb posRev text1Sec'>
         <div className='d-none d-lg-block'>
         <div className='container'>
             <div className='row'>
             <div className='col-md-2'>
-                <div className={styles.imgFull + ' imgMagnify'}>
+                <div className={styles.imgFull + ' imgMagnify'} data-scroll data-scroll-speed="4">
                 <Image
                 priority
                 src={Discover1}
@@ -18,7 +20,7 @@ export default function HomeText1() {
                 </div>
             </div>
             <div className='col-md-8'>
-                <div className='text1 text1_h2Mb'>
+                <div className='text1 text1_h2Mb' data-scroll data-scroll-speed="1">
                 <h2>Discover premium workspaces for your business to grow.</h2>
                 <h3>For teams of 1-20, we have designed our space to motivate, inspire and boost creativity.</h3>
                 </div>
@@ -30,6 +32,7 @@ export default function HomeText1() {
         priority
         src={Discover2}
         alt="discover image 2"
+        data-scroll data-scroll-speed="5"
         />
         </div>
 

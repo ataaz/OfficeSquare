@@ -1,0 +1,65 @@
+.col2Text{
+    background: #F6F6F6;
+    padding: 40px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    transition: 0.5s;
+}
+
+.col2Text h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #000;
+    margin:18px 0 15px 0;
+    transition: 0.5s;
+}
+
+.col2Text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000;
+    transition: 0.5s;
+}
+
+.col2Text:hover{
+    background: #E35B5B;
+    transition: 0.5s;
+}
+
+.col2Text:hover h3{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.col2Text:hover p{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.col2Text:hover svg path:nth-child(2){
+    stroke: #fff;
+    transition: 0.5s;
+}
+
+.col2Text:hover svg path:nth-child(1){
+    stroke: #fff;
+    transition: 0.5s;
+}
+
+.invertedCol2{
+    background: #E35B5B;
+    transition: 0.5s;
+}
+
+.invertedCol2:hover{
+    background: #f6f6f6;
+    transition: 0.5s;
+}
+
+.invertedCol2 h3, .invertedCol2 p{color:#fff;}
+.invertedCol2:hover h3, .invertedCol2:hover p{color:#000;}
+.invertedCol2 svg path:nth-child(2), .invertedCol2 svg path:nth-child(1){stroke:#fff;}
+.invertedCol2:hover svg path:nth-child(2), .invertedCol2:hover svg path:nth-child(1){stroke:#000;}

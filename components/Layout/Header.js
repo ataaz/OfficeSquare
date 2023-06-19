@@ -3,11 +3,19 @@ import headerMobileLogo from "../../public/header-mobile-logo.svg";
 import Image from 'next/image'
 import Link from 'next/link';
 import Head from "next/head";
+import { useState } from "react";
 
 export default function Header() {
+    const [isActive, setIsActive] = useState(false);
+    const handleClick = event => {
+        // 👇️ toggle isActive state on click
+        setIsActive(current => !current);
+      };
     return <header className='siteHeader'>
         <Head>
             <link rel="icon" href="/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+            <script id="bootstrap-cdn" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
         </Head>
         <main>
             {/* <nav
@@ -47,7 +55,7 @@ export default function Header() {
                             </div>
                             <div className='col-3 text-end'>
                                 <button
-                                className="navbar-toggler"
+                                className={isActive ? 'navbar-toggler active' : 'navbar-toggler'} onClick={handleClick}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#navbarsExample01"

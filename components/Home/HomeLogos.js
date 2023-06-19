@@ -8,7 +8,6 @@ import logo7 from "../../public/logo7.svg";
 import React from "react";
 import Slider from "react-slick";
 import Image from 'next/image'
-import Head from "next/head";
 
 export default function HomeLogos() {
     var homeLogoz = {
@@ -58,9 +57,6 @@ export default function HomeLogos() {
     };
     return (
         <section className='comLogos default-pt'>
-          <Head>
-          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
-          </Head>
         <div className='container'>
           <div className='row justify-content-between align-items-end mb-5'>
             <div className='col-md-6 col-lg-5 mb-4 mb-md-0 pb-1 pb-md-0'>
@@ -68,16 +64,16 @@ export default function HomeLogos() {
                 <h1 className='mb-0'>Companies Who <br className="d-none d-xl-block"></br>Have Chosen Us</h1>
               </div>
             </div>
-            <div className='col-md-6 text-justify'>
+            <div className='col-md-5'>
               <div className="text1">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+                <h5>We are leaders of the future of flexible work. From freelancers to multinational companies, financial institutions, and government offices.</h5>
               </div>
             </div>
           </div>
         </div>
 
         <div className='HomeLogozSec overflow-hidden'>
-          <div className='HomeLogoz'>
+          <div className='HomeLogoz' data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6">
             <Slider {...homeLogoz}>
               <Image priority src={logo1} alt="Logo 1"/>
               <Image priority src={logo2} alt="Logo 2"/>

@@ -2,7 +2,7 @@ import styles from '../../styles/Home.module.css';
 
 export default function HomeBanner() {
     return <section className={styles.homeBanner}>
-    <div className='container'>
+    <div className='container' data-scroll data-scroll-speed="1">
       <div className={styles.vdoText}>
         <video controls muted autoPlay loop>
           <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></source>

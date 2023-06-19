@@ -1,0 +1,20 @@
+.whiteBox{
+    background: #fff;
+    padding: 50px 60px 30px 50px;
+    height: 100%;
+}
+
+.whiteBox h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #000;
+    margin:15px 0 10px 0;
+}
+
+.whiteBox p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(78, 78, 78, 1);
+}

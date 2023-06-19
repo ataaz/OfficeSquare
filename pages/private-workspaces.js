@@ -9,21 +9,27 @@ import SolutionsAbout from '../components/About/Solutions';
 import Locations from '../components/About/Locations';
 import HomeLogos from '../components/Home/HomeLogos';
 import HomeCTA from '../components/Home/HomeCTA';
+import Text2Cols from '../components/Service/Text2Cols';
+import Benefits from '../components/Service/Benefits';
+import Amenities from '../components/Service/Amenities';
+import LocationCTA from '../components/Service/LocationCTA';
+import Features from '../components/Service/Features';
+import Gallery from '../components/Service/Gallery';
 
 export default function About() {
   return (
     <>
     <Layout>
       <Head>
-        <title>About | Office Square</title>
+        <title>Private Workspaces | Office Square</title>
       </Head>
       <div>
-        <AboutHeader></AboutHeader>
-        <CenterText></CenterText>
-        <KeypointsAbout></KeypointsAbout>
-        <OfferAbout></OfferAbout>
-        <SolutionsAbout></SolutionsAbout>
-        <Locations></Locations>
+        <Text2Cols></Text2Cols>
+        <Benefits></Benefits>
+        <Amenities></Amenities>
+        <LocationCTA></LocationCTA>
+        <Features></Features>
+        <Gallery></Gallery>
         <HomeLogos></HomeLogos>
         <HomeCTA></HomeCTA>
       </div>
