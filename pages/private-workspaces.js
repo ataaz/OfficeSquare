@@ -15,6 +15,8 @@ import Amenities from '../components/Service/Amenities';
 import LocationCTA from '../components/Service/LocationCTA';
 import Features from '../components/Service/Features';
 import Gallery from '../components/Service/Gallery';
+import FAQs from '../components/Service/FAQs';
+import SliderHeader from '../components/Service/SliderHeader';
 
 export default function About() {
   return (
@@ -24,12 +26,14 @@ export default function About() {
         <title>Private Workspaces | Office Square</title>
       </Head>
       <div>
+        <SliderHeader></SliderHeader>
         <Text2Cols></Text2Cols>
         <Benefits></Benefits>
         <Amenities></Amenities>
         <LocationCTA></LocationCTA>
         <Features></Features>
         <Gallery></Gallery>
+        <FAQs></FAQs>
         <HomeLogos></HomeLogos>
         <HomeCTA></HomeCTA>
       </div>
