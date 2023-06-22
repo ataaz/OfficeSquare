@@ -17,7 +17,7 @@ export default function About() {
       <Head>
         <title>About | Office Square</title>
       </Head>
-      <div>
+      <div className='aboutPage'>
         <AboutHeader></AboutHeader>
         <CenterText></CenterText>
         <KeypointsAbout></KeypointsAbout>

@@ -1,11 +1,11 @@
-import rightArrow from "../../public/right-arrow.svg";
+import rightArrow from "../../images/right-arrow.svg";
 import React from "react";
 import Image from 'next/image'
 import Link from 'next/link';
 
 export default function CTAText() {
     return (
-    <section className='ctaText default-pt default-pb'>
+    <section className='ctaText default-pt default-pb' data-scroll-section>
         <div className="scrollingRow">
             <div className="scrollingBg">
                 <h3>Office Square</h3>

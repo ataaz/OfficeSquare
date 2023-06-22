@@ -1,10 +1,10 @@
-import logo1 from "../../public/logo1.svg";
-import logo2 from "../../public/logo2.svg";
-import logo3 from "../../public/logo3.svg";
-import logo4 from "../../public/logo4.svg";
-import logo5 from "../../public/logo5.svg";
-import logo6 from "../../public/logo6.svg";
-import logo7 from "../../public/logo7.svg";
+import logo1 from "../../images/logo1.svg";
+import logo2 from "../../images/logo2.svg";
+import logo3 from "../../images/logo3.svg";
+import logo4 from "../../images/logo4.svg";
+import logo5 from "../../images/logo5.svg";
+import logo6 from "../../images/logo6.svg";
+import logo7 from "../../images/logo7.svg";
 import React from "react";
 import Slider from "react-slick";
 import Image from 'next/image'
@@ -56,7 +56,7 @@ export default function HomeLogos() {
       ]
     };
     return (
-        <section className='comLogos default-pt'>
+        <section className='comLogos default-pt' data-scroll-section>
         <div className='container'>
           <div className='row justify-content-between align-items-end mb-5'>
             <div className='col-md-6 col-lg-5 mb-4 mb-md-0 pb-1 pb-md-0'>

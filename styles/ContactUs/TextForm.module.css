@@ -1,0 +1,28 @@
+.TextForm{
+    overflow: hidden;
+}
+
+.formControl{
+    padding: 16px 20px;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #000000;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+select.formControl{
+    background: url(../../images/arrow-down-select.svg) no-repeat;
+    background-position: center right 20px;
+}
+
+.submitInput{
+    background: #E35B5B;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    border: none;
+    padding: 16px 25px;
+}

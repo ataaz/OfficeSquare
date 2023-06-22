@@ -1,16 +1,18 @@
-import Link from 'next/link';
-import styles from '../styles/Home.module.css';
+import Head from 'next/head';
+import FAQList from '../components/FAQs/FAQList';
+import TextHeader from '../components/FAQs/TextHeader';
 import Layout from '../components/Layout/layout';
 
 export default function FAQs() {
   return (
     <>
     <Layout>
-        <div className={styles.container}>
-        <h1>FAQs page</h1>
-        <h2>
-            <Link href="/">Back to home</Link>
-        </h2>
+      <Head>
+        <title>Frequently Asked Questions</title>
+      </Head>
+        <div className='topPadding'>
+          <TextHeader></TextHeader>
+          <FAQList></FAQList>
         </div>
     </Layout>
     </>

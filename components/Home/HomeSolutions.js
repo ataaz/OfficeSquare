@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image'
-import serviceImg1 from "../../public/co-working.jpg";
-import serviceImg2 from "../../public/offices.jpg";
-import serviceImg3 from "../../public/virtual-address.jpg";
-import serviceImg4 from "../../public/licensing.jpg";
-import circleIcon from "../../public/circle-more.svg";
+import serviceImg1 from "../../images/co-working.jpg";
+import serviceImg2 from "../../images/offices.jpg";
+import serviceImg3 from "../../images/virtual-address.jpg";
+import serviceImg4 from "../../images/licensing.jpg";
+import circleIcon from "../../images/circle-more.svg";
 
 export default function HomeSolutions() {
-    return <section className='HomeSol default-pt default-pb'>
+    return <section className='HomeSol default-pt default-pb' data-scroll-section>
     <div className='container'>
       <div className='row justify-content-between align-items-center mb-5'>
         <div className='col-md-4 col-lg-4 col-xl-3 col-7'>

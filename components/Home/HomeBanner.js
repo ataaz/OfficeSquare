@@ -1,7 +1,7 @@
 import styles from '../../styles/Home.module.css';
 
 export default function HomeBanner() {
-    return <section className={styles.homeBanner}>
+    return <section className={styles.homeBanner} data-scroll-section>
     <div className='container' data-scroll data-scroll-speed="1">
       <div className={styles.vdoText}>
         <video controls muted autoPlay loop>

@@ -2,16 +2,16 @@ import Image from 'next/image';
 import text4 from '../../styles/About/Text4.module.css';
 import Link from 'next/link';
 import styles from '../../styles/About/Solutions.module.css';
-import PrivateWorkspaces from "../../public/private-workspaces.jpg";
-import CoworkingWorkSpaces from "../../public/co-working-workspaces.jpg";
-import ConferenceRoom from "../../public/conference-rooms.jpg";
+import PrivateWorkspaces from "../../images/private-workspaces.jpg";
+import CoworkingWorkSpaces from "../../images/co-working-workspaces.jpg";
+import ConferenceRoom from "../../images/conference-rooms.jpg";
 
 export default function SolutionsAbout() {
   return (
     <>
-    <section className={styles.solutionsAbout + ' default-pb1 default-pt position-relative'}>
+    <section className={styles.solutionsAbout + ' default-pb1 default-pt position-relative solutionsAboutSec'} data-scroll-section>
         <div className="container">
-            <div className='row justify-content-between align-items-end mb-5 pb-5'>
+            <div className='row justify-content-between align-items-end mb-5 pb-md-5'>
                 <div className='col-md-6 col-lg-5 mb-4 mb-md-0 pb-1 pb-md-0'>
                     <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700}>
                         <span><em>Our Solutions</em></span>
@@ -26,7 +26,7 @@ export default function SolutionsAbout() {
           </div>
 
           <div className='row'>
-            <div className='col-md-4'>
+            <div className='col-md-4 col-sm-6 mb-5'>
                 <div className={styles.col3}>
                     <div className='fullImg imgMagnify'>
                         <Image src={PrivateWorkspaces} alt=''/>
@@ -40,7 +40,7 @@ export default function SolutionsAbout() {
                     </div>
                 </div>
             </div>
-            <div className='col-md-4'>
+            <div className='col-md-4 col-sm-6 mb-5'>
                 <div className={styles.col3}>
                     <div className='fullImg imgMagnify'>
                         <Image src={CoworkingWorkSpaces} alt=''/>
@@ -54,7 +54,7 @@ export default function SolutionsAbout() {
                     </div>
                 </div>
             </div>
-            <div className='col-md-4'>
+            <div className='col-md-4 col-sm-6'>
                 <div className={styles.col3}>
                     <div className='fullImg imgMagnify'>
                         <Image src={ConferenceRoom} alt=''/>

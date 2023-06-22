@@ -1,7 +1,7 @@
 .text4 h2{
     font-size: 50px;
     font-weight: 800;
-    line-height: 50px;
+    line-height: 60px;
     color:#000;
     margin-bottom: 60px;
 }
@@ -75,8 +75,8 @@
 }
 
 .text4_fszP16 p{
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 16px !important;
+    line-height: 25px !important;
 }
 
 .Hidetext4Label span{
@@ -85,4 +85,51 @@
 
 .Hidetext4Label span:after{
     display: none;
+}
+
+@media (max-width:575.98px){
+    .imgAbs4{width:99px;height:100px;top:0;}
+    .text4 h2{font-size:30px;line-height:40px;;margin-bottom:25px;}
+    .text4 p{font-size:16px;line-height:25px;}
+    .imgAbs5{width:81px;height:78px;right:0;bottom:20px;}
+    .posTop110px{top:29px;}
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .text4_fszP16 p{
+        font-size: 14px !important;
+        line-height: 24px !important;
+    }
+    .imgAbs4{width:99px;height:100px;top:0;}
+    .text4 h2{font-size:24px;line-height:30px;;margin-bottom:25px;}
+    .text4 p{font-size:16px;line-height:25px;}
+    .imgAbs5{width:81px;height:78px;right:0;bottom:20px;}
+    .posTop110px{top:29px;}
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    .text4_fszP16 p{
+        font-size: 14px !important;
+        line-height: 24px !important;
+    }
+    .imgAbs4{top:0;width:190px;height:135px;}
+    .imgAbs5{right:30px;bottom:60px;width:150px;height:100px;}
+    .text4 h2{font-size:36px;line-height:46px;margin-bottom:30px;}
+    .text4 h2 br{display:none;}
+    .text4 p{font-size:16px;line-height:26px;}
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+    .imgAbs4{width:190px;height:135px;top:100px;}
+    .imgAbs5{right:30px;bottom:60px;width:150px;height:100px;}
+    .text4 h2{font-size:36px;line-height:46px;margin-bottom:30px;}
+    .text4 h2 br{display:none;}
+    .text4 p{font-size:16px;line-height:26px;}
+}
+
+@media (min-width:1200px) and (max-width:1499.98px){
+    .imgAbs4{width:199px;height:206px;}
+    .imgAbs5{width:175px;height:167px;}
+    .text4 h2{font-size:44px;}
+    .text4 p{font-size:18px;}
 }

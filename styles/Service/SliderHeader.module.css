@@ -1,0 +1,53 @@
+.SliderHeader .ContainerAbsolute{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+.SliderHeader .SliderHeaderBox{
+    background: #fff;
+    padding: 30px 50px;
+}
+
+.SliderHeaderText{
+    position: relative;
+    z-index: 2;
+}
+
+.SliderHeaderImagesParent{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.ImageHeader .SliderHeaderBox{
+    background: transparent;
+    padding: 0;
+}
+
+.ImageHeader h1{
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 100px;
+    color: #000;
+}
+
+@media (max-width:575.98px){
+    .ImageHeader h1{font-size:32px;line-height:48px;}
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .ImageHeader h1{font-size:32px;line-height:48px;}
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    .ImageHeader h1{font-size:66px;line-height:80px;}
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+    .ImageHeader h1{font-size:66px;line-height:80px;}
+}
+
+@media (min-width:1200px) and (max-width:1499.98px){
+}

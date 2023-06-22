@@ -26,4 +26,29 @@
     right: 0;
     width: 278px;
     height: 183px;
-  }
+}
+
+@media (max-width:575.98px){
+    .imgAbs6{width:150px;height:99px;}
+    .OfferSpans span{font-size:24px;}
+    .OfferSpans span br{display:none;}
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .imgAbs6{width:150px;height:99px;top:0;}
+    .OfferSpans span{font-size:24px;}
+    .OfferSpans span br{display:none;}
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    .OfferSpans span{font-size:18px;line-height:24px;margin-bottom:15px;padding-bottom:15px;}
+    .imgAbs6{top:-50px;}
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+    .imgAbs6{top:-50px;}
+}
+
+@media (min-width:1200px) and (max-width:1499.98px){
+    .imgAbs6{top:0;}
+}

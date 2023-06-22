@@ -56,7 +56,7 @@ export default function Gallery() {
     };
   return (
     <>
-    <section className={styles.gallerySec + ' default-pb1 position-relative'}>
+    <section className={styles.gallerySec + ' default-pb1 position-relative overflow-hidden'}>
         <div className="container">
             <div className='row justify-content-between align-items-end mb-5 pb-5'>
                 <div className='col-md-6 col-lg-6 mb-4 mb-md-0 pb-1 pb-md-0'>
@@ -67,7 +67,7 @@ export default function Gallery() {
                     </div>
                 </div>
                 <div className='col-md-3 text-end'>
-                    <a class="btn1" href="/">Book Now</a>
+                    <Link className="btn1" href="/">Book Now</Link>
                 </div>
             </div>
         </div>

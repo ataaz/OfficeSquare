@@ -1,12 +1,12 @@
 import styles from '../../styles/Home.module.css';
 import Image from 'next/image'
-import Discover1 from "../../public/disocver-workspace-1.jpg";
-import Discover2 from "../../public/disocver-workspace-2.jpg";
+import Discover1 from "../../images/disocver-workspace-1.jpg";
+import Discover2 from "../../images/disocver-workspace-2.jpg";
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeText1() {
     const { scroll } = useLocomotiveScroll()
-    return <section className='default-pb posRev text1Sec'>
+    return <section className='default-pb posRev text1Sec' data-scroll-section>
         <div className='d-none d-lg-block'>
         <div className='container'>
             <div className='row'>

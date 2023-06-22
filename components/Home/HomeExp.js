@@ -1,15 +1,15 @@
 import Image from 'next/image'
-import experience1 from "../../public/experience-1.jpg";
-import experience2 from "../../public/experience-2.png";
-import exIcon1 from "../../public/wifi.svg";
-import exIcon2 from "../../public/bin-minus.svg";
-import exIcon3 from "../../public/modern-tv.svg";
-import exIcon4 from "../../public/fridge.svg";
-import exIcon5 from "../../public/headset-help.svg";
-import exIcon6 from "../../public/calendar.svg";
+import experience1 from "../../images/experience-1.jpg";
+import experience2 from "../../images/experience-2.png";
+import exIcon1 from "../../images/wifi.svg";
+import exIcon2 from "../../images/bin-minus.svg";
+import exIcon3 from "../../images/modern-tv.svg";
+import exIcon4 from "../../images/fridge.svg";
+import exIcon5 from "../../images/headset-help.svg";
+import exIcon6 from "../../images/calendar.svg";
 
 export default function HomeExp() {
-    return <section className='ofcExp'>
+    return <section className='ofcExp' data-scroll-section>
     <div className='container'>
         <div className='row justify-content-between align-items-center mb-5'>
         <div className='col-md-6 col-lg-6 col-xl-4'>

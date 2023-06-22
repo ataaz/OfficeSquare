@@ -25,7 +25,7 @@ export default function About() {
       <Head>
         <title>Private Workspaces | Office Square</title>
       </Head>
-      <div>
+      <div className='topPadding'>
         <SliderHeader></SliderHeader>
         <Text2Cols></Text2Cols>
         <Benefits></Benefits>

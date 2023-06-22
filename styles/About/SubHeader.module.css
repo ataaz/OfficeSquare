@@ -1,5 +1,5 @@
 .Header2{
-    background: url(../../public/about-header.jpg) no-repeat;
+    background: url(../../images/about-header.jpg) no-repeat;
     background-position: top right;
     background-size: cover;
     padding: 250px 0 150px 0;
@@ -17,4 +17,29 @@
     font-weight: 600;
     line-height: 24px;
     color: #000;
+}
+
+@media (max-width:575.98px){
+    .Header2 p{font-size:12px;line-height:16px;}
+    .Header2 h1{font-size:32px;line-height:50px;}
+    .Header2{padding:250px 0 200px 0;}
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .Header2 p{font-size:15px;line-height:20px;}
+    .Header2 h1{font-size:52px;line-height:70px;}
+    .Header2{padding:250px 0 200px 0;}
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    .Header2 h1{font-size:60px;line-height:80px;}
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+    .Header2 h1{font-size:70px;line-height:80px;}
+}
+
+@media (min-width:1200px) and (max-width:1499.98px){
+    .Header2 h1{font-size:80px;line-height:95px;}
+    .Header2 p{font-size:14px;line-height:20px;}
 }

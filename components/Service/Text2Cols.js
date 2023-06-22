@@ -7,7 +7,7 @@ export default function Text2Cols() {
     <>
     <section className={styles.Text2Cols + ' default-pb1 default-pt1 position-relative'}>
         <div className="container">
-            <div className='row'>
+            <div className='row justify-content-between'>
                 <div className='col-md-5'>
                     <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700 + ' ' + text4.posTop110px}>
                         <span><em>Why Serviced Offices</em></span>

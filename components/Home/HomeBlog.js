@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import blog1 from "../../public/blog-1.jpg";
-import blog2 from "../../public/blog-2.jpg";
-import blog3 from "../../public/blog-3.jpg";
+import blog1 from "../../images/blog-1.jpg";
+import blog2 from "../../images/blog-2.jpg";
+import blog3 from "../../images/blog-3.jpg";
 
 export default function HomeBlog() {
     return (
-        <section className='HomeBlog default-pt'>
+        <section className='HomeBlog default-pt' data-scroll-section>
           <div className='container'>
             <div className='row justify-content-between align-items-center mb-5'>
               <div className='col-md-5 col-lg-4 col-7'>

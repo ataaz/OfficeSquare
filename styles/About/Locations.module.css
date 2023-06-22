@@ -17,7 +17,7 @@
 .locBoxText span{
     font-size: 32px;
     font-weight: 700;
-    line-height: 30px;    
+    line-height: 30px;
     color: #fff;
 }
 
@@ -34,4 +34,29 @@
     font-weight: 700;
     line-height: 28px;
     color: #fff;
+}
+
+.LocationSecGlobal.default-pt1{padding-top:0;}
+
+@media (max-width:575.98px){
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .locBoxText{padding:20px 20px;}
+    .locBoxText span{font-size:22px;line-height:24px;}
+    .locBoxText p{font-size:12px;}
+    .locBoxText h4{font-size:16px;line-height:24px;}
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    .locBoxText{padding:20px 20px;}
+    .locBoxText span{font-size:28px;line-height:30px;}
+    .locBoxText h4{font-size:16px;line-height:22px;}
+    .locBoxText p{font-size:14px;line-height:18px;}
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+}
+
+@media (min-width:1200px) and (max-width:1499.98px){
 }
