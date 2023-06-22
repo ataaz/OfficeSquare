@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
       <LocomotiveScrollProvider
       options={
         {
-          smooth: true,
+          smooth: false,
           // ... all available Locomotive Scroll instance options 
         }
       }
@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }) {
       }
       containerRef={containerRef}
     >
-      <main data-scroll-container ref={containerRef}>
+      <main ref={containerRef}>
         <Component {...pageProps} />;
       </main>
     </LocomotiveScrollProvider>

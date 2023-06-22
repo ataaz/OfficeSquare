@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function Footer() {
-    return <footer className='siteFooter'>
+    return <footer className='siteFooter' data-scroll-section>
         <div className='container'>
             <div className='row'>
                 <div className='col-md-4 col-lg-3 col-sm-6'>
