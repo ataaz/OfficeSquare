@@ -8,6 +8,7 @@ import logo7 from "../../images/logo7.svg";
 import React from "react";
 import Slider from "react-slick";
 import Image from 'next/image'
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeLogos() {
     var homeLogoz = {
@@ -55,8 +56,9 @@ export default function HomeLogos() {
         // instead of a settings object
       ]
     };
+    const { scroll } = useLocomotiveScroll()
     return (
-        <section className='comLogos default-pt' data-scroll-section>
+        <section className='comLogos default-pt'>
         <div className='container'>
           <div className='row justify-content-between align-items-end mb-5'>
             <div className='col-md-6 col-lg-5 mb-4 mb-md-0 pb-1 pb-md-0'>

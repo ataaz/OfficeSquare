@@ -12,6 +12,7 @@ import HomeText2 from '../components/Home/HomeText2';
 
 export default function Home() {
   return (
+    <div>
     <Layout>
       <Head>
         <title>Home | Office Square</title>
@@ -25,5 +26,6 @@ export default function Home() {
       <HomeBlog></HomeBlog>
       <CTAText></CTAText>
     </Layout>
+    </div>
   )
 }

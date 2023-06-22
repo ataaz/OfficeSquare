@@ -5,11 +5,13 @@ import DubaiImg from "../../images/dubai.jpg";
 import AbuDhabiImg from "../../images/abu-dhabi.jpg";
 import QatarImg from "../../images/qatar.jpg";
 import Link from 'next/link';
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function Locations() {
+    const { scroll } = useLocomotiveScroll()
   return (
     <>
-    <section className={styles.LocationSec + ' default-pt1 position-relative LocationSecGlobal'} data-scroll-section>
+    <section className={styles.LocationSec + ' default-pt1 position-relative LocationSecGlobal'}>
         <div className="container">
             <div className='row align-items-center mb-5 pb-lg-5'>
                 <div className='col-md-3 col-lg-3 mb-4 mb-md-0 pb-1 pb-md-0'>

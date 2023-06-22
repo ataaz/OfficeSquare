@@ -3,15 +3,17 @@ import Image from 'next/image'
 import Discover1 from "../../images/disocver-workspace-1.jpg";
 import Discover2 from "../../images/disocver-workspace-2.jpg";
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
+import { useParallax } from 'react-scroll-parallax';
 
 export default function HomeText1() {
-    const { scroll } = useLocomotiveScroll()
-    return <section className='default-pb posRev text1Sec' data-scroll-section>
+    const { scroll } = useLocomotiveScroll();
+    const { ref } = useParallax({ speed: 10 });
+    return <section className='default-pb posRev text1Sec'>
         <div className='d-none d-lg-block'>
         <div className='container'>
             <div className='row'>
             <div className='col-md-2'>
-                <div className={styles.imgFull + ' imgMagnify'} data-scroll data-scroll-speed="4">
+                <div className={styles.imgFull + ' imgMagnify'} ref={ref}>
                 <Image
                 priority
                 src={Discover1}

@@ -1,11 +1,13 @@
 import styles from '../../styles/About/SubHeader.module.css';
 import Image from 'next/image';
 import CurveArrowDown from "../../images/curve-arrow-down.svg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function AboutHeader() {
+    const { scroll } = useLocomotiveScroll()
   return (
     <>
-    <section className={styles.Header2} data-scroll-section>
+    <section className={styles.Header2}>
         <div className="container">
             <div className="row">
                 <div className="col-sm-3 col-xl-1 col-lg-2 col-4 mt-3 position-relative">

@@ -1,9 +1,11 @@
 import styles from '../../styles/About/Keypoints.module.css';
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function KeypointsAbout() {
+    const { scroll } = useLocomotiveScroll()
   return (
     <>
-    <section className={'default-pb1 pt-5 keySec'} data-scroll-section>
+    <section className={'default-pb1 pt-5 keySec'}>
         <div className={styles.kpRow + " container"}>
             <div className={" row"}>
                 <div className="col-sm-6 col-md-3 col-6">

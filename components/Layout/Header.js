@@ -14,7 +14,7 @@ export default function Header() {
     const handleClickSubMenu = event => {
         setSubmenuIsActive(current => !current);
     };
-    return <header className={isActive ? 'siteHeader active' : 'siteHeader'} data-scroll-section>
+    return <header className={isActive ? 'siteHeader active' : 'siteHeader'}>
         <Head>
             <link rel="icon" href="/favicon.ico" />
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>

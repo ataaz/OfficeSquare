@@ -1,12 +1,14 @@
 import styles from '../../styles/Home.module.css';
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeBanner() {
-    return <section className={styles.homeBanner} data-scroll-section>
+    const { scroll } = useLocomotiveScroll()
+    return <section className={styles.homeBanner}>
     <div className='container' data-scroll data-scroll-speed="1">
       <div className={styles.vdoText}>
         <video controls muted autoPlay loop>
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></source>
-          <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"></source>
+          <source src="https://demo.officesquare.com/home-video.mp4" type="video/mp4"></source>
+          <source src="https://demo.officesquare.com/home-video.mp4" type="video/ogg"></source>
           Your browser does not support HTML video.
         </video>
         <div className={styles.vdoTextBox}>

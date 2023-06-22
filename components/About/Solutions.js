@@ -5,8 +5,10 @@ import styles from '../../styles/About/Solutions.module.css';
 import PrivateWorkspaces from "../../images/private-workspaces.jpg";
 import CoworkingWorkSpaces from "../../images/co-working-workspaces.jpg";
 import ConferenceRoom from "../../images/conference-rooms.jpg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function SolutionsAbout() {
+    const { scroll } = useLocomotiveScroll()
   return (
     <>
     <section className={styles.solutionsAbout + ' default-pb1 default-pt position-relative solutionsAboutSec'} data-scroll-section>

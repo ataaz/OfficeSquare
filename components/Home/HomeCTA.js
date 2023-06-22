@@ -2,10 +2,12 @@ import rightArrow from "../../images/right-arrow.svg";
 import React from "react";
 import Image from 'next/image'
 import Link from 'next/link';
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function CTAText() {
+    const { scroll } = useLocomotiveScroll()
     return (
-    <section className='ctaText default-pt default-pb' data-scroll-section>
+    <section className='ctaText default-pt default-pb'>
         <div className="scrollingRow">
             <div className="scrollingBg">
                 <h3>Office Square</h3>

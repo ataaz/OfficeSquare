@@ -2,9 +2,11 @@ import styles from '../../styles/Home.module.css';
 import Image from 'next/image'
 import premierchoice1 from "../../images/premier-choice-1.jpg";
 import premierchoice2 from "../../images/premier-choice-2.jpg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeText2() {
-    return <section className='textCenterSec position-relative' data-scroll-section>
+    const { scroll } = useLocomotiveScroll()
+    return <section className='textCenterSec position-relative'>
         <Image
         className='imgAbs2'
         priority

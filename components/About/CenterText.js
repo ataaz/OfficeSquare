@@ -2,11 +2,13 @@ import Image from 'next/image'
 import styles from '../../styles/About/Text4.module.css';
 import intro1 from "../../images/intro-text-1.jpg";
 import intro2 from "../../images/intro-text-2.jpg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function CenterText() {
+    const { scroll } = useLocomotiveScroll()
     return (
       <>
-      <section className="centerText default-pt1 default-pb1 position-relative" data-scroll-section>
+      <section className="centerText default-pt1 default-pb1 position-relative">
         <Image priority src={intro1} alt="" className={styles.imgAbs4}/>
         <div className="container">
             <div className="row justify-content-center">

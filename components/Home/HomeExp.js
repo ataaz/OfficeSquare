@@ -7,9 +7,11 @@ import exIcon3 from "../../images/modern-tv.svg";
 import exIcon4 from "../../images/fridge.svg";
 import exIcon5 from "../../images/headset-help.svg";
 import exIcon6 from "../../images/calendar.svg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeExp() {
-    return <section className='ofcExp' data-scroll-section>
+    const { scroll } = useLocomotiveScroll()
+    return <section className='ofcExp'>
     <div className='container'>
         <div className='row justify-content-between align-items-center mb-5'>
         <div className='col-md-6 col-lg-6 col-xl-4'>

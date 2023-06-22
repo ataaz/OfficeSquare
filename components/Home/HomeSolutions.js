@@ -5,9 +5,11 @@ import serviceImg2 from "../../images/offices.jpg";
 import serviceImg3 from "../../images/virtual-address.jpg";
 import serviceImg4 from "../../images/licensing.jpg";
 import circleIcon from "../../images/circle-more.svg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeSolutions() {
-    return <section className='HomeSol default-pt default-pb' data-scroll-section>
+  const { scroll } = useLocomotiveScroll()
+    return <section className='HomeSol default-pt default-pb'>
     <div className='container'>
       <div className='row justify-content-between align-items-center mb-5'>
         <div className='col-md-4 col-lg-4 col-xl-3 col-7'>

@@ -3,10 +3,12 @@ import Link from 'next/link';
 import blog1 from "../../images/blog-1.jpg";
 import blog2 from "../../images/blog-2.jpg";
 import blog3 from "../../images/blog-3.jpg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeBlog() {
+    const { scroll } = useLocomotiveScroll()
     return (
-        <section className='HomeBlog default-pt' data-scroll-section>
+        <section className='HomeBlog default-pt'>
           <div className='container'>
             <div className='row justify-content-between align-items-center mb-5'>
               <div className='col-md-5 col-lg-4 col-7'>
