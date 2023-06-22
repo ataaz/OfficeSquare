@@ -3,15 +3,18 @@ import Image from 'next/image'
 import premierchoice1 from "../../images/premier-choice-1.jpg";
 import premierchoice2 from "../../images/premier-choice-2.jpg";
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
+import { useParallax } from 'react-scroll-parallax';
 
 export default function HomeText2() {
     const { scroll } = useLocomotiveScroll()
+    const { ref } = useParallax({ speed: 10 });
     return <section className='textCenterSec position-relative'>
         <Image
         className='imgAbs2'
         priority
         src={premierchoice1}
         alt="premier image 1"
+        ref={ref}
         />
         <div className='container'>
         <div className='row justify-content-center'>

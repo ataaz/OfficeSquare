@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
           font-family: ${jk.style.fontFamily};
         }
       `}</style>
-      <ParallaxProvider>
+      <ParallaxProvider scrollAxis="vertical">
         <Component {...pageProps} />;
       </ParallaxProvider>
     </>

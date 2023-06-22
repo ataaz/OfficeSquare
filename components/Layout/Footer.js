@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function Footer() {
-    return <footer className='siteFooter default-pb1'>
+    return <footer className='siteFooter'>
         <div className='container'>
             <div className='row'>
                 <div className='col-md-4 col-lg-3 col-sm-6'>

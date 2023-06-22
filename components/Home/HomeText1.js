@@ -7,7 +7,7 @@ import { useParallax } from 'react-scroll-parallax';
 
 export default function HomeText1() {
     const { scroll } = useLocomotiveScroll();
-    const { ref } = useParallax({ speed: 10 });
+    const { ref } = useParallax({ speed: 20 });
     return <section className='default-pb posRev text1Sec'>
         <div className='d-none d-lg-block'>
         <div className='container'>
@@ -22,7 +22,7 @@ export default function HomeText1() {
                 </div>
             </div>
             <div className='col-md-8'>
-                <div className='text1 text1_h2Mb' data-scroll data-scroll-speed="1">
+                <div className='text1 text1_h2Mb'>
                 <h2>Discover premium workspaces for your business to grow.</h2>
                 <h3>For teams of 1-20, we have designed our space to motivate, inspire and boost creativity.</h3>
                 </div>
@@ -34,7 +34,7 @@ export default function HomeText1() {
         priority
         src={Discover2}
         alt="discover image 2"
-        data-scroll data-scroll-speed="5"
+        ref={ref}
         />
         </div>
 
