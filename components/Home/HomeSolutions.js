@@ -9,7 +9,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeSolutions() {
   const { scroll } = useLocomotiveScroll()
-    return <section className='HomeSol default-pt default-pb'>
+    return <section className='HomeSol default-pt default-pb' data-scroll-container>
     <div className='container'>
       <div className='row justify-content-between align-items-center mb-5'>
         <div className='col-md-4 col-lg-4 col-xl-3 col-7'>
@@ -18,12 +18,12 @@ export default function HomeSolutions() {
           </div>
         </div>
         <div className='col-md-4 col-lg-3 col-5 text-end'>
-          <Link href='' className='btn1'>All Solutions</Link>
+          {/* <Link href='#' className='btn1'>All Solutions</Link> */}
         </div>
       </div>
 
       <div className='row g-0 rowMbMobile'>
-      <div className='col-sm-6 col-md-6 col-lg-3'>
+      <div className='col-sm-6 col-md-6 col-lg-3 mb-4 pb-2 mb-md-0 pb-md-0'>
           <div className='serBox'>
             <div className='serBoxImg'>
               <Image
@@ -42,7 +42,7 @@ export default function HomeSolutions() {
           </div>
         </div>
 
-        <div className='col-sm-6 col-md-6 col-lg-3'>
+        <div className='col-sm-6 col-md-6 col-lg-3 mb-4 pb-2 mb-md-0 pb-md-0'>
           <div className='serBox'>
             <div className='serBoxImg'>
               <Image
@@ -61,19 +61,19 @@ export default function HomeSolutions() {
           </div>
         </div>
 
-        <div className='col-sm-6 col-md-6 col-lg-3'>
+        <div className='col-sm-6 col-md-6 col-lg-3 mb-4 pb-2 mb-md-0 pb-md-0'>
           <div className='serBox'>
             <div className='serBoxImg'>
               <Image
               priority
               src={serviceImg3}
-              alt="Virtual Address"
+              alt="Conferences"
               />
             </div>
             <Link href="#" className='serBoxText'>
-              <span>Prestigious Location</span>
+              <span>Meeting Rooms</span>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
-                <h3>Virtual Address</h3>
+                <h3>Conferences</h3>
                 <Image priority src={circleIcon} alt="Circle Icon"/>
               </div>
             </Link>

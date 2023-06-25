@@ -42,6 +42,6 @@
     .FAQTabs .FAQItem{font-size:15px;padding:12px 25px 12px 0px;}
 }
 
-@media (min-width:1200px) and (max-width:1499.98px){
+@media (min-width:1200px) and (max-width:1399.98px){
     .FAQTabs .FAQItem{font-size:16px;}
 }

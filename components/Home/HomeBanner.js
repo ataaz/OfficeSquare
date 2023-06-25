@@ -4,7 +4,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 export default function HomeBanner() {
     const { scroll } = useLocomotiveScroll()
     return <section className={styles.homeBanner}>
-    <div className='container' data-scroll data-scroll-speed="1">
+    <div className='container' data-scroll data-scroll-speed="1" data-scroll-container>
       <div className={styles.vdoText}>
         <video controls muted autoPlay loop>
           <source src="https://demo.officesquare.com/home-video.mp4" type="video/mp4"></source>

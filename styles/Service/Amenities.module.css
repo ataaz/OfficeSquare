@@ -18,3 +18,31 @@
     line-height: 20px;
     color: rgba(78, 78, 78, 1);
 }
+
+
+@media (max-width:575.98px){
+    .whiteBox{padding: 20px 20px 20px 20px;}
+    .whiteBox p{font-size:14px;line-height:18px;}
+    .whiteBox h3{font-size:18px;line-height:24px;margin:10px 0 10px 0;}
+    .whiteBox svg{width:30px;height:30px;}
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .whiteBox{padding: 20px 20px 20px 20px;}
+    .whiteBox p{font-size:14px;line-height:18px;}
+    .whiteBox h3{font-size:18px;line-height:24px;margin:10px 0 10px 0;}
+    .whiteBox svg{width:30px;height:30px;}
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    .whiteBox{padding: 20px 20px 20px 20px;}
+    .whiteBox p{font-size:14px;line-height:18px;}
+    .whiteBox h3{font-size:18px;line-height:24px;margin:10px 0 10px 0;}
+    .whiteBox svg{width:30px;height:30px;}
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+}
+
+@media (min-width:1200px) and (max-width:1399.98px){
+}

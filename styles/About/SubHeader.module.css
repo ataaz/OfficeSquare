@@ -39,7 +39,7 @@
     .Header2 h1{font-size:70px;line-height:80px;}
 }
 
-@media (min-width:1200px) and (max-width:1499.98px){
+@media (min-width:1200px) and (max-width:1399.98px){
     .Header2 h1{font-size:80px;line-height:95px;}
     .Header2 p{font-size:14px;line-height:20px;}
 }

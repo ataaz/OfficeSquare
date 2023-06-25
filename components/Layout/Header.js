@@ -1,5 +1,7 @@
 import headerLogo from "../../images/logo-office-square.svg";
 import headerMobileLogo from "../../images/header-mobile-logo.svg";
+import whiteLogo from "../../images/white-logo.svg";
+import SubmenuImage from "../../images/submenu-image.webp";
 import Image from 'next/image'
 import Link from 'next/link';
 import Head from "next/head";
@@ -14,7 +16,15 @@ export default function Header() {
     const handleClickSubMenu = event => {
         setSubmenuIsActive(current => !current);
     };
-    return <header className={isActive ? 'siteHeader active' : 'siteHeader'}>
+    const [isSubmenuChildActive, setSubmenuChildIsActive] = useState(false);
+    const handleClickSubMenuChild = event => {
+        setSubmenuChildIsActive(current => !current);
+    };
+    const [isDesktopSubmenuActive, setDesktopSubmenuIsActive] = useState(false);
+    const handleClickDesktopSubMenu = event => {
+        setDesktopSubmenuIsActive(current => !current);
+    };
+    return <header className={isActive ? 'siteHeader active' : isSubmenuActive ? 'siteHeader activeSubmenu' : 'siteHeader'}>
         <Head>
             <link rel="icon" href="/favicon.ico" />
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
@@ -41,14 +51,23 @@ export default function Header() {
                             src={headerMobileLogo}
                             alt="Header Mobile Logo - Office Square"
                             />
+                            <Image
+                            className="d-none subMenuLogo"
+                            priority
+                            src={whiteLogo}
+                            alt="Header White Logo - Office Square"
+                            />
                         </Link>
                     </div> 
                     <div className="col-8 col-md-9 col-lg-7 col-xl-6 d-none d-md-flex flex-wrap justify-content-end">
                         <ul className="navbar-nav list-inline">
                             <li className="nav-item list-inline-item"><Link className="nav-link active" aria-current="page" href="/about">About</Link></li>
-                            <li className="nav-item list-inline-item"><Link className="nav-link" href="#" onClick={handleClickSubMenu}>Solutions</Link></li>
-                            <li className="nav-item list-inline-item"><Link className="nav-link" href="/faqs">FAQs</Link></li>
-                            <li className="nav-item list-inline-item"><Link className="nav-link" href="/contact-us">Book Your Space</Link></li>
+                            <li className="nav-item list-inline-item"><Link className="nav-link" href="#"
+                            onClick={() => {
+                                handleClickSubMenu();
+                            }}
+                            >Solutions</Link></li>
+                            <li className="nav-item list-inline-item HdrBtn"><Link className="nav-link" href="/contact-us">Book Your Space</Link></li>
                         </ul>
                     </div>
                     <div className="col-8 d-block d-md-none">
@@ -77,8 +96,21 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarsExample01">
                         <ul className="navbar-nav me-auto mb-2">
                             <li className="nav-item"><a className="nav-link active" aria-current="page" href="/about">About</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#" onClick={handleClickSubMenu}>Solutions</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/faqs">FAQs</a></li>
+                            <li className="nav-item"><a className="nav-link solMobileAnchor" href="#" onClick={handleClickDesktopSubMenu}>Solutions <svg width="17" height="2" viewBox="0 0 17 2" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="17" height="2" fill="black"/> </svg></a>
+                                <ul className={isDesktopSubmenuActive ? 'subMenuMobile active' : 'subMenu'} style={{display:`none`,height:`0`,transition:`0.5s`}}>
+                                    <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces"><span>-</span> Private Workspaces</a></li>
+                                    <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces"><span>-</span> Co-working Spaces</a></li>
+                                    <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces"><span>-</span> Conference Rooms</a></li>
+                                    <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces"><span>-</span> Event Spaces</a></li>
+                                    <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces"><span>-</span> Virtual Offices</a></li>
+                                    <li className="nav-item dropdown"><a className="nav-link" aria-current="page" href="#" onClick={handleClickSubMenuChild}><span>-</span> Additional Services</a>
+                                        <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{height:`0`, opacity:`0`,transition:`opacity 2s ease-out`}}>
+                                            <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces"><span>-</span> PRO Management</a></li>
+                                            <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces"><span>-</span> Business Set Up</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
                             <li className="nav-item list-inline-item"><Link className="nav-link" href="/contact-us">Contact</Link></li>
                             <li className="nav-item list-inline-item d-none"><Link className="nav-link" href="/contact-us">Contact</Link></li>
                         </ul>
@@ -95,20 +127,29 @@ export default function Header() {
             {/* </nav> */}
         </main>
 
-        <div className={isSubmenuActive ? 'subMenu active' : 'subMenu'} style={{display:`none`}}>
+        <div className={isSubmenuActive ? 'subMenu active' : 'subMenu d-none'} style={{height:`0px`,opacity:`0`,zIndex:`-1`,transition:`0.5s`}}>
             <div className="container">
-                <div className="row">
-                    <div className="col-sm-3 col-md-4">
+                <div className="row align-items-center justify-content-between">
+                    <div className="col-sm-4 col-md-5 col-lg-4">
                         <ul className="navbar-subnav me-auto mb-2">
                             <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">Private Workspaces</a></li>
                             <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">Co-working Spaces</a></li>
                             <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">Conference Rooms</a></li>
                             <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">Event Spaces</a></li>
                             <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">Virtual Offices</a></li>
-                            <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">Additional Services</a></li>
+                            <li className="nav-item dropdown"><a className="nav-link" aria-current="page" href="#" onClick={handleClickSubMenuChild}>Additional Services</a>
+                                {/* <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{visibility:`hidden`, opacity:`0`,transition:`visibility 0s, opacity 0.5s linear`}}> */}
+                                <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{height:`0`, opacity:`0`,transition:`opacity 2s ease-out`}}>
+                                    <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">PRO Management</a></li>
+                                    <li className="nav-item"><a className="nav-link" aria-current="page" href="/private-workspaces">Business Set Up</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
-                    <div className="col-sm-3 col-md-4">
+                    <div className="col-sm-8 col-md-6 col-lg-8">
+                        <div className="fullImg">
+                            <Image src={SubmenuImage} alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeExp() {
     const { scroll } = useLocomotiveScroll()
-    return <section className='ofcExp'>
+    return <section className='ofcExp' data-scroll-container>
     <div className='container'>
         <div className='row justify-content-between align-items-center mb-5'>
         <div className='col-md-6 col-lg-6 col-xl-4'>
@@ -21,7 +21,7 @@ export default function HomeExp() {
         </div>
         <div className='col-md-6 text-justify'>
             <div className='text1'>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis. </h4>
+            <h4>We provide the business essentials you need so you can focus on running your operations, while elevating your team’s experience.</h4>
             </div>
         </div>
         </div>

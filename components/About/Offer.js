@@ -3,10 +3,8 @@ import styles from '../../styles/About/Offer.module.css';
 import text4 from '../../styles/About/Text4.module.css';
 import Offer from "../../images/offer.jpg";
 import OfferSmall from "../../images/offer-small.jpg";
-import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function OfferAbout() {
-    const { scroll } = useLocomotiveScroll()
   return (
     <>
     <section className={styles.offerSec + ' default-pb1 default-pt position-relative'} data-scroll-section>
@@ -26,7 +24,7 @@ export default function OfferAbout() {
                     </div>
                 </div>
                 <div className='col-md-9 col-md-9 order-1 order-md-2'>
-                    <div className='fullImg'>
+                    <div className='fullImg imgMagnify'>
                         <Image priority src={Offer} alt="Offer"/>
                     </div>
                 </div>

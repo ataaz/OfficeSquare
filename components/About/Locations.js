@@ -5,10 +5,8 @@ import DubaiImg from "../../images/dubai.jpg";
 import AbuDhabiImg from "../../images/abu-dhabi.jpg";
 import QatarImg from "../../images/qatar.jpg";
 import Link from 'next/link';
-import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function Locations() {
-    const { scroll } = useLocomotiveScroll()
   return (
     <>
     <section className={styles.LocationSec + ' default-pt1 position-relative LocationSecGlobal'}>
@@ -20,7 +18,7 @@ export default function Locations() {
                     </div>
                 </div>
                 <div className='col-md-7 col-lg-5'>
-                    <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700}>
+                    <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700 + ' text4_h2Mobile'}>
                         <h2 className='mb-0'>Providing services in <br className='d-none d-sm-block'></br>different cities</h2>
                     </div>
                 </div>

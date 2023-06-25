@@ -12,7 +12,7 @@ export default function ContactUs() {
         <Head>
             <title>Contact Us | Office Square</title>
         </Head>
-        <div className='topPadding'>
+        <div className='topPadding contactPage'>
             <ImageHeader></ImageHeader>
             <TextForm></TextForm>
             <Locations></Locations>

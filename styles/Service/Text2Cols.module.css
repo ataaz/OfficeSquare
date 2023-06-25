@@ -63,3 +63,34 @@
 .invertedCol2:hover h3, .invertedCol2:hover p{color:#000;}
 .invertedCol2 svg path:nth-child(2), .invertedCol2 svg path:nth-child(1){stroke:#fff;}
 .invertedCol2:hover svg path:nth-child(2), .invertedCol2:hover svg path:nth-child(1){stroke:#000;}
+
+
+@media (max-width:575.98px){
+    .Text2Cols{padding-top: 0;}
+    .col2Text{padding:15px;}
+    .col2Text p{font-size:14px;line-height:20px;}
+    .col2Text svg{width:40px;height:40px;}
+    .col2Text h3{line-height:24px;margin-right:20px;}
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .Text2Cols{padding-top: 0;}
+    .col2Text{padding:25px;}
+    .col2Text p{font-size:14px;line-height:20px;}
+    .col2Text svg{width:40px;height:40px;}
+    .col2Text h3{line-height:24px;margin-right:20px;}
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    .Text2Cols{padding-top:50px;}
+    .col2Text{padding:20px 20px;}
+    .col2Text p{font-size:14px;line-height:22px;}
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+    .col2Text{padding:20px 20px;}
+    .col2Text p{font-size:14px;line-height:22px;}
+}
+
+@media (min-width:1200px) and (max-width:1399.98px){
+}

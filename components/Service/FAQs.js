@@ -6,10 +6,10 @@ export default function FAQs() {
     <>
     <section className={' position-relative'}>
         <div className="container">
-            <div className='row justify-content-center align-items-end mb-5 pb-2'>
+            <div className='row justify-content-center align-items-end mb-4 mb-lg-5 pb-2'>
                 <div className='col-md-6 col-lg-6 text-center'>
                     <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700}>
-                        <h2 className='mb-4'>FAQs</h2>
+                        <h2 className='mb-0 mb-lg-4'>FAQs</h2>
                     </div>
                 </div>
             </div>

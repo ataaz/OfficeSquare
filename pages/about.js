@@ -1,14 +1,13 @@
-import Link from 'next/link';
 import Layout from '../components/Layout/layout';
 import AboutHeader from '../components/About/AboutHeader';
 import CenterText from '../components/About/CenterText';
 import KeypointsAbout from '../components/About/Keypoints';
 import OfferAbout from '../components/About/Offer';
-import Head from 'next/head';
 import SolutionsAbout from '../components/About/Solutions';
 import Locations from '../components/About/Locations';
 import HomeLogos from '../components/Home/HomeLogos';
 import HomeCTA from '../components/Home/HomeCTA';
+import Head from 'next/head';
 
 export default function About() {
   return (

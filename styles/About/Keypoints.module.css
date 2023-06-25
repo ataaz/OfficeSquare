@@ -1,17 +1,3 @@
-.kpRow .row .col-md-3{
-    position: relative;
-}
-
-.kpRow .row .col-md-3:after{
-    position: absolute;
-    content: "";
-    background: rgba(169, 169, 169, 1);
-    width: 1px;
-    height: 100%;
-    right: 0;
-    top: 0;
-}
-
 .kpBox span{
     font-size: 64px;
     font-weight: 700;
@@ -64,6 +50,6 @@
     .kpBox span{font-size:48px;}
 }
 
-@media (min-width:1200px) and (max-width:1499.98px){
+@media (min-width:1200px) and (max-width:1399.98px){
     .kpBox span{font-size:54px;}
 }

@@ -1,4 +1,4 @@
-.SliderHeader .ContainerAbsolute{
+.ContainerAbsolute{
     width: 100%;
     height: 100%;
     left: 0;
@@ -21,6 +21,17 @@
     overflow: hidden;
 }
 
+.SliderHeaderImagesParent2{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.ImageHeader{
+    position: relative;
+    z-index: 2;
+}
+
 .ImageHeader .SliderHeaderBox{
     background: transparent;
     padding: 0;
@@ -33,21 +44,81 @@
     color: #000;
 }
 
+.SliderHeaderText h2{
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 60px;
+    color:#000;
+    margin-bottom: 60px;
+}
+
+.SliderHeaderText p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 25px;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
+
 @media (max-width:575.98px){
-    .ImageHeader h1{font-size:32px;line-height:48px;}
+    .ImageHeader h1{font-size:32px;line-height:40px;}
+    .ImageHeader .ContainerAbsolute{position:absolute!important;}
+    .SliderHeaderImagesParent2 img{height:140px;object-fit:cover;}
+    .ContainerAbsolute{position:relative!important;}
+    .SliderHeader{display:flex;flex-direction:column;}
+    .SliderHeader .SliderHeaderImg{order:1;}
+    .SliderHeader .SliderHeaderText{order:2;top:-50px;}
+    .SliderHeader .SliderHeaderBox{padding:20px;margin-bottom:-30px;}
+    .SliderHeaderImagesParent img{height:320px;object-fit:cover;}
+    .SliderHeader .SliderHeaderText h2{font-size:26px;line-height:36px;}
+    /* .SliderHeaderText h2{font-size:30px;line-height:40px;;margin-bottom:25px;} */
+    .SliderHeaderText p{font-size:16px;line-height:25px;}
 }
 
 @media (min-width:576px) and (max-width:767.98px){
+    .SliderHeaderText h2{font-size:34px;line-height:40px;;margin-bottom:25px;}
+    .SliderHeaderText p{font-size:16px;line-height:25px;}
     .ImageHeader h1{font-size:32px;line-height:48px;}
+    .ImageHeader .ContainerAbsolute{position:absolute!important;}
+
+    .ContainerAbsolute{position: relative !important;}
+    .SliderHeader{display:flex;flex-direction:column;}
+    .SliderHeader .SliderHeaderImg{order:1;}
+    .SliderHeader .SliderHeaderText{order:2;top:-50px;}
+    .SliderHeader .SliderHeaderBox{padding:20px;margin-bottom:-30px;}
+    .SliderHeaderImagesParent img{height:320px;object-fit:cover;}
+    .SliderHeaderText p{font-size:16px;line-height:25px;}
 }
 
 @media (min-width:768px) and (max-width:991.98px){
-    .ImageHeader h1{font-size:66px;line-height:80px;}
+    .ImageHeader h1{font-size:46px;line-height:60px;}
+    .SliderHeaderText h2{font-size:36px;line-height:46px;margin-bottom:30px;}
+    .SliderHeaderText h2 br{display:none;}
+    .SliderHeaderText p{font-size:16px;line-height:26px;}
+    .ImageHeader .ContainerAbsolute{position:absolute!important;}
+
+    .ContainerAbsolute{position: relative !important;}
+    .SliderHeader{display:flex;flex-direction:column;}
+    .SliderHeader .SliderHeaderImg{order:1;}
+    .SliderHeader .SliderHeaderText{order:2;top:-40px;left:20px;}
+    .SliderHeader .SliderHeaderBox{padding:20px;margin-bottom:-30px;}
+    .SliderHeaderImagesParent img{height:320px;object-fit:cover;}
+    .SliderHeaderText p{font-size:16px;line-height:25px;}
 }
 
 @media (min-width:992px) and (max-width:1199.98px){
     .ImageHeader h1{font-size:66px;line-height:80px;}
+    .SliderHeaderText h2{font-size:36px;line-height:46px;margin-bottom:30px;}
+    .SliderHeaderText h2 br{display:none;}
+    .SliderHeaderText p{font-size:16px;line-height:26px;}
 }
 
-@media (min-width:1200px) and (max-width:1499.98px){
+@media (min-width:1200px) and (max-width:1399.98px){
+    .SliderHeaderText h2{font-size:34px;line-height:50px;}
+    .SliderHeaderText p{font-size:18px;}
+    .ImageHeader h1{font-size:66px;line-height:76px;}
 }

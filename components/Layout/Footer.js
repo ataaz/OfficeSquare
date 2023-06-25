@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className='widget mb-5 mb-sm-0 pb-1 pb-sm-0'>
                         <h3>Find Us</h3>
                         <p>123456-65432</p>
-                        <p>Middle East </p>
+                        <p>Dubai, UAE</p>
                     </div>
                 </div>
                 <div className='col-md-4 col-lg-3 mt-sm-4 mt-md-0'>
@@ -37,6 +37,7 @@ export default function Footer() {
                 </div>
                 <div className='col-md-6 col-lg-5'>
                     <div className='siteFooterLinks'>
+                        <Link href='/blog/' className='linkMargin'>Blog</Link>
                         <Link href='/contact-us/' className='linkMargin'>Contact Us</Link>
                         <Link href='/privacy-policy/' className='linkMargin'>Privacy Policy</Link>
                         <span className='copyrightText d-block d-sm-none'>© 2023  Office Square | All Rights Reserved</span>
