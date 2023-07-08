@@ -3,29 +3,30 @@ import styles from '../../styles/About/Offer.module.css';
 import text4 from '../../styles/About/Text4.module.css';
 import Offer from "../../images/offer.jpg";
 import OfferSmall from "../../images/offer-small.jpg";
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-export default function OfferAbout() {
+export default function OfferAbout(props) {
+    const { scroll } = useLocomotiveScroll();
+    // const offerz= props.offer?.map((el,i)=> 
+    // )
   return (
     <>
-    <section className={styles.offerSec + ' default-pb1 default-pt position-relative'} data-scroll-section>
-        <Image className={styles.imgAbs6} priority src={OfferSmall} alt="Offer"/>
+    <section className={styles.offerSec + ' default-pb1 default-pt position-relative'}>
+        <Image className={styles.imgAbs6} priority src={props.img1?.url} alt={props.img1?.alt} width="1" height="1" data-scroll data-scroll-speed="4"/>
         <div className="container">
             <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700 + ' ' + text4.posTop110px}>
-                <span><em>What We Offer</em></span>
-                <h2 className='mb-0'>Your professional address <br className='d-none d-sm-block'></br>in the digital world</h2>
+                <span><em>{props.label}</em></span>
+                <h2 className='mb-0' dangerouslySetInnerHTML={{__html: props.content}}></h2>
             </div>
 
             <div className='row justify-content-between align-items-end'>
                 <div className='col-md-2 order-2 order-md-1 mt-5 mt-md-0'>
-                    <div className={styles.OfferSpans}>
-                        <span>Prestigious <br></br>locations</span>
-                        <span>Personalized <br></br>support</span>
-                        <span>Convenient <br></br>payments</span>
+                    <div className={styles.OfferSpans} dangerouslySetInnerHTML={{__html: props.offers}}>
                     </div>
                 </div>
                 <div className='col-md-9 col-md-9 order-1 order-md-2'>
                     <div className='fullImg imgMagnify'>
-                        <Image priority src={Offer} alt="Offer"/>
+                        <Image priority src={props.mainImg?.url} alt={props.mainImg?.alt} width="1" height="1"/>
                     </div>
                 </div>
             </div>

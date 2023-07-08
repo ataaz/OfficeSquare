@@ -1,32 +1,52 @@
 
 .homeBanner{
   height: 700px;
-  padding-top: 120px;
+  padding-top: 0px;
   overflow: hidden;
+  position: relative;
 }
-/* @media (min-width:1400px){
+@media (min-width:1199.98px){
   .homeBanner{
-    height: 100vh;
+    height: 85vh;
   }
-  .homeBanner.default-pt{
+  /* .homeBanner.default-pt{
     padding-top: 0 !important;
+  } */
+}
+
+@media (min-width:1200px) and (max-width:1399.98px){
+  .homeBanner{
+    height: 80vh;
   }
-} */
+}
+
+.homeBanner .svgHome{
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+.homeBanner .svgHome svg{
+  width: 42px;
+  height: 42px;
+}
 
 .homeBanner h1{
-  font-size: 250px;
+  font-size: 290px;
   font-weight: 800;
-  line-height: 220px;
+  line-height: 260px;
   color: #000;
   margin-left: -15px;
   background-color: #fff;
   mix-blend-mode: lighten;
   margin-bottom: 0;
 }
+
 .homeBanner h2{
   font-size: 62px;
   font-weight: 700;
   line-height: 77px;
+  margin-top: 20px;
 }
 
 .vdoText{
@@ -38,8 +58,8 @@
   width: 1180px;
   height: 650px;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -60px;
+  top: -60px;
 }
 
 .imgFull img{
@@ -67,31 +87,32 @@
 }
 
 @media (max-width:575.98px){
-  .homeBanner{padding-top:120px;}
-  .homeBanner h1{font-size:84px;margin-left:0;line-height:80px;}
-  .homeBanner h2{font-size:28px;line-height:36px;margin-top:15px;}
+  /* .homeBanner{padding-top:60px;} */
+  .homeBanner h1{font-size:94px;margin-left:0;line-height:80px;}
+  .homeBanner h2{font-size:40px;line-height:48px;margin-top:20px;}
+  .homeBanner h2 br{display:none;}
   .vdoText video{width:575px;height:310px;}
-  .homeBanner{height:450px;}
-  .lighterText h2{font-size:20px;line-height:30px;}
+  .homeBanner{height:100vh;}
+  .lighterText h2{font-size:30px;line-height:40px;}
 }
 
 @media (min-width:576px) and (max-width:767.98px){
   .homeBanner h1{font-size:84px;margin-left:0;line-height:80px;}
   .homeBanner h2{font-size:28px;line-height:36px;margin-top:15px;}
   .vdoText video{width:575px;height:310px;}
-  .homeBanner{height:400px;padding-top:100px;}
+  .homeBanner{height:100vh;}
   .lighterText h2{font-size:20px;line-height:30px;}
 }
 
 @media (min-width:768px) and (max-width:991.98px){
   .homeBanner h1{font-size:150px;line-height:140px;}
   .homeBanner h2{font-size:38px;line-height:50px;}
-  .homeBanner{height:550px;}
+  /* .homeBanner{height:100vh;} */
   .lighterText h2{font-size:28px;line-height:40px;padding:0 80px 0 10px;}
 }
 
 @media (min-width:992px) and (max-width:1199.98px){
-  .homeBanner h1{font-size:170px;line-height:140px;}
+  .homeBanner h1{font-size:200px;line-height:170px;}
   .homeBanner h2{font-size:38px;line-height:50px;}
   .homeBanner{height:550px;}
   .lighterText h2{font-size:32px;line-height:52px;}
@@ -100,10 +121,10 @@
 }
 
 @media (min-width:1200px) and (max-width:1399.98px){
-  .homeBanner h1{font-size:170px;line-height:160px;}
+  .homeBanner h1{font-size:240px;line-height:210px;}
   .homeBanner h2{font-size:42px;line-height:57px;}
-  .homeBanner{height:600px;}
+  /* .homeBanner{height:600px;} */
   .lighterText h2{font-size:32px;line-height:52px;}
   .serBoxImg img{height:360px;}
-  .vdoText video{height:500px;width:900px;}
+  .vdoText video{height:550px;width:970px;}
 }

@@ -10,7 +10,7 @@ import Slider from "react-slick";
 import Image from 'next/image'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
-export default function HomeLogos() {
+export default function HomeLogos(props) {
     var homeLogoz = {
       centerMode:true,
       centerPadding:'140px',
@@ -58,7 +58,7 @@ export default function HomeLogos() {
     };
     const { scroll } = useLocomotiveScroll()
     return (
-        <section className='comLogos default-pt' data-scroll-container>
+        <section className={'comLogos ' + props.customClass}>
         <div className='container'>
           <div className='row justify-content-between align-items-end mb-5 pb-0 pb-lg-5'>
             <div className='col-md-6 col-lg-5 mb-4 mb-md-0 pb-1 pb-md-0'>
@@ -77,14 +77,14 @@ export default function HomeLogos() {
         <div className='HomeLogozSec overflow-hidden'>
           <div className='HomeLogoz' data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6">
             <Slider {...homeLogoz}>
-              <Image priority src={logo1} alt="Logo 1"/>
-              <Image priority src={logo2} alt="Logo 2"/>
-              <Image priority src={logo3} alt="Logo 3"/>
-              <Image priority src={logo4} alt="Logo 4"/>
-              <Image priority src={logo5} alt="Logo 5"/>
-              <Image priority src={logo6} alt="Logo 6"/>
-              <Image priority src={logo7} alt="Logo 7"/>
-              <Image priority src={logo1} alt="Logo 1"/>
+              <Image priority src={logo1} alt="Logo 1" width="auto" height="auto"/>
+              <Image priority src={logo2} alt="Logo 2" width="auto" height="auto"/>
+              <Image priority src={logo3} alt="Logo 3" width="auto" height="auto"/>
+              <Image priority src={logo4} alt="Logo 4" width="auto" height="auto"/>
+              <Image priority src={logo5} alt="Logo 5" width="auto" height="auto"/>
+              <Image priority src={logo6} alt="Logo 6" width="auto" height="auto"/>
+              <Image priority src={logo7} alt="Logo 7" width="auto" height="auto"/>
+              <Image priority src={logo1} alt="Logo 1" width="auto" height="auto"/>
             </Slider>
           </div>
         </div>

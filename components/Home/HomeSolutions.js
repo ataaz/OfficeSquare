@@ -5,16 +5,18 @@ import serviceImg2 from "../../images/offices.jpg";
 import serviceImg3 from "../../images/virtual-address.jpg";
 import serviceImg4 from "../../images/licensing.jpg";
 import circleIcon from "../../images/circle-more.svg";
-import { useLocomotiveScroll } from 'react-locomotive-scroll'
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-export default function HomeSolutions() {
+export default function HomeSolutions(props) {
+
   const { scroll } = useLocomotiveScroll()
-    return <section className='HomeSol default-pt default-pb' data-scroll-container>
+    return <section className='HomeSol default-pt default-pb'>
     <div className='container'>
       <div className='row justify-content-between align-items-center mb-5'>
-        <div className='col-md-4 col-lg-4 col-xl-3 col-7'>
+        {/* <div className='col-md-4 col-lg-4 col-xl-3 col-7'> */}
+        <div className='col-md-12'>
           <div className='text2 text2_h2mb'>
-            <h2>Our Solution</h2>
+            <h2>{props.heading}</h2>
           </div>
         </div>
         <div className='col-md-4 col-lg-3 col-5 text-end'>
@@ -33,7 +35,7 @@ export default function HomeSolutions() {
               />
             </div>
             <Link href="#" className='serBoxText'>
-              <span>Seat in open landscape</span>
+              <span>Work in open landscape</span>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
                 <h3>Co-working</h3>
                 <Image priority src={circleIcon} alt="Circle Icon"/>
@@ -71,7 +73,7 @@ export default function HomeSolutions() {
               />
             </div>
             <Link href="#" className='serBoxText'>
-              <span>Meeting Rooms</span>
+              <span>Meeting rooms</span>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
                 <h3>Conferences</h3>
                 <Image priority src={circleIcon} alt="Circle Icon"/>

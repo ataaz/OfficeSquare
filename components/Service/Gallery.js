@@ -4,8 +4,6 @@ import styles from '../../styles/Service/Gallery.module.css';
 import Link from 'next/link';
 import React, { Component } from "react";
 import Slider from "react-slick";
-import SliderImage1 from '../../images/gallery-1.jpg';
-import SliderImage2 from '../../images/gallery-2.jpg';
 
 
 export default class Gallery extends Component {
@@ -15,6 +13,8 @@ export default class Gallery extends Component {
         nav1: null,
         nav2: null
       };
+      this.GalleryList= props.gallery?.map((el,i)=> <div className='' key={i}><Image priority src={el.url} alt={el.alt} width={1} height={1}/></div>);
+      this.GalleryListDiv= this.props.galleryDiv?.map((el,i)=> <div key={i}></div>);
     }
   
     componentDidMount() {
@@ -47,16 +47,16 @@ export default class Gallery extends Component {
         <div>
             <section className={styles.gallerySec + ' default-pb1 position-relative overflow-hidden gallerySecGlobal'}>
                 <div className="container">
-                    <div className='row justify-content-between align-items-start align-items-sm-end mb-5 pb-2 mb-xl-5 pb-xl-5'>
+                    <div className='row justify-content-between align-items-start align-items-sm-end mb-5 pb-2 mb-xl-5 pb-xl-2'>
                         <div className='col-md-6 col-lg-6 mb-4 mb-md-0 pb-1 pb-md-0'>
                             <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700}>
-                            <span><em>Gallery</em></span>
-                            <h2 className='mb-4'>Unleashing Productivity</h2>
-                            <p className='mb-0'>Experience the freedom of tailoring your ideal workspace with our serviced offices, where customization meets convenience.</p>
+                            <span><em>{this.props.label}</em></span>
+                            <h2 className='mb-4'>{this.props.heading}</h2>
+                            <p className='mb-0'>{this.props.content}</p>
                             </div>
                         </div>
                         <div className='col-md-3 text-md-end'>
-                            <Link className="btn1" href="/">Book Now</Link>
+                            <Link className="btn1" href={this.props.link.url}>{this.props.link.title}</Link>
                         </div>
                     </div>
                 </div>
@@ -70,9 +70,7 @@ export default class Gallery extends Component {
                         swipeToSlide={true}
                         focusOnSelect={false}
                         >
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            {this.GalleryListDiv}
                         </Slider>
                     </div>
                     <div className='sliderGallery'>
@@ -85,9 +83,7 @@ export default class Gallery extends Component {
                         centerPadding={'200px'}
                         {...settingsForResponsive}
                         >
-                            <div className=''><Image priority src={SliderImage1} alt="Slider Image 1"/></div>
-                            <div className=''><Image priority src={SliderImage2} alt="Slider Image 1"/></div>
-                            <div className=''><Image priority src={SliderImage1} alt="Slider Image 1"/></div>
+                            {this.GalleryList}
                         </Slider>
                     </div>
                 </div>
@@ -96,57 +92,3 @@ export default class Gallery extends Component {
       );
     }
   }
-
-// export default function Gallery() {
-//     var sliderGallery = {
-//         centerMode:true,
-//         centerPadding:'340px',
-//         infinite: true,
-//         arrows: true,
-//         dots:false,
-//         speed: 500,
-//         autoplaySpeed: 40000,
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         touchMove: false,
-//         pauseOnFocus: false,
-//         pauseOnHover: false,
-//         pauseOnDotsHover: false,
-//         appendArrows:'.sliderGalleryArrowz',
-//         responsive: [
-//             {
-//             breakpoint: 1200,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 centerPadding:'40px',
-//             }
-//             },
-//             {
-//             breakpoint: 768,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 centerPadding:'40px',
-//             }
-//             },
-//             {
-//             breakpoint: 576,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 centerPadding:'60px',
-//             }
-//             }
-//             // You can unslick at a given breakpoint now by adding:
-//             // settings: "unslick"
-//             // instead of a settings object
-//         ]
-//     };
-//   return (
-//     <>
-    
-//     </>
-//   );
-// }

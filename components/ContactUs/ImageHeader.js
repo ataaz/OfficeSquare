@@ -1,15 +1,14 @@
 import Image from 'next/image';
 import text4 from '../../styles/About/Text4.module.css';
 import styles from '../../styles/Service/SliderHeader.module.css';
-import HeaderImage from '../../images/contact-header.jpg';
 
-export default function ImageHeader() {
+export default function ImageHeader(props) {
   return (
     <>
     <div>
         <div className='container d-inline-block d-sm-none mb-2'>
             <div className={styles.SliderHeaderText + ' ' + text4.text4 + ' ' + text4.text4Label + ' ' + styles.SliderHeaderBox + ' ' + text4.text4_fszP16}>
-                <span><em>Contact Us</em></span>
+                <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><em>{props.label}</em></span>
             </div>
         </div>
         <section className={styles.ImageHeader + ' ' + ' '}>
@@ -17,8 +16,8 @@ export default function ImageHeader() {
                 <div className='row align-items-center h-100'>
                     <div className='col-md-7 col-8'>
                         <div className={styles.SliderHeaderText + ' ' + text4.text4 + ' ' + text4.text4Label + ' ' + styles.SliderHeaderBox + ' ' + text4.text4_fszP16}>
-                            <span className='d-sm-inline-block d-none'><em>Contact Us</em></span>
-                            <h1 className='mb-0'>Get In touch <br className='d-none d-sm-block'></br>With Us</h1>
+                            <span className='d-sm-inline-block d-none' data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><em>Contact Us</em></span>
+                            <h1 className='mb-0' dangerouslySetInnerHTML={{ __html: props.heading }} data-aos="fade-up" data-aos-delay="700" data-aos-duration="800"></h1>
                         </div>
                     </div>
                 </div>
@@ -26,8 +25,8 @@ export default function ImageHeader() {
             <div className="container">
                 <div className='row justify-content-end'>
                     <div className='col-md-8 col-8 col-sm-9'>
-                        <div className={styles.SliderHeaderImagesParent2}>
-                        <div className='fullImg'><Image priority src={HeaderImage} alt="Slider Image 1"/></div>
+                        <div className={styles.SliderHeaderImagesParent2} data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
+                        <div className='fullImg'><Image priority src={props.img.url} alt={props.img.alt} width={1} height={1}/></div>
                         </div>
                     </div>
                 </div>

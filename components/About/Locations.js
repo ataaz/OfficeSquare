@@ -26,43 +26,43 @@ export default function Locations() {
 
           <div className='row'>
             <div className='col-md-4 col-sm-6 mb-5 mb-sm-4 mb-md-0'>
-                <div className={styles.locBox} style={{backgroundImage: `url('abu-dhabi.jpg')`,backgroundSize:`cover`}}>
-                    <div className='fullImg imgMagnify'>
-                        <Image src={AbuDhabiImg}/>
+                <div className={styles.locBox + ' imgMagnify'}>
+                    <div className='fullImg'>
+                        <Image src={AbuDhabiImg} data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="#" className={styles.locBoxText}>
                         <span>Abu Dhabi</span>
                         <div className='textBelow'>
-                            <p>Private-Space Providing</p>
-                            <h4>Space provided in Abu Dhabi for business promotion</h4>
+                            <p>Al Maryah Island</p>
+                            <h4>Home to Abu Dhabi’s <br className='d-none d-sm-block'></br>business district</h4>
                         </div>
                     </Link>
                 </div>
             </div>
             <div className='col-md-4 col-sm-6 mb-5 mb-sm-4 mb-md-0'>
-                <div className={styles.locBox} style={{backgroundImage: `url('dubai.jpg')`,backgroundSize:`cover`}}>
-                    <div className='fullImg imgMagnify'>
-                        <Image src={DubaiImg}/>
+                <div className={styles.locBox + ' imgMagnify'}>
+                    <div className='fullImg'>
+                        <Image src={DubaiImg} data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="#" className={styles.locBoxText}>
                         <span>Dubai</span>
                         <div className='textBelow'>
-                            <p>Private-Space Providing</p>
-                            <h4>Space provided in Dubai for business promotion</h4>
+                            <p>Dubai Marina</p>
+                            <h4>Nestled in the heart of <br className='d-none d-sm-block'></br>Dubai</h4>
                         </div>
                     </Link>
                 </div>
             </div>
             <div className='col-md-4 col-sm-6'>
-                <div className={styles.locBox} style={{backgroundImage: `url('qatar.jpg')`,backgroundSize:`cover`}}>
-                    <div className='fullImg imgMagnify'>
-                        <Image src={QatarImg}/>
+                <div className={styles.locBox + ' imgMagnify'}>
+                    <div className='fullImg'>
+                        <Image src={QatarImg} data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="#" className={styles.locBoxText}>
-                        <span>Qatar</span>
+                        <span>Doha</span>
                         <div className='textBelow'>
-                            <p>Private-Space Providing</p>
-                            <h4>Space provided in Qatar for business promotion</h4>
+                            <p>West Bay</p>
+                            <h4>Surrounded by numerous multinational companies</h4>
                         </div>
                     </Link>
                 </div>

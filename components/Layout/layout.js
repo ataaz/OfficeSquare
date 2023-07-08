@@ -2,9 +2,9 @@ import Footer from './Footer';
 import Header from './Header';
 
 export default function Layout({ children }) {
-    return <div data-scroll-container>
+    return <div>
         <Header></Header>
-        {children}
+            {children}
         <Footer></Footer>
         </div>;
 }

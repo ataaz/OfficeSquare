@@ -1,32 +1,47 @@
 import styles from '../../styles/Home.module.css';
-import Image from 'next/image'
-import premierchoice1 from "../../images/premier-choice-1.jpg";
-import premierchoice2 from "../../images/premier-choice-2.jpg";
+import Image from 'next/image';
 import Link from 'next/link';
 
-export default function HomeText2() {
-    return <section className='textCenterSec position-relative' data-scroll-container>
+export default function HomeText2(props) {
+    const TextLoop= props.content?.map((el,i)=> <span key={i}>{el.acf_fc_layout == 'text' ? ' ' + el.text_a : null }{el.acf_fc_layout == 'link' ? <Link href={el.link_a.url}>{el.link_a.title}</Link> : null}</span>
+    );
+    return <section className='textCenterSec position-relative'>
+        {/* only desktop visible */}
         <Image
-        className='imgAbs2'
+        className='imgAbs2 d-sm-block d-none'
         priority
-        src={premierchoice1}
-        alt="premier image 1"
+        src={props.image1?.url}
+        alt={props.image1?.alt}
+        width={250}
+        height={250}
         data-scroll data-scroll-speed="-3"
+        />
+        {/* only mobile visible */}
+        <Image
+        className='imgAbs2 d-none d-sm-none'
+        priority
+        src={props.image1?.url}
+        alt={props.image1?.alt}
+        width={250}
+        height={250}
+        data-scroll data-scroll-speed="-10"
         />
         <div className='container'>
         <div className='row justify-content-center'>
-            <div className='col-md-9 col-lg-7 col-9'>
+            <div className='col-md-11 col-lg-9 col-xl-8 col-12'>
             <div className={styles.lighterText}>
-                <h2>We are the premier choice for individuals and businesses seeking <Link href="/private-workspaces">serviced office</Link> solutions. Within our prestigious locations, we also offer both exclusive and shared <Link href="/private-workspaces">co-working</Link> spaces, designed with you in mind. We create an environment where <strong>productivity</strong> thrives and <strong>success</strong> becomes inevitable.</h2>
+                <h2>{TextLoop}</h2>
             </div>
             </div>
         </div>
         </div>
         <Image
-        className='imgAbs3'
+        className='imgAbs3 d-none d-sm-block'
         priority
-        src={premierchoice2}
-        alt="premier image 2"
+        src={props.image2?.url}
+        alt={props.image2?.url}
+        width={250}
+        height={250}
         data-scroll data-scroll-speed="3"
         />
     </section>

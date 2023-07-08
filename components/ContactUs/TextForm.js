@@ -2,18 +2,55 @@ import Image from 'next/image';
 import text4 from '../../styles/About/Text4.module.css';
 import styles from '../../styles/ContactUs/TextForm.module.css';
 import Link from 'next/link';
+import { useState } from 'react';
+import axios from 'axios';
 
-export default function TextForm() {
+export default function TextForm(props) {
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [services, setServices] = useState('')
+    const [success, setSuccess] = useState(false)
+    const [failure, setFailure] = useState(false)
+    const [loading, setLoading] = useState(false)
+    
+    const servicesList = ["Service of interest", "Private Workspaces", "Co-Working Spaces", "Event Spaces", "Virtual Offices", "PRO Management", "Business Set up"]
+
+    const handleSubmit= async(e) =>{
+        e.preventDefault();
+        var data = {
+            Name: name,
+            Phone: phone,
+            Email: email,
+            Message: message, 
+            Services: services
+        }
+        console.log(data);
+        setLoading(true);
+        var response = await axios.post(`//demo.officesquare.com/apis/wp-json/api/v1/contact`, data)
+        // var response = await axios.post(`#`, data)
+        console.log(response);
+        response.data.status == 'success' ? setSuccess(true) : setFailure(true);
+        response.data.status == 'loading' ? setLoading(true) : setLoading(false);
+        console.log('working');
+        setName("")
+        setPhone("")
+        setEmail("")
+        setServices("")
+        setMessage("")
+        window.location.href = "/thank-you";
+    }
   return (
     <>
     <section className={styles.TextForm + ' ' + styles.SliderHeader + ' ' + ' position-relative default-pt1'}>
         <div className='container'>
             <div className='row justify-content-between'>
                 <div className='col-md-5 col-xl-4'>
-                    <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_fszP16  + ' ' + text4.text4_h2fw700 + ' text4Contact'}>
-                        <h2 className='mb-3 mb-md-4'>Have any questions?</h2>
-                        <p>Fill out the form and one of our consultants will get back to you within 24 hours to answer any questions you may have.</p>
-                        <div className='socialIcons d-flex flex-wrap mt-0 mt-md-4 pt-2 mb-4 pb-2 pb-md-0 mb-md-0'>
+                    <div>
+                        <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_fszP16  + ' ' + text4.text4_h2fw700 + ' text4Contact'} dangerouslySetInnerHTML={{ __html: props.content }}>
+                        </div>
+                        <div className='socialIcons d-none flex-wrap mt-0 mt-md-4 pt-2 mb-4 pb-2 pb-md-0 mb-md-0'>
                             <Link href="#"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M34.5 17.491C34.5 26.8746 26.8891 34.482 17.5 34.482C8.11092 34.482 0.5 26.8746 0.5 17.491C0.5 8.10737 8.11092 0.5 17.5 0.5C26.8891 0.5 34.5 8.10737 34.5 17.491Z" stroke="black"/> <path d="M17.4151 9.25781C19.6294 9.25781 19.9056 9.26596 20.7744 9.30668C21.6423 9.34741 22.2331 9.48344 22.7531 9.68544C23.2909 9.89233 23.744 10.1725 24.1972 10.6246C24.6116 11.0318 24.9322 11.5243 25.1368 12.0679C25.3381 12.5868 25.475 13.1782 25.5157 14.0456C25.5541 14.9139 25.5646 15.19 25.5646 17.4031C25.5646 19.6162 25.5565 19.8923 25.5157 20.7606C25.475 21.6281 25.3381 22.2186 25.1368 22.7383C24.9328 23.2822 24.6121 23.7749 24.1972 24.1817C23.7896 24.5957 23.2969 24.9162 22.7531 25.1208C22.2339 25.322 21.6423 25.4589 20.7744 25.4996C19.9056 25.5379 19.6294 25.5485 17.4151 25.5485C15.2009 25.5485 14.9246 25.5403 14.0559 25.4996C13.188 25.4589 12.5971 25.322 12.0772 25.1208C11.5331 24.9168 11.0402 24.5962 10.6331 24.1817C10.2186 23.7746 9.89797 23.282 9.69347 22.7383C9.49137 22.2195 9.35527 21.6281 9.31452 20.7606C9.27622 19.8923 9.26562 19.6162 9.26562 17.4031C9.26562 15.19 9.27377 14.9139 9.31452 14.0456C9.35527 13.1773 9.49137 12.5876 9.69347 12.0679C9.8974 11.524 10.2181 11.0313 10.6331 10.6246C11.0403 10.2102 11.5332 9.88967 12.0772 9.68544C12.5971 9.48344 13.1872 9.34741 14.0559 9.30668C14.9246 9.2684 15.2009 9.25781 17.4151 9.25781ZM17.4151 13.3305C16.3344 13.3305 15.298 13.7596 14.5338 14.5233C13.7697 15.2871 13.3404 16.323 13.3404 17.4031C13.3404 18.4833 13.7697 19.5192 14.5338 20.2829C15.298 21.0467 16.3344 21.4758 17.4151 21.4758C18.4958 21.4758 19.5323 21.0467 20.2964 20.2829C21.0606 19.5192 21.4899 18.4833 21.4899 17.4031C21.4899 16.323 21.0606 15.2871 20.2964 14.5233C19.5323 13.7596 18.4958 13.3305 17.4151 13.3305ZM22.7123 13.1268C22.7123 12.8568 22.605 12.5978 22.4139 12.4069C22.2229 12.2159 21.9638 12.1087 21.6936 12.1087C21.4235 12.1087 21.1643 12.2159 20.9733 12.4069C20.7823 12.5978 20.6749 12.8568 20.6749 13.1268C20.6749 13.3969 20.7823 13.6558 20.9733 13.8468C21.1643 14.0377 21.4235 14.145 21.6936 14.145C21.9638 14.145 22.2229 14.0377 22.4139 13.8468C22.605 13.6558 22.7123 13.3969 22.7123 13.1268ZM17.4151 14.9595C18.0635 14.9595 18.6854 15.217 19.1439 15.6752C19.6024 16.1335 19.86 16.7551 19.86 17.4031C19.86 18.0512 19.6024 18.6728 19.1439 19.131C18.6854 19.5893 18.0635 19.8467 17.4151 19.8467C16.7667 19.8467 16.1449 19.5893 15.6864 19.131C15.2279 18.6728 14.9703 18.0512 14.9703 17.4031C14.9703 16.7551 15.2279 16.1335 15.6864 15.6752C16.1449 15.217 16.7667 14.9595 17.4151 14.9595Z" fill="black"/></svg></Link>
                             <Link href="#"><svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M34.7969 17.491C34.7969 26.8746 27.186 34.482 17.7969 34.482C8.40779 34.482 0.796875 26.8746 0.796875 17.491C0.796875 8.10737 8.40779 0.5 17.7969 0.5C27.186 0.5 34.7969 8.10737 34.7969 17.491Z" stroke="black"/> <path d="M19.3765 18.6249H21.4139L22.2289 15.3668H19.3765V13.7377C19.3765 12.8988 19.3765 12.1087 21.0064 12.1087H22.2289V9.37185C21.9632 9.33682 20.96 9.25781 19.9005 9.25781C17.688 9.25781 16.1167 10.6075 16.1167 13.0861V15.3668H13.6719V18.6249H16.1167V25.5485H19.3765V18.6249Z" fill="black"/> </svg></Link>
                             <Link href="#"><svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M35.3828 17.491C35.3828 26.8746 27.7719 34.482 18.3828 34.482C8.99373 34.482 1.38281 26.8746 1.38281 17.491C1.38281 8.10737 8.99373 0.5 18.3828 0.5C27.7719 0.5 35.3828 8.10737 35.3828 17.491Z" stroke="black"/> <path d="M26.075 13.3511C26.4475 14.8026 26.4475 17.8327 26.4475 17.8327C26.4475 17.8327 26.4475 20.8627 26.075 22.3142C25.868 23.1165 25.2625 23.7478 24.4956 23.9612C23.1029 24.3489 18.2979 24.3489 18.2979 24.3489C18.2979 24.3489 13.4954 24.3489 12.1002 23.9612C11.3301 23.7445 10.7254 23.1141 10.5209 22.3142C10.1484 20.8627 10.1484 17.8327 10.1484 17.8327C10.1484 17.8327 10.1484 14.8026 10.5209 13.3511C10.7279 12.5488 11.3334 11.9175 12.1002 11.7041C13.4954 11.3164 18.2979 11.3164 18.2979 11.3164C18.2979 11.3164 23.1029 11.3164 24.4956 11.7041C25.2658 11.9208 25.8705 12.5512 26.075 13.3511ZM16.668 20.6835L21.5578 17.8327L16.668 14.9818V20.6835Z" fill="black"/> </svg></Link>
@@ -23,44 +60,45 @@ export default function TextForm() {
                 </div>
                 <div className='col-md-7 col-xl-6'>
                     <div className='formz'>
-                        <form action=''>
+                        <form onSubmit={handleSubmit} action="">
                             <div className='row mb-3 mb-md-4 pb-2'>
-                                <div className='col-md-6 mb-3 mb-md-0'>
-                                    <input type="text" className={styles.formControl + ' form-control'} id="Name" placeholder="Your Name"/>
+                                <div className='col-md-6 mb-4 mb-md-0'>
+                                    <input type="text" required value={name} onChange={event => setName(event.target.value)} className={styles.formControl + ' form-control'} id="Name" placeholder="Your Name"/>
                                 </div>
                                 <div className='col-md-6'>
-                                    <input type="email" className={styles.formControl + ' form-control'} id="Email" placeholder="Your Email"/>
+                                    <input value={email} required type="email" name="Email" onChange={event => setEmail(event.target.value)} className={styles.formControl + ' form-control'} id="Email" placeholder="Your Email"/>
                                 </div>
                             </div>
 
                             <div className='row mb-3 mb-md-4 pb-2'>
                                 <div className='col-md-6  mb-3 mb-md-0'>
-                                    <input type="tel" className={styles.formControl + ' form-control'} id="PhoneNumber" placeholder="Phone Number"/>
+                                    <input type="tel" className={styles.formControl + ' form-control'} id="PhoneNumber" placeholder="Phone Number" value={phone} required name="Phone" onChange={event => setPhone(event.target.value)}/>
                                 </div>
                                 <div className='col-md-6'>
-                                    <select className={styles.formControl + ' form-control'} aria-label="Default select example">
-                                        <option selected>Service of interest</option>
-                                        <option value="1">Private Workspaces</option>
-                                        <option value="2">Co-Working Spaces</option>
-                                        <option value="3">Event Spaces</option>
-                                        <option value="4">Virtual Offices</option>
-                                        <option value="5">PRO Management</option>
-                                        <option value="6">Business Set up</option>
+                                    <select required name="Services" className={styles.formControl + ' form-control'} onChange={event => setServices(event.target.value)}>
+                                    {servicesList?.map((name,id)=>{
+                                        return name === "Select Your Service" ? <option value="" key={id}>{name}</option> : <option value={name} key={id}>{name}</option>
+                                    })}
                                     </select>
                                 </div>
                             </div>
 
                             <div className='row mb-3 mb-md-4 pb-2'>
                                 <div className='col-md-12'>
-                                    <textarea className={styles.formControl + ' form-control'} id="Message" placeholder='Your Message' rows="3"/>  
+                                <textarea value={message} name="Message" className={styles.formControl + ' form-control'} onChange={event => setMessage(event.target.value)} id="Message" placeholder='Your Message' rows="3"/>
                                 </div>
                             </div>
 
                             <div className='row'>
-                                <div className='col-md-4'>
-                                    <input type="submit" className={styles.submitInput} id="Submit" value="Send a Message"/>
+                                <div className='col-md-5'>
+                                    <div className='d-flex align-items-center flex-wrap'>
+                                        <input type="submit" className={styles.submitInput} id="Submit" value="Send a Message"/>
+                                        {loading ? <div className="spinner-border brand-color" style={{margin: `auto`,marginLeft:`10px`}} role="status"> <span className="sr-only"></span> </div> : null}
+                                    </div>
                                 </div>
                             </div>
+                            {success ? <div className="textModule1 alert alert-success mt-3">Your message has been sent successfully</div> : null}
+                            {failure ? <div className="textModule1 alert alert-danger mt-3">Please check fields again!</div> : null}
                         </form>
                     </div>
                 </div>

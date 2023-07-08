@@ -1,0 +1,7 @@
+.FeaturesOne{
+    display: block;
+}
+
+@media (max-width:575.98px){
+    .FeaturesOne{display:none;}
+}

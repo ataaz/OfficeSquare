@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function Footer() {
-    return <footer className='siteFooter'>
+    return <footer className='siteFooter' style={{paddingBottom:`20px`}}>
         <div className='container'>
             <div className='row'>
                 <div className='col-md-4 col-lg-3 col-sm-6'>
@@ -12,13 +12,13 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className='col-md-4 col-lg-3 col-sm-6'>
-                    <div className='widget mb-5 mb-sm-0 pb-1 pb-sm-0'>
+                    <div className='widget mb-4 mb-md-0'>
                         <h3>Find Us</h3>
                         <p>123456-65432</p>
                         <p>Dubai, UAE</p>
                     </div>
                 </div>
-                <div className='col-md-4 col-lg-3 mt-sm-4 mt-md-0'>
+                <div className='col-md-4 col-lg-3 mt-sm-4 mt-md-0 d-none'>
                     <div className='widget'>
                         <h3>Follow Us</h3>
                         <div className='socialIcons d-flex flex-wrap'>
@@ -32,15 +32,15 @@ export default function Footer() {
             </div>
 
             <div className='row justify-content-between mt-5 mb-4'>
-                <div className='col-md-6 col-lg-5 d-none d-sm-block'>
+                <div className='col-md-6 col-lg-5 d-none d-md-block'>
                     <span className='copyrightText'>© 2023  Office Square | All Rights Reserved</span>
                 </div>
                 <div className='col-md-6 col-lg-5'>
                     <div className='siteFooterLinks'>
-                        <Link href='/blog/' className='linkMargin'>Blog</Link>
-                        <Link href='/contact-us/' className='linkMargin'>Contact Us</Link>
-                        <Link href='/privacy-policy/' className='linkMargin'>Privacy Policy</Link>
-                        <span className='copyrightText d-block d-sm-none'>© 2023  Office Square | All Rights Reserved</span>
+                        <Link href='#' className='linkMargin'>Blog</Link>
+                        <Link href='/contact-us' className='linkMargin'>Contact Us</Link>
+                        <Link href='/privacy-policy' className='linkMargin'>Privacy Policy</Link>
+                        <span className='copyrightText d-block d-md-none'>© 2023  Office Square | All Rights Reserved</span>
                         <span><a href='https://arenacapital.com/website-design-development/' target='_blank'>Website</a> by <a href='https://arenacapital.com/' target='_blank'><strong>ARENA</strong></a></span>
                     </div>
                 </div>

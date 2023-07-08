@@ -4,6 +4,8 @@ import '../styles/globals.css';
 import '../styles/locomotive-scroll.min.css';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Provider } from "react-redux";
+import store from "../store.js";
 const jk = Plus_Jakarta_Sans({ 
     subsets: ['latin'],
     weight: ['400', '500', '700', '800'],
@@ -22,6 +24,10 @@ export default function App({ Component, pageProps }) {
       options={
         {
           smooth: true,
+          smartphone: {
+            smooth: true
+          },
+          // reloadOnContextChange:true,
           // ... all available Locomotive Scroll instance options 
         }
       }
@@ -34,8 +40,10 @@ export default function App({ Component, pageProps }) {
       }
       containerRef={containerRef}
     >
-    <main ref={containerRef}>
-      <Component {...pageProps} />;
+    <main ref={containerRef} data-scroll-container>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
     </main>
     </LocomotiveScrollProvider>
     </>

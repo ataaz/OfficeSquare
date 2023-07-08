@@ -8,6 +8,17 @@
   transition: 0.5s;
 }
 
+/* .siteHeaderParent{
+  position: fixed;
+  left:0;
+  right: 0;
+  z-index: 9;
+}
+
+.topPadding{
+  padding-top:150px;
+} */
+
 
 /* Navbar CSS */
 .navbar-nav{
@@ -30,10 +41,23 @@
   background: rgba(227, 91, 91, 1);
   color: #fff;
   display: inline-block;
-  padding: 16px 20px;
+  padding: 16px 0;
+  width: 172px;
   line-height: 15px;
   font-weight: 600;
+  height: 47px;
+  position: relative;
+  overflow: hidden;
   transition: 0.5s;
+}
+
+.navbar-nav li.HdrBtn a svg{
+  position: absolute;
+  animation: scrollBackground 8s linear infinite;
+}
+
+marquee span{
+  margin-right: 30px;
 }
 
 .navbar-nav li.HdrBtn a:hover{
@@ -71,10 +95,10 @@
 
 .imgAbs1{
   position: absolute;
-  top: 0;
+  bottom: 150px;
   right: 0;
-  width: 170px;
-  height: 160px;
+  width: 215px;
+  height: 207px;
 }
 
 .posRelv{
@@ -91,7 +115,7 @@
 }
 
 .imgAbsHome img{
-  width: 270px;
+  width: 100%;
   position: relative;
   z-index: 1;
   height: 100%;
@@ -101,13 +125,17 @@
   position:relative;
 }
 
+.textCenterSec{
+  padding-bottom: 200px;
+}
+
 .imgAbs2{
   position: absolute;
-  left: 150px;
+  left: 50px;
   top: 50%;
   transform: translate(0, -50%);
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: 220px;
 }
 
 .imgAbs3{
@@ -154,6 +182,7 @@ a{
 .serBoxImg img{
   width: 100%;
   height: 460px;
+  object-fit: cover;
 }
 
 .serBoxText{
@@ -345,21 +374,22 @@ a{
   height: 100%;
 }
 
-.scrollingRow:hover h3{
+.scrollingRow svg{
   animation: scrollBackground 20s linear infinite;
 }
 
-.scrollingBg h3{
+.scrollingBg svg{
   color: #000;
   font-size: 250px;
   font-weight: 800;
   line-height: 199px;
-  -webkit-text-fill-color: transparent;
+  width: 6000px;
+  /* -webkit-text-fill-color: #ccc;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-stroke-color: #000;
-  -webkit-text-stroke-width: 2px;
-  opacity: 0.2;
+  -webkit-text-strokeWidth: 2px; */
+  /* opacity: 0.2; */
 }
 
 .scrollingContent {
@@ -455,7 +485,7 @@ a{
 
 .navbar-toggler-icon{
   background: #000;
-  height: 3px;
+  height: 2px;
   position: relative;
   display: block;
   width: 90%;
@@ -466,8 +496,8 @@ a{
   position: absolute;
   content: "";
   background-color: #000;
-  width: 100%;
-  height: 3px;
+  width: 120%;
+  height: 2px;
   right: 0;
   top: -16px;
   transition:0.5s;
@@ -477,8 +507,8 @@ a{
   position: absolute;
   content: "";
   background-color: #000;
-  width: 70%;
-  height: 3px;
+  width: 80%;
+  height: 2px;
   right: 0;
   top: 16px;
   transition:0.5s;
@@ -487,12 +517,14 @@ a{
 .mobileHeaderBtn{
   background-color: #E35B5B;
   color: #fff;
-  font-size: 12px;
+  /* font-size: 12px; */
   font-weight: 600;
   line-height: 15px;
   display: inline-block;
-  padding: 14px 25px;
+  padding: 18px 5px;
   text-align: center;
+  width: 200px;
+  margin-top: 20px;
 }
 
 .text1 h4{
@@ -663,9 +695,16 @@ a{
   font-weight: 600;
   line-height: 15px;
   padding: 16px 30px;
+  transition: 0.5s;
 }
 
-/* .topPadding{padding-top:140px;} */
+.btn2:hover{
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* .aboutPage{padding-top:105px;} */
 
 .SliderHeaderImagesArrowz{
   position: absolute;
@@ -795,6 +834,19 @@ main{
   display: none !important;
 }
 
+.topBar a{
+  color: #000;
+}
+
+.topBar a:hover{
+  color: #333;
+}
+
+.topBar {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 10px 0;
+}
+
 /* section{
   opacity: 1 !important;
 } */
@@ -906,8 +958,73 @@ main{
   .imgAbsHome img{width:100%;}
 }
 
+/* html.has-scroll-smooth {
+  -webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+} */
+
+[data-scroll-container]{
+  perspective: 1px
+}
+
+/* [data-load-container] {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+} */
+
+.homeBannerGlobal .container{
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+body .phoneNum a{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
+
+body .phoneNum a:hover{
+  border-bottom: 1px solid transparent;
+}
+
+.aboutHeader .siteHeader{
+  position: fixed;
+}
 
 @media (max-width:575.98px){
+  .scrollingBg svg{position:relative !important;}
+  .contactPage{padding-top:120px;}
+  .serBoxText:hover{
+    background-color: transparent;
+    transform: scale(1.0);
+  }
+  .serBoxText:hover span{
+    display: inline-block;
+    align-self: flex-end;
+    background: #fff;
+    color: #000;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .imgAbsHome img{margin-top:-220px;}
+  .imgAbs1{display:none;}
+  .imgAbsHome img{width:100%;}
+  .text1Sec .text1 h2{margin-left:0 !important;}
   .kpRow2 .row .col-md-3 .kpBoxInner:after{left:-14px;}
   .container{padding-left:25px!important;padding-right:25px!important;}
 
@@ -915,10 +1032,10 @@ main{
   .MobileLogo{width:38px;height:50px;}
 
   /* Homepage CSS */
-  .HomeSol .text2 h2{font-size:24px;line-height:32px;}
-  .HomeBlog .text2 h2{font-size:24px;line-height:32px;}
+  /* .HomeSol .text2 h2{font-size:24px;line-height:32px;} */
+  /* .HomeBlog .text2 h2{font-size:24px;line-height:32px;} */
   .text2 h1{font-size:34px;line-height:42px;}
-  .text1 h2{font-size:24px;line-height:30px;}
+  .text1 h2{font-size:32px;line-height:40px;}
   .text1 h3{font-size:20px;line-height:25px;}
   .D1img{width:106px;height:109px;}
   .remove_h2Margin h2{margin-bottom:0;}
@@ -927,9 +1044,9 @@ main{
   .dImg2{width:120px;height:125px;}
   .default-pb{padding-bottom:100px;}
   .default-pt{padding-top:100px;}
-  .textCenterSec{overflow:hidden;}
-  .imgAbs3{right:-60px;width:130px;height:130px;}
-  .imgAbs2{left:-70px;width:130px;height:130px;bottom:0;top:inherit;transform:inherit;}
+  .textCenterSec{overflow:hidden;padding-bottom:0;}
+  .imgAbs3{right:0;width:130px;height:130px;}
+  .imgAbs2{left:0;width:180px;height:160px;bottom:0;top:inherit;transform:inherit;}
   /* .text2 h2{font-size:24px;line-height:30px;} */
   .btn1{font-size:14px;padding:8px 18px;}
   .rowMbMobile .col-sm-3{margin-bottom:25px;}
@@ -982,7 +1099,7 @@ main{
   /* Service template */
   .mt80px{margin-top:50px;}
   .underlineBtn{font-size:14px;}
-  /* .topPadding{padding-top:120px;} */
+  /* .aboutPage{padding-top:120px;} */
   /* .SliderHeaderImagesArrowz{display:none;} */
   .btn2{font-size:14px;padding:12px 20px;}
   .SliderHeaderImagesArrowz{width:120px;padding:8px 10px;right:inherit;left:10px;position:relative;}
@@ -1012,6 +1129,8 @@ main{
 
 
 @media (min-width:576px) and (max-width:767.98px){
+  .contactPage{padding-top:95px;}
+  .scrollingBg svg{position:relative !important;}
   /* Header CSS */
   .MobileLogo{width:38px;height:50px;}
 
@@ -1026,8 +1145,8 @@ main{
   .default-pb{padding-bottom:100px;}
   .default-pt{padding-top:100px;}
   .textCenterSec{overflow:hidden;}
-  .imgAbs3{right:-60px;width:130px;height:130px;}
-  .imgAbs2{left:-70px;width:130px;height:130px;bottom:0;top:inherit;transform:inherit;}
+  .imgAbs3{right:0;width:130px;height:130px;}
+  .imgAbs2{left:0;width:130px;height:130px;bottom:0;top:inherit;transform:inherit;}
   .text2 h2{font-size:24px;line-height:30px;}
   .btn1{font-size:14px;padding:8px 18px;}
   .rowMbMobile .col-sm-3{margin-bottom:25px;}
@@ -1103,6 +1222,8 @@ main{
 }
 
 @media (min-width:768px) and (max-width:991.98px){
+  .list-inline-item:not(:last-child){margin-right:15px !important;}
+  .navbar-nav li.HdrBtn a{padding:12px 14px;font-size:14px;}
   .kpRow2 .row .col-md-3 .kpBoxInner:after{left:-20px;}
   .text1 h5{font-size:16px;}
   .text1 h2{font-size:30px;line-height:38px;}
@@ -1112,8 +1233,8 @@ main{
   .dImg2{width:160px;height:160px;}
   .default-pt{padding-top:120px;}
   .default-pb{padding-bottom:120px;}
-  .imgAbs3{right:20px;width:160px;height:160px;}
-  .imgAbs2{width:110px;height:110px;top:60%;left:10px;}
+  .imgAbs3{right:0;width:160px;height:160px;}
+  .imgAbs2{width:110px;height:110px;top:60%;left:0;}
   .text1 h4{font-size:18px;line-height:26px;margin-bottom:0;}
   .expImg img{height:350px;}
   .iconBox:after{display:none;}
@@ -1174,8 +1295,8 @@ main{
   .default-pt{padding-top: 120px;}
   .text1 h2{font-size:36px;line-height:48px;}
   .text1 h3{font-size:26px;line-height:40px;}
-  .imgAbs3{right:30px;width:195px;height:198px;}
-  .imgAbs2{left:20px;width:185px;height:185px;}
+  .imgAbs3{right:0;width:195px;height:198px;}
+  .imgAbs2{left:0;width:185px;height:185px;}
   .serBoxImg img{height:350px;}
   .serBoxText h3{font-size:18px;}
   .serBoxText span{padding:6px 8px;font-size:13px}
@@ -1200,12 +1321,13 @@ main{
 }
 
 @media (min-width:1200px) and (max-width:1399.98px){
+  .homeBannerGlobal .container{margin-top:-30px;}
   .kpRow2 .row .col-md-3 .kpBoxInner:after{left:-40px;}
   .default-pb{padding-bottom:120px;}
   .default-pt{padding-top: 120px;}
   .text1 h2{font-size:42px;line-height:48px;}
   .imgAbs3{right:0;width:195px;height:198px;}
-  .imgAbs2{left:0;width:185px;height:185px;}
+  .imgAbs2{left:0;width:220px;height:220px;}
   .serBoxImg img{height:350px;}
   .serBoxText h3{font-size:18px;}
   .serBoxText span{padding:6px 8px;font-size:13px}
@@ -1232,14 +1354,15 @@ main{
 @media (max-width:767.98px){
   .navbar-toggler.active .navbar-toggler-icon{background:transparent;transition:0.5s;}
   .navbar-toggler.active .navbar-toggler-icon::before{
-    transform: rotate(45deg);
+    transform: rotate(225deg);
     top: 0;
     height: 1.3px;
     transition:0.5s;
+    width: 100%;
   }
 
   .navbar-toggler.active .navbar-toggler-icon::after{
-    transform: rotate(-45deg);
+    transform: rotate(-225deg);
     top: 0;
     width: 100%;
     height: 1.3px;
@@ -1258,10 +1381,12 @@ main{
   .navbar-nav{flex-direction:column;}
   .navbar-nav li{width:100%;}
   .list-inline-item:not(:last-child){margin-right:0!important;}
+  .siteHeader{position:fixed;}
   .siteHeader.active .mobileHeaderBtn{opacity: 0;}
   .siteHeader.active main, .siteHeader.active .container{height:100%;}
   .siteHeader.active .socialIcons{display:none;}
   .siteHeader.active .mobileHeaderContent{display:flex !important;}
+  .siteHeader.active .mobileHeaderContent .navbar-collapse{display:block;}
   .subMenuMobile li a span{position:relative;top:-2px;margin-right:5px;}
   .subMenuMobile{margin: 15px 0;list-style:none;padding-left:0;transition:0.5s;}
   .subMenuMobile li a{font-size:20px;line-height:22px;}

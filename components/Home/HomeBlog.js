@@ -8,7 +8,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 export default function HomeBlog() {
     const { scroll } = useLocomotiveScroll()
     return (
-        <section className='HomeBlog default-pt' data-scroll-container>
+        <section className='HomeBlog default-pt'>
           <div className='container'>
             <div className='row justify-content-between align-items-center mb-5'>
               <div className='col-md-5 col-lg-4 col-7'>
