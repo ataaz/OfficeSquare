@@ -11,7 +11,7 @@ export default function OfferAbout(props) {
     // )
   return (
     <>
-    <section className={styles.offerSec + ' default-pb1 default-pt position-relative'}>
+    <section className={styles.offerSec + ' default-pb1 default-pt position-relative LargeScreenWidth'}>
         <Image className={styles.imgAbs6} priority src={props.img1?.url} alt={props.img1?.alt} width="1" height="1" data-scroll data-scroll-speed="4"/>
         <div className="container">
             <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700 + ' ' + text4.posTop110px}>

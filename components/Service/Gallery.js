@@ -45,7 +45,7 @@ export default class Gallery extends Component {
         };
       return (
         <div>
-            <section className={styles.gallerySec + ' default-pb1 position-relative overflow-hidden gallerySecGlobal'}>
+            <section className={styles.gallerySec + ' default-pb1 position-relative overflow-hidden gallerySecGlobal LargeScreenWidth'}>
                 <div className="container">
                     <div className='row justify-content-between align-items-start align-items-sm-end mb-5 pb-2 mb-xl-5 pb-xl-2'>
                         <div className='col-md-6 col-lg-6 mb-4 mb-md-0 pb-1 pb-md-0'>

@@ -3,7 +3,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeText1(props) {
     const { scroll } = useLocomotiveScroll()
-    return <section className='posRev text1Sec default-pb' id="Intro">
+    return <section className='posRev text1Sec default-pb LargeScreenWidth' id="Intro">
         <div className='d-block d-lg-block'>
             <div className='container'>
                 <div className='row'>

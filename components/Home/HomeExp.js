@@ -26,7 +26,7 @@ export default function HomeExp(props) {
             <h2 dangerouslySetInnerHTML={{__html: props.heading}}></h2>
             </div>
         </div>
-        <div className='col-md-6 text-justify'>
+        <div className='col-md-5 text-justify'>
             <div className='text1'>
             <h4 dangerouslySetInnerHTML={{__html: props.content}}></h4>
             </div>

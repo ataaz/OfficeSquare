@@ -8,7 +8,7 @@ export default function CenterText(props) {
   const { scroll } = useLocomotiveScroll()
     return (
       <>
-      <section className="centerText default-pt1 default-pb1 position-relative">
+      <section className="centerText default-pt1 default-pb1 position-relative LargeScreenWidth">
         <Image priority src={props.img1?.url} alt={props.img2?.alt} className={styles.imgAbs4} data-scroll data-scroll-speed="4" width="1" height="1"/>
         <div className="container">
             <div className="row justify-content-center">

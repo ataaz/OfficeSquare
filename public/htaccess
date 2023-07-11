@@ -1,4 +1,44 @@
+AddHandler application/x-httpd-php80 .php
+#RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} ^officesquare\.com [NC]
+
+#RewriteCond %{SERVER_PORT} 80
+
+#RewriteRule ^(.*)$ https://officesquare.com/$1 [R,L]
+
+
+
+
+
+<IfModule mod_rewrite.c>
+
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^demo.officesquare\.com [NC]
+
+RewriteCond %{HTTP_HOST} ^officesquare\.com [NC]
+
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://demo.officesquare.com/$1 [R,L]
+
+RewriteRule ^(.*)$ https://officesquare.com/$1 [R,L]
+
+RewriteBase /
+
+# DirectoryIndex disabled
+
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^officesquare\.com$ [NC]
+
+RewriteRule ^(.*)$ https://officesquare.com/$1 [R=301,L]
+
+#RewriteRule ^$ http://200.225.42.32:3006/ [P,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteRule ^(.*)$ http://200.225.42.32:3006/$1 [P,L]
+
+ExpiresActive On
+
+</IfModule>

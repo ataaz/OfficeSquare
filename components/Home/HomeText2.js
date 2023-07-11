@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function HomeText2(props) {
     const TextLoop= props.content?.map((el,i)=> <span key={i}>{el.acf_fc_layout == 'text' ? ' ' + el.text_a : null }{el.acf_fc_layout == 'link' ? <Link href={el.link_a.url}>{el.link_a.title}</Link> : null}</span>
     );
-    return <section className='textCenterSec position-relative'>
+    return <section className='textCenterSec position-relative LargeScreenWidth'>
         {/* only desktop visible */}
         <Image
         className='imgAbs2 d-sm-block d-none'

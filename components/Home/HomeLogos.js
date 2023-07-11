@@ -58,7 +58,7 @@ export default function HomeLogos(props) {
     };
     const { scroll } = useLocomotiveScroll()
     return (
-        <section className={'comLogos ' + props.customClass}>
+        <section className={'comLogos LargeScreenWidth ' + props.customClass}>
         <div className='container'>
           <div className='row justify-content-between align-items-end mb-5 pb-0 pb-lg-5'>
             <div className='col-md-6 col-lg-5 mb-4 mb-md-0 pb-1 pb-md-0'>

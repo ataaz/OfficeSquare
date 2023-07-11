@@ -1,11 +1,12 @@
 /* Header CSS */
 .siteHeader{
   padding: 30px 0;
-  /* position: fixed; */
+  position: relative;
   left: 0;
   right: 0;
   z-index: 999;
-  /* transition: 0.5s; */
+  height: 112.6px;
+  transition: 0.5s;
 }
 
 .siteHeader *{
@@ -25,7 +26,6 @@
   z-index: 9;
   transition: 0.5s;
   transform: none !important;
-  pointer-events: none !important;
 }
 
 .topPadding{
@@ -839,9 +839,10 @@ body .CustomTabs ul li:nth-last-child(1) .nav-link{
 .aboutPage .solutionsAboutSec.default-pt{padding-top:50px;}
 
 .subMenu{
-  position: absolute;
-  top: -200px;
+  position: relative;
+  top: -250px;
   height: 0;
+  transition: 10s;
 }
 
 main{
@@ -856,17 +857,18 @@ main{
   z-index: 1 !important;
   position: relative !important;
   padding: 40px 0 90px 0;
-  transition: 2s;
+  transition: 10s;
   top: 30px;
-  background: #000;
+  background: #fcfcfc;
 }
 
 .activeSubmenu.siteHeader{
-  background: #000;
-  transition: 0s;
+  background: #fcfcfc;
+  transition: 0.5s;
+  height: auto;
 }
 
-.activeSubmenu.siteHeader .navbar-nav li a{
+/* .activeSubmenu.siteHeader .navbar-nav li a{
   color: #fff;
 }
 
@@ -876,7 +878,7 @@ main{
 
 .activeSubmenu.siteHeader .navbar-brand .DesktopLogo{
   display: none !important;
-}
+} */
 
 .topBar a{
   color: #000;
@@ -896,6 +898,9 @@ main{
   opacity: 1 !important;
 } */
 
+/* .fade-in-top{-webkit-animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both} */
+/* @-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}} */
+
 .navbar-subnav{
   list-style: none;
   padding-left: 0;
@@ -904,15 +909,16 @@ main{
 }
 
 .navbar-subnav li a, .navbar-subnav li a:focus{
-  color: rgba(255, 255, 255, 0.40);
+  /* color: rgba(255, 255, 255, 0.40); */
+  color: #000;
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 48px;
   position: relative;
 }
 
 .navbar-subnav li a:hover{
-  color: #fff;
+  color: #000;
 }
 
 .childSubMenu.active{
@@ -920,7 +926,10 @@ main{
   opacity: 1 !important;
   height: 100% !important;
   transition: 0.5s;
+  /* -webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both */
 }
+/* .fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both} */
+/* @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}} */
 
 .navbar-subnav li.dropdown a:after{
   position: relative;
@@ -1060,6 +1069,13 @@ body .phoneNum a:hover{
   margin-bottom: 0;
   line-height: 1;
   display: inline-block;
+}
+
+@media (min-width:2400px){
+  .LargeScreenWidth{
+    max-width: 1750px;
+    margin: auto;
+  }
 }
 
 @media (max-width:575.98px){

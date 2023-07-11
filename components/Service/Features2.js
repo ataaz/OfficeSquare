@@ -14,11 +14,11 @@ export default function Features2(props) {
     );
   return (
     <>
-    <section className={styles.features2 + ' default-pb default-pt2 position-relative'} style={{background:`url(${props.bg}) no-repeat`,backgroundSize:`cover`}}>
+    <section className={styles.features2 + ' default-pb default-pt2 position-relative'} style={{background:`url(${props.bg}) no-repeat`,backgroundSize:`auto 100%`,backgroundPosition:`right`,backgroundColor:`#f8f9fb`}}>
         <div className="container">
             <div className='row justify-content-center'>
                 <div className='col-md-8 col-lg-6 col-xl-5'>
-                    <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_fszP16  + ' ' + text4.Hidetext4Label + ' ' +text4.bgTransparentLabel + ' text-center'}>
+                    <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_fszP16  + ' ' + text4.Hidetext4Label + ' ' + text4.bgTransparentLabel + ' text-center'}>
                         <span className='ps-0'><em className='ps-0'>{props.label}</em></span>
                         <h2 className='mb-5 mb-md-0'>{props.heading}</h2>
                     </div>
