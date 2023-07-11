@@ -2,10 +2,11 @@ import React, { useEffect, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.css';
 import '../styles/locomotive-scroll.min.css';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import { Provider } from "react-redux";
 import store from "../store.js";
+import Header from "../components/Layout/Header";
 const jk = Plus_Jakarta_Sans({ 
     subsets: ['latin'],
     weight: ['400', '500', '700', '800'],
@@ -40,6 +41,7 @@ export default function App({ Component, pageProps }) {
       }
       containerRef={containerRef}
     >
+    <Header/>
     <main ref={containerRef} data-scroll-container>
         <Provider store={store}>
           <Component {...pageProps} />

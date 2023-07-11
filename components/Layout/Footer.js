@@ -7,15 +7,14 @@ export default function Footer() {
                 <div className='col-md-4 col-lg-3 col-sm-6'>
                     <div className='widget mb-5 mb-sm-0 pb-1 pb-sm-0'>
                         <h3>Chat With Us</h3>
-                        <Link href="tel:123456789">123.456.789</Link>
+                        <Link href='tel:+971 4 123 4567'>+971 4 123 4567</Link>
                         <Link href="mailto:info@officesquare.com">info@officesquare.com</Link>
                     </div>
                 </div>
-                <div className='col-md-4 col-lg-3 col-sm-6'>
+                <div className='col-md-4 col-lg-4 col-sm-6'>
                     <div className='widget mb-4 mb-md-0'>
                         <h3>Find Us</h3>
-                        <p>123456-65432</p>
-                        <p>Dubai, UAE</p>
+                        <p className='locName'><Link href="/contact-us">Dubai</Link> <span>|</span> <Link href="/contact-us">Abu Dhabi</Link> <span>|</span> <Link href="/contact-us">Doha</Link></p>
                     </div>
                 </div>
                 <div className='col-md-4 col-lg-3 mt-sm-4 mt-md-0 d-none'>
@@ -35,8 +34,8 @@ export default function Footer() {
                 <div className='col-md-6 col-lg-5 d-none d-md-block'>
                     <span className='copyrightText'>© 2023  Office Square | All Rights Reserved</span>
                 </div>
-                <div className='col-md-6 col-lg-5'>
-                    <div className='siteFooterLinks'>
+                <div className='col-md-6 col-lg-6'>
+                    <div className='siteFooterLinks text-start text-lg-end'>
                         <Link href='#' className='linkMargin'>Blog</Link>
                         <Link href='/contact-us' className='linkMargin'>Contact Us</Link>
                         <Link href='/privacy-policy' className='linkMargin'>Privacy Policy</Link>

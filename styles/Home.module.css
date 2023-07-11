@@ -1,13 +1,13 @@
 
 .homeBanner{
   height: 700px;
-  padding-top: 0px;
+  padding-top: 90px;
   overflow: hidden;
   position: relative;
 }
 @media (min-width:1199.98px){
   .homeBanner{
-    height: 85vh;
+    height: 100vh;
   }
   /* .homeBanner.default-pt{
     padding-top: 0 !important;
@@ -82,8 +82,34 @@
   z-index: 2;
 }
 
+.lighterText h2 a{
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+}
+
 .lighterText h2 a:hover{
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid rgba(229, 91, 89, 1);
+  transition: 0.5s;
+}
+
+.lighterText h2 a:before{
+  position: absolute;
+  content: "";
+  height: 0;
+  transition: 0.5s;
+}
+
+.lighterText h2 a:hover:before{
+  position: absolute;
+  content: "";
+  background: rgba(229, 91, 89, 1);
+  height: 30%;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
 }
 
 @media (max-width:575.98px){
@@ -93,7 +119,7 @@
   .homeBanner h2 br{display:none;}
   .vdoText video{width:575px;height:310px;}
   .homeBanner{height:100vh;}
-  .lighterText h2{font-size:30px;line-height:40px;}
+  .lighterText h2{font-size:24px;line-height:36px;}
 }
 
 @media (min-width:576px) and (max-width:767.98px){

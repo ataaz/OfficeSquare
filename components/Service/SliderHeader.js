@@ -41,6 +41,7 @@ export default class SliderHeader extends Component {
                                       arrows={true}
                                       swipeToSlide={true}
                                       focusOnSelect={true}
+                                      autoplay={true}
                                       >
                                         {this.SliderListDiv}
                                       </Slider>
@@ -58,6 +59,7 @@ export default class SliderHeader extends Component {
                               asNavFor={this.state.nav2}
                               ref={slider => (this.slider1 = slider)}
                               arrows={this.false}
+                              autoplay={true}
                               >
                                 {this.SliderList}
                               </Slider>
@@ -69,6 +71,7 @@ export default class SliderHeader extends Component {
                                 arrows={true}
                                 swipeToSlide={true}
                                 focusOnSelect={true}
+                                autoplay={true}
                                 >
                                   {this.SliderListDiv}
                                 </Slider>

@@ -2,6 +2,22 @@
     background: #fff;
     padding: 50px 60px 30px 50px;
     height: 100%;
+    transition:0.5s;
+}
+
+.whiteBox:hover{
+    background: rgba(227, 91, 91, 1);
+    transition:0.5s;
+}
+
+.whiteBox:hover h3, .whiteBox:hover p{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.whiteBox:hover svg path{
+    stroke: #fff;
+    transition: 0.5s;
 }
 
 .whiteBox h3{

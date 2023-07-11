@@ -34,7 +34,7 @@ export default function HomeSolutions(props) {
               alt="Co-working"
               />
             </div>
-            <Link href="#" className='serBoxText'>
+            <Link href="/co-working-spaces" className='serBoxText'>
               <span>Work in open landscape</span>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
                 <h3>Co-working</h3>
@@ -53,7 +53,7 @@ export default function HomeSolutions(props) {
               alt="Offices"
               />
             </div>
-            <Link href="#" className='serBoxText'>
+            <Link href="/virtual-offices" className='serBoxText'>
               <span>Teams of 1-20</span>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
                 <h3>Offices</h3>
@@ -72,7 +72,7 @@ export default function HomeSolutions(props) {
               alt="Conferences"
               />
             </div>
-            <Link href="#" className='serBoxText'>
+            <Link href="/conference-rooms" className='serBoxText'>
               <span>Meeting rooms</span>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
                 <h3>Conferences</h3>
@@ -91,7 +91,7 @@ export default function HomeSolutions(props) {
               alt="Licensing"
               />
             </div>
-            <Link href="#" className='serBoxText'>
+            <Link href="/pro-management" className='serBoxText'>
               <span>Start your business</span>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
                 <h3>Licensing</h3>
