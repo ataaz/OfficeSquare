@@ -40,7 +40,7 @@ export default function Privacy() {
         <title>{page.yoast_head_json.title}</title>
         <meta name='description' content={page.yoast_head_json.og_description}></meta>
       </Head>
-      <div className='aboutPage'>
+      <div className='aboutPage topPadding'>
       <section className="centerText default-pt2 default-pb1 position-relative">
         <div className="container">
             <div className="row justify-content-center">

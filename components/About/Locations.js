@@ -5,8 +5,14 @@ import DubaiImg from "../../images/dubai-loc.jpg";
 import AbuDhabiImg from "../../images/abudhabi-loc.jpg";
 import QatarImg from "../../images/qatar.jpg";
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Locations() {
+    const [Gototop, setScrollTop] = useState(false);
+    const doScrollTop = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
   return (
     <>
     <section className={styles.LocationSec + ' default-pt1 position-relative LocationSecGlobal'}>
@@ -30,7 +36,7 @@ export default function Locations() {
                     <div className='fullImg'>
                         <Image src={AbuDhabiImg} data-scroll-speed="-1.5" data-scroll/>
                     </div>
-                    <Link href="#" className={styles.locBoxText}>
+                    <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Abu Dhabi</span>
                         <div className='textBelow'>
                             <p>Al Maryah Island</p>
@@ -44,7 +50,7 @@ export default function Locations() {
                     <div className='fullImg'>
                         <Image src={DubaiImg} data-scroll-speed="-1.5" data-scroll/>
                     </div>
-                    <Link href="#" className={styles.locBoxText}>
+                    <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Dubai</span>
                         <div className='textBelow'>
                             <p>Dubai Marina</p>
@@ -58,7 +64,7 @@ export default function Locations() {
                     <div className='fullImg'>
                         <Image src={QatarImg} data-scroll-speed="-1.5" data-scroll/>
                     </div>
-                    <Link href="#" className={styles.locBoxText}>
+                    <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Doha</span>
                         <div className='textBelow'>
                             <p>West Bay</p>

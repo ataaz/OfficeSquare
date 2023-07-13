@@ -1,8 +1,14 @@
 import styles from '../../styles/Service/Text2Cols.module.css';
 import text4 from '../../styles/About/Text4.module.css';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Text2Cols(props) {
+    const [Gototop, setScrollTop] = useState(false);
+    const doScrollTop = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
     const ColList= props.cols?.map((el,i)=> <div className={i == '0' ? 'mt80px col-6' : 'col-6'} key={i}>
         <div className={styles.col2Text}>
             <div className='col2TextChild'>
@@ -31,7 +37,7 @@ export default function Text2Cols(props) {
                     </div>
                 </div>
             </div>
-            <Link href={props.link?.url} className='underlineBtn mt-4 pt-3 d-inline-block d-md-none'>{props.link?.title}</Link>
+            <Link href={props.link?.url} onClick={Gototop} className='underlineBtn mt-4 pt-3 d-inline-block d-md-none'>{props.link?.title}</Link>
         </div>
     </section>
     </>

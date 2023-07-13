@@ -5,10 +5,19 @@ import SubmenuImage from "../../images/submenu-image.webp";
 import Image from 'next/image'
 import Link from 'next/link';
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-export default function Header(props) {
+export default function Header() {
+    const [scroll, setScroll] = useState(0)
+    useEffect(() => {
+      document.addEventListener("scroll", () => {
+        const scrollCheck = window.scrollY > 100
+        if (scrollCheck !== scroll) {
+          setScroll(scrollCheck)
+        }
+      })
+    })
     const [isActive, setIsActive] = useState(false);
     const handleClick = event => {
         setIsActive(current => !current);
@@ -27,10 +36,15 @@ export default function Header(props) {
     };
     const pathname = usePathname();
     const getPathName = pathname.replace(/^\//, '');
-    return <div className={"siteHeaderParent " + getPathName + 'Header'}>
+    return <div className={scroll ? "HeaderScrolled siteHeaderParent " + getPathName + 'Header' : "siteHeaderParent " + getPathName + 'Header'}>
         <Head>
             <link rel="icon" href="/favicon.ico" />
             <script id="bootstrap-cdn" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
+            <script dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MFJ537D');`}}></script>
         </Head>
         <div className="topBar">
             <div className="container">
@@ -78,15 +92,15 @@ export default function Header(props) {
                     <div className="col-8 col-md-9 col-lg-9 col-xl-8 d-none d-md-flex flex-wrap justify-content-end">
                         <ul className="navbar-nav list-inline">
                             <li className="nav-item list-inline-item"><Link className="nav-link active" aria-current="page" href="about">About</Link></li>
-                            <li className="nav-item list-inline-item"><Link className="nav-link" href="#"
+                            <li className="nav-item list-inline-item"><Link className="nav-link d-flex align-items-end" href="#"
                             onClick={() => {
                                 handleClickSubMenu();
                             }}
                             >Solutions
                             {isSubmenuActive ? 
-                            <svg fill="#000000" style={{marginLeft:`5px`,transform:`rotate(180deg)`}} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve"> <g> <path d="M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z"/> </g> </svg>
+                            <svg fill="#000000" style={{marginLeft:`5px`,transform:`rotate(180deg)`,position:`relative`,top:`3px`}} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve"> <g> <path d="M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z"/> </g> </svg>
                             :
-                            <svg fill="#000000" style={{marginLeft:`5px`}} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve"> <g> <path d="M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z"/> </g> </svg>
+                            <svg fill="#000000" style={{marginLeft:`5px`,position:`relative`,top:`3px`}} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve"> <g> <path d="M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z"/> </g> </svg>
                             }</Link></li>
                             <li className="nav-item list-inline-item"><Link className="nav-link" aria-current="page" href="#">Blog</Link></li>
                             <li className="nav-item list-inline-item HdrBtn"><Link className="nav-link" href="contact-us">
@@ -192,12 +206,12 @@ export default function Header(props) {
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="24" viewBox="0 0 24 24"> <path fillRule="evenodd" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"></path></svg>
                             }</Link>
                                 <ul className={isDesktopSubmenuActive ? 'subMenuMobile active' : 'subMenu'} style={{display:`none`,height:`0`,transition:`0.5s`}}>
-                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="private-workspaces"><span>-</span> Private Workspace</Link></li>
-                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="co-working-spaces"><span>-</span> Co-working</Link></li>
-                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="conference-rooms"><span>-</span> Meeting/Conference Room</Link></li>
-                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="event-spaces"><span>-</span> Event Space</Link></li>
-                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="virtual-offices"><span>-</span> Virtual Office</Link></li>
-                                    <li className="nav-item dropdown"><a className="nav-link" aria-current="page" href="#" onClick={handleClickSubMenuChild}><span>-</span> Additional Services
+                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="private-workspaces">Private Workspace</Link></li>
+                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="co-working-spaces">Co-working</Link></li>
+                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="conference-rooms">Meeting/Conference Room</Link></li>
+                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="event-spaces">Event Space</Link></li>
+                                    <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="virtual-offices">Virtual Office</Link></li>
+                                    <li className="nav-item dropdown"><a className="nav-link" aria-current="page" href="#" onClick={handleClickSubMenuChild}>Additional Services
                                     {isSubmenuChildActive ? 
                                     <svg style={{marginLeft:`10px`}} width="17" height="2" viewBox="0 0 17 2" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="17" height="2" fill="black"/> </svg>
                                     :
@@ -205,15 +219,14 @@ export default function Header(props) {
                                     }
                                     </a>
                                         <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{height:`0`, opacity:`0`,transition:`opacity 2s ease-out`,listStyle:`none`}}>
-                                            <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="pro-management"><span>-</span> PRO Management</Link></li>
-                                            <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="business-setup"><span>-</span> Business Set Up</Link></li>
+                                            <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="pro-management">PRO Management</Link></li>
+                                            <li className="nav-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="business-setup">Business Set Up</Link></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
                             <li className="nav-item list-inline-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="#">Blog</Link></li>
                             <li className="nav-item list-inline-item"><Link onClick={handleClick} className="nav-link" href="contact-us">Contact</Link></li>
-                            {/* <li className="nav-item list-inline-item d-none"><Link className="nav-link" href="contact-us">Contact</Link></li> */}
                         </ul>
                     </div>
 
@@ -230,23 +243,22 @@ export default function Header(props) {
         <div className={isSubmenuActive ? 'subMenu active' : 'subMenu'} style={{height:`0px`,opacity:`0`,zIndex:`-1`,transition:`0.5s`}}>
             <div className="container">
                 <div className="row align-items-center justify-content-between">
-                    <div className={isSubmenuActive ? "fade-in col-sm-4 col-md-5 col-lg-4" : "col-sm-4 col-md-5 col-lg-4"} style={{transitionDelay:`400ms`,opacity:`0`}}>
+                    <div className={isSubmenuActive ? "fade-in-left col-sm-4 col-md-5 col-lg-4" : "col-sm-4 col-md-5 col-lg-4"} style={{animationDelay:`400ms`}}>
                         <ul className="navbar-subnav me-auto mb-2">
-                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="private-workspaces"><span>-</span> Private Workspace</Link></li>
-                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="co-working-spaces"><span>-</span> Co-working</Link></li>
-                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="conference-rooms"><span>-</span> Meeting/Conference Room</Link></li>
-                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="event-spaces"><span>-</span> Event Space</Link></li>
-                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="virtual-offices"><span>-</span> Virtual Office</Link></li>
+                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="private-workspaces">Private Workspace</Link></li>
+                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="co-working-spaces">Co-working</Link></li>
+                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="conference-rooms">Meeting/Conference Room</Link></li>
+                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="event-spaces">Event Space</Link></li>
+                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="virtual-offices">Virtual Office</Link></li>
                             <li className="nav-item dropdown"><Link className="nav-link" aria-current="page" href="#" onClick={handleClickSubMenuChild}>Additional Services</Link>
-                                {/* <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{visibility:`hidden`, opacity:`0`,transition:`visibility 0s, opacity 0.5s linear`}}> */}
-                                <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{height:`0`, opacity:`0`,transition:`opacity 2s ease-out`}}>
+                                <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{height:`0`, opacity:`0`,transition:`opacity 2s ease-out`,listStyle:`none`}}>
                                     <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="pro-management">PRO Management</Link></li>
                                     <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="business-setup">Business Set Up</Link></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <div className={isSubmenuActive ? "fade-in col-sm-8 col-md-6 col-lg-8" : "col-sm-8 col-md-6 col-lg-8"} style={{transitionDelay:`700ms`,opacity:`0`}}>
+                    <div className={isSubmenuActive ? "fade-in-left col-sm-8 col-md-6 col-lg-8" : "col-sm-8 col-md-6 col-lg-8"} style={{animationDelay:`900ms`}}>
                         <div className="fullImg">
                             <Image src={SubmenuImage} alt=""/>
                         </div>

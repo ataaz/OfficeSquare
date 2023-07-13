@@ -13,6 +13,17 @@ const jk = Plus_Jakarta_Sans({
 })
 
 export default function App({ Component, pageProps }) {
+  // const [clientWindowHeight, setClientWindowHeight] = useState(0);
+  // useEffect(() => {
+  //     const handleScroll = () => {
+  //         setClientWindowHeight(window.scrollY);
+  //         console.log(clientWindowHeight)
+  //       };
+        
+  //   window.addEventListener("scroll", handleScroll); 
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // });
+  // console.log(clientWindowHeight)
   const containerRef = useRef(null)
   return (
     <>

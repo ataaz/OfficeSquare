@@ -5,18 +5,31 @@
   left: 0;
   right: 0;
   z-index: 999;
-  height: 112.6px;
+  background:transparent;
+  /* height: 112.6px; */
   transition: 0.5s;
 }
+
+.HeaderScrolled.siteHeaderParent{
+  top: -200px;
+  transition: 0.5s;
+}
+
+/* .HeaderScrolled .topBar{
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  transform: 0.5s;
+} */
 
 .siteHeader *{
   transition: 0.5s;
 }
 
-/* .has-scroll-scrolling .siteHeaderParent{
+.has-scroll-scrolling .siteHeaderParent{
   top: -200px;
   transition: 0.5s;
-} */
+}
 
 .siteHeaderParent{
   position: fixed;
@@ -26,6 +39,7 @@
   z-index: 9;
   transition: 0.5s;
   transform: none !important;
+  background: rgba(255,255,255,0.9);
 }
 
 .topPadding{
@@ -839,10 +853,11 @@ body .CustomTabs ul li:nth-last-child(1) .nav-link{
 .aboutPage .solutionsAboutSec.default-pt{padding-top:50px;}
 
 .subMenu{
-  position: relative;
-  top: -250px;
+  /* position: relative; */
+  /* top: -250px; */
   height: 0;
-  transition: 10s;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 main{
@@ -852,20 +867,32 @@ main{
 
 .subMenu.active{
   /* display: block !important; */
-  height: 100% !important;
+  height: 440px !important;
   opacity: 1 !important;
   z-index: 1 !important;
-  position: relative !important;
+  /* position: relative !important; */
   padding: 40px 0 90px 0;
-  transition: 10s;
-  top: 30px;
-  background: #fcfcfc;
+  transition: 0.5s;
+  top: 0px;
+}
+
+@media (min-width:1700px){
+  .subMenu.active{
+    height: 550px !important;
+  }
+}
+
+@media (min-width:1920px){
+  .subMenu.active{
+    height: 600px !important;
+  }
 }
 
 .activeSubmenu.siteHeader{
-  background: #fcfcfc;
+  background: #f5f5f5;
+  box-shadow: 0 30px 30px rgba(0,0,0,0.1);
+  /* background-color: purple; */
   transition: 0.5s;
-  height: auto;
 }
 
 /* .activeSubmenu.siteHeader .navbar-nav li a{
@@ -915,21 +942,23 @@ main{
   font-weight: 400;
   line-height: 48px;
   position: relative;
+  transition: 0.5s;
 }
 
 .navbar-subnav li a:hover{
   color: #000;
+  font-weight: 600;
+  transition: 0.5s;
 }
 
 .childSubMenu.active{
-  /* visibility: visible !important; */
   opacity: 1 !important;
   height: 100% !important;
   transition: 0.5s;
-  /* -webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both */
 }
-/* .fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both} */
-/* @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}} */
+
+.fade-in-left{-webkit-animation:fade-in-left .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-left .6s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
 
 .navbar-subnav li.dropdown a:after{
   position: relative;
@@ -1070,6 +1099,41 @@ body .phoneNum a:hover{
   line-height: 1;
   display: inline-block;
 }
+
+.mobileHomeSolutions{
+  position: relative;
+}
+
+.mobileHomeSolutions .slick-arrow {
+  position: absolute;
+  bottom: 0;
+  top: inherit;
+  width: 54px !important;
+  height: 34px !important;
+}
+
+.mobileHomeSolutions .slick-prev {
+  left: 0;
+}
+
+.mobileHomeSolutions .slick-next {
+  left: 70px;
+}
+
+.mobileHomeSolutions.customArrows .slick-prev:after{
+  display: none;
+}
+
+.mobileHomeSolutions.slick-slider{
+  padding-bottom: 30px;
+}
+
+@media (max-width:376px){
+  .topBar a{font-size:13px;}
+  .text2 h2{font-size:26px;line-height:40px;}
+  .iconBox span{font-size:14px;line-height:20px;}
+}
+
 
 @media (min-width:2400px){
   .LargeScreenWidth{
@@ -1350,7 +1414,7 @@ body .phoneNum a:hover{
   .customTabs .nav-tabs .nav-link.active:after, .customTabs .nav-tabs .nav-link:hover:after{width:5px;right:-5px;}
   .CurveArrowDown{width:20px;}
   .keySec.default-pb1{padding-bottom:80px;}
-  .navbar-subnav li a, .navbar-subnav li a:focus{font-size:20px;line-height:38px;}
+  .navbar-subnav li a, .navbar-subnav li a:focus{font-size:16px;line-height:32px;}
 
   /* Service Template */
   .EvenOrderRow .row.default-pb2{padding-bottom:50px;}
@@ -1371,7 +1435,7 @@ body .phoneNum a:hover{
 
 @media (min-width:992px) and (max-width:1199.98px){
   .kpRow2 .row .col-md-3 .kpBoxInner:after{left:-30px;}
-  .navbar-subnav li a, .navbar-subnav li a:focus{font-size:22px;line-height:42px;}
+  .navbar-subnav li a, .navbar-subnav li a:focus{font-size:18px;line-height:34px;}
   .default-pb{padding-bottom:120px;}
   .default-pt{padding-top: 120px;}
   .text1 h2{font-size:36px;line-height:48px;}
@@ -1402,6 +1466,7 @@ body .phoneNum a:hover{
 }
 
 @media (min-width:1200px) and (max-width:1399.98px){
+  .navbar-subnav li a, .navbar-subnav li a:focus{font-size:22px;line-height:38px;}
   .homeBannerGlobal .container{margin-top:-30px;}
   .kpRow2 .row .col-md-3 .kpBoxInner:after{left:-40px;}
   .default-pb{padding-bottom:120px;}

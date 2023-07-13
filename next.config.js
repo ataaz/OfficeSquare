@@ -27,9 +27,16 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output:'export',
+  // output:'export',
   images: {
-    unoptimized: true,
+    unoptimized: false,
+    domains: ['officesquare.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.officesquare.com',
+      },
+    ],
   },
 }
  

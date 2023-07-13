@@ -7,12 +7,10 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 export default function OfferAbout(props) {
     const { scroll } = useLocomotiveScroll();
-    // const offerz= props.offer?.map((el,i)=> 
-    // )
   return (
     <>
     <section className={styles.offerSec + ' default-pb1 default-pt position-relative LargeScreenWidth'}>
-        <Image className={styles.imgAbs6} priority src={props.img1?.url} alt={props.img1?.alt} width="1" height="1" data-scroll data-scroll-speed="4"/>
+        <Image className={styles.imgAbs6} priority src={props.img1?.url} alt={props.img1?.alt} width="278" height="183" data-scroll data-scroll-speed="4"/>
         <div className="container">
             <div className={text4.text4 + ' ' + text4.text4Label + ' ' + text4.text4_h2fw700 + ' ' + text4.posTop110px}>
                 <span><em>{props.label}</em></span>
@@ -26,7 +24,7 @@ export default function OfferAbout(props) {
                 </div>
                 <div className='col-md-9 col-md-9 order-1 order-md-2'>
                     <div className='fullImg imgMagnify'>
-                        <Image priority src={props.mainImg?.url} alt={props.mainImg?.alt} width="1" height="1"/>
+                        <Image priority src={props.mainImg?.url} alt={props.mainImg?.alt} width="960" height="604"/>
                     </div>
                 </div>
             </div>

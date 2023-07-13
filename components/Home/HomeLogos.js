@@ -84,7 +84,6 @@ export default function HomeLogos(props) {
               <Image priority src={logo5} alt="Logo 5" width="auto" height="auto"/>
               <Image priority src={logo6} alt="Logo 6" width="auto" height="auto"/>
               <Image priority src={logo7} alt="Logo 7" width="auto" height="auto"/>
-              <Image priority src={logo1} alt="Logo 1" width="auto" height="auto"/>
             </Slider>
           </div>
         </div>

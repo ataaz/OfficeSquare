@@ -28,7 +28,7 @@ export default function TextForm(props) {
         }
         console.log(data);
         setLoading(true);
-        var response = await axios.post(`//demo.officesquare.com/apis/wp-json/api/v1/contact`, data)
+        var response = await axios.post(`//officesquare.com/apis/wp-json/api/v1/contact`, data)
         // var response = await axios.post(`#`, data)
         console.log(response);
         response.data.status == 'success' ? setSuccess(true) : setFailure(true);

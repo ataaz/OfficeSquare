@@ -1,6 +1,12 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Footer() {
+    const [Gototop, setScrollTop] = useState(false);
+    const doScrollTop = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
     return <footer className='siteFooter' style={{paddingBottom:`20px`}}>
         <div className='container'>
             <div className='row'>
@@ -14,7 +20,7 @@ export default function Footer() {
                 <div className='col-md-4 col-lg-4 col-sm-6'>
                     <div className='widget mb-4 mb-md-0'>
                         <h3>Find Us</h3>
-                        <p className='locName'><Link href="/contact-us">Dubai</Link> <span>|</span> <Link href="/contact-us">Abu Dhabi</Link> <span>|</span> <Link href="/contact-us">Doha</Link></p>
+                        <p className='locName'><Link onClick={Gototop} href="/contact-us">Dubai</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Abu Dhabi</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Doha</Link></p>
                     </div>
                 </div>
                 <div className='col-md-4 col-lg-3 mt-sm-4 mt-md-0 d-none'>
@@ -36,9 +42,9 @@ export default function Footer() {
                 </div>
                 <div className='col-md-6 col-lg-6'>
                     <div className='siteFooterLinks text-start text-lg-end'>
-                        <Link href='#' className='linkMargin'>Blog</Link>
-                        <Link href='/contact-us' className='linkMargin'>Contact Us</Link>
-                        <Link href='/privacy-policy' className='linkMargin'>Privacy Policy</Link>
+                        <Link onClick={Gototop} href='#' className='linkMargin'>Blog</Link>
+                        <Link onClick={Gototop} href='/contact-us' className='linkMargin'>Contact Us</Link>
+                        <Link onClick={Gototop} href='/privacy-policy' className='linkMargin'>Privacy Policy</Link>
                         <span className='copyrightText d-block d-md-none'>© 2023  Office Square | All Rights Reserved</span>
                         <span><a href='https://arenacapital.com/website-design-development/' target='_blank'>Website</a> by <a href='https://arenacapital.com/' target='_blank'><strong>ARENA</strong></a></span>
                     </div>

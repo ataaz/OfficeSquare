@@ -1,9 +1,15 @@
 import styles from '../../styles/Home.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function HomeText2(props) {
-    const TextLoop= props.content?.map((el,i)=> <span key={i}>{el.acf_fc_layout == 'text' ? ' ' + el.text_a : null }{el.acf_fc_layout == 'link' ? <Link href={el.link_a.url}>{el.link_a.title}</Link> : null}</span>
+    const [Gototop, setScrollTop] = useState(false);
+    const doScrollTop = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+    const TextLoop= props.content?.map((el,i)=> <span key={i}>{el.acf_fc_layout == 'text' ? ' ' + el.text_a : null }{el.acf_fc_layout == 'link' ? <Link onClick={Gototop} href={el.link_a.url}>{el.link_a.title}</Link> : null}</span>
     );
     return <section className='textCenterSec position-relative LargeScreenWidth'>
         {/* only desktop visible */}

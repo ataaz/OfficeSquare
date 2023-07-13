@@ -16,7 +16,7 @@ export default class Gallery extends Component {
       this.GalleryList= props.gallery?.map((el,i)=> <div className='' key={i}><Image priority src={el.url} alt={el.alt} width={1} height={1}/></div>);
       this.GalleryListDiv= this.props.galleryDiv?.map((el,i)=> <div key={i}></div>);
     }
-  
+
     componentDidMount() {
       this.setState({
         nav1: this.slider1,
