@@ -36,12 +36,12 @@ export default function HomeExp(props) {
         <div className='row rowz1'>
         <div className='col-md-8'>
             <div className='imgMagnify fullImg expImg'>
-            <Image priority src={props.image1?.url} alt={props.image1?.alt} width={100} height={100}/>
+            <Image priority src={props.image1?.url} alt={props.image1?.alt} width={841} height={570}/>
             </div>
         </div>
         <div className='col-md-4 d-none d-md-block'>
             <div className='imgMagnify fullImg expImg'>
-            <Image priority src={props.image2?.url} alt={props.image2?.alt} width={250} height={250}/>
+            <Image priority src={props.image2?.url} alt={props.image2?.alt} width={385} height={570}/>
             </div>
         </div>
         </div>
