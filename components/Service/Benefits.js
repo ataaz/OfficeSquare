@@ -7,7 +7,7 @@ export default function Benefits(props) {
     const BenefitsList= props.benefits?.map((el,i)=> <div className={i == '0' ? 'row align-items-center default-pb2 justify-content-between mobilePad1' : '' + i == '1' ? 'row align-items-center default-pb2 default-pt2 justify-content-between mobilePad2' : '' + i == '2' ? 'row align-items-center default-pt2 justify-content-between mobilePad3' : ''} key={i}>
         <div className='col-md-6'>
             <div className='imgMagnify fullImg'>
-                <Image src={el.image.url} alt={el.image.alt} width={1} height={1} data-scroll-speed="-1.5" data-scroll/>
+                <Image src={el.image.url} alt={el.image.alt} width={636} height={676} data-scroll-speed="-1.5" data-scroll/>
             </div>
         </div>
         <div className='col-md-5'>

@@ -26,7 +26,7 @@ export default function ImageHeader(props) {
                 <div className='row justify-content-end'>
                     <div className='col-md-8 col-8 col-sm-9'>
                         <div className={styles.SliderHeaderImagesParent2} data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
-                            <div className='fullImg'><Image priority src={props.img?.url} alt={props.img?.alt} width={1} height={1}/></div>
+                            <div className='fullImg'><Image priority src={props.img?.url} alt={props.img?.alt} width={856} height={481}/></div>
                         </div>
                     </div>
                 </div>

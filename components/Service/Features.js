@@ -6,7 +6,7 @@ export default function Features(props) {
     const FeaturesList1= props.features1?.map((el,i)=> i == '0' ?
     <div className='col-md-3 col-6 order-2 order-md-1 mb-4 mb-md-0' key={i}>
         <div className='fullImg imgMagnify featureImgBox'>
-            <Image src={el.image?.url} alt={el.image?.alt} width={1} height={1}/>
+            <Image src={el.image?.url} alt={el.image?.alt} width={306} height={210}/>
             <span>{el.image_label}</span>
         </div>
     </div> : null + 
@@ -20,7 +20,7 @@ export default function Features(props) {
     i == '2' ?
     <div className='col-md-3 col-6 order-3 order-md-3 mb-4 mb-md-0' key={i}>
         <div className='fullImg imgMagnify featureImgBox featureImgBoxLeft'>
-            <Image src={el.image?.url} alt={el.image?.alt} width={1} height={1}/>
+            <Image src={el.image?.url} alt={el.image?.alt} width={306} height={210}/>
             <span>{el.image_label}</span>
         </div>
     </div> : null
@@ -28,21 +28,21 @@ export default function Features(props) {
     const FeaturesList2= props.features2?.map((el,i)=> i == '3' ?
     <div key={i} className='col-md-3 col-6 col-lg-4 col-xl-3 align-self-start mb-4 mb-md-0'>
         <div className='fullImg imgMagnify featureImgBox'>
-            <Image src={el.image?.url} alt={el.image?.alt} width={1} height={1}/>
+            <Image src={el.image?.url} alt={el.image?.alt} width={306} height={210}/>
             <span>{el.image_label}</span>
         </div>
     </div> : null + 
     i == '4' ?
     <div key={i} className='col-md-6 col-6 col-lg-4 col-xl-6 mb-4 mb-md-0'>
         <div className='fullImg imgMagnify featureImgBox'>
-            <Image src={el.image?.url} alt={el.image?.alt} width={1} height={1}/>
+            <Image src={el.image?.url} alt={el.image?.alt} width={636} height={398}/>
             <span>{el.image_label}</span>
         </div>
     </div> : null + 
     i == '5' ?
     <div key={i} className='col-md-2 col-6 col-lg-4 col-xl-2 align-self-center'>
         <div className='fullImg imgMagnify featureImgBox'>
-            <Image src={el.image?.url} alt={el.image?.alt} width={1} height={1}/>
+            <Image src={el.image?.url} alt={el.image?.alt} width={196} height={135}/>
             <span>{el.image_label}</span>
         </div>
     </div> : null

@@ -13,7 +13,7 @@ export default class Gallery extends Component {
         nav1: null,
         nav2: null
       };
-      this.GalleryList= props.gallery?.map((el,i)=> <div className='' key={i}><Image priority src={el.url} alt={el.alt} width={1} height={1}/></div>);
+      this.GalleryList= props.gallery?.map((el,i)=> <div className='' key={i}><Image priority src={el.url} alt={el.alt} width={1086} height={543}/></div>);
       this.GalleryListDiv= this.props.galleryDiv?.map((el,i)=> <div key={i}></div>);
     }
 

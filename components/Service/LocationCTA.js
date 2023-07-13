@@ -17,7 +17,7 @@ export default function LocationCTA(props) {
             <div className='row align-items-center justify-content-between'>
                 <div className='col-md-6'>
                     <div className='fullImg'>
-                        <Image src={props.image.url} alt={props.image.alt} width={1} height={1}/>
+                        <Image src={props.image.url} alt={props.image.alt} width={636} height={636}/>
                     </div>
                 </div>
                 <div className='col-md-5 mt-4 mt-md-0'>

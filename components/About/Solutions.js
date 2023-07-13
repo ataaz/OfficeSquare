@@ -10,7 +10,7 @@ export default function SolutionsAbout(props) {
     const solutionsList= props.solutions?.map((el,i)=> <div className='col-md-4 col-sm-6 mb-5' key={i}>
         <div className={styles.col3}>
             <div className='fullImg imgMagnify'>
-                <Image src={el.image.url} alt={el.image.alt} width="1" height="1"/>
+                <Image src={el.image.url} alt={el.image.alt} width="416" height="520"/>
             </div>
             <div className={styles.col3Text}>
                 <div className='textBelow'>

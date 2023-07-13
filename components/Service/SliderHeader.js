@@ -12,7 +12,7 @@ export default class SliderHeader extends Component {
       nav1: null,
       nav2: null
     };
-    this.SliderList= props.slider?.map((el,i)=> <div className='fullImg' key={i}><Image width={1} height={1} priority src={el.image.url} alt={el.image.alt}/></div>);
+    this.SliderList= props.slider?.map((el,i)=> <div className='fullImg' key={i}><Image width={856} height={428} priority src={el.image.url} alt={el.image.alt}/></div>);
     this.SliderListDiv= props.sliderDiv?.map((el,i)=> <div key={i}></div>);
   }
 
@@ -39,6 +39,7 @@ export default class SliderHeader extends Component {
                                       asNavFor={this.state.nav1}
                                       ref={slider => (this.slider2 = slider)}
                                       arrows={true}
+                                      autoplaySpeed={6000}
                                       swipeToSlide={true}
                                       focusOnSelect={true}
                                       autoplay={true}
@@ -71,6 +72,7 @@ export default class SliderHeader extends Component {
                                 arrows={true}
                                 swipeToSlide={true}
                                 focusOnSelect={true}
+                                autoplaySpeed={6000}
                                 autoplay={true}
                                 >
                                   {this.SliderListDiv}
