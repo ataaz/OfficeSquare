@@ -1,27 +1,30 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function HomeText1(props) {
     const { scroll } = useLocomotiveScroll()
-    return <section className='posRev text1Sec default-pb LargeScreenWidth' id="Intro">
+    return <section className='posRev text1Sec default-pb default-pt LargeScreenWidth' id="Intro">
         <div className='d-block d-lg-block'>
             <div className='container'>
-                <div className='row'>
-                <div className='col-md-2 posRelv'>
-                    <div className={'imgAbsHome d-none d-sm-block'} data-scroll data-scroll-speed="4">
+                <div className='row align-items-center justify-content-between'>
+                <div className='col-md-6 order-2 order-sm-2 mt-5 mt-md-0'>
+                    <div className={''}>
                         <Image
                         priority
                         src={props.image1?.url}
                         alt={props.image1?.alt}
-                        width="250"
-                        height="250"
+                        width="650"
+                        height="802"
+                        style={{width:`100%`,height:`100%`}}
                         />
                     </div>
                 </div>
-                <div className='col-md-8'>
+                <div className='col-md-5 order-1 order-sm-1'>
                     <div className='text1 text1_h2Mb'>
                         <h2 className='ms-3 ms-sm-0'>{props.text1}</h2>
-                        <h3>{props.text2}</h3>
+                        <p>{props.text2}</p>
+                        <Link className='btn2 mt-5' href={props.link.url}>{props.link.title}</Link>
                     </div>
                     <div className={'imgAbsHome d-none d-sm-none'} data-scroll data-scroll-speed="4">
                         <Image

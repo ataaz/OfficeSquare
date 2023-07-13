@@ -1,23 +1,23 @@
 
 .homeBanner{
-  height: 100vh;
-  padding-top: 90px;
+  /* height: 100vh; */
+  padding-top: 20px;
   overflow: hidden;
   position: relative;
 }
 @media (min-width:1199.98px){
-  .homeBanner{
+  /* .homeBanner{
     height: 100vh;
-  }
+  } */
   /* .homeBanner.default-pt{
     padding-top: 0 !important;
   } */
 }
 
 @media (min-width:1200px) and (max-width:1399.98px){
-  .homeBanner{
+  /* .homeBanner{
     height: 100vh;
-  }
+  } */
 }
 
 .homeBanner .svgHome{
@@ -32,21 +32,42 @@
 }
 
 .homeBanner h1{
-  font-size: 290px;
+  font-size: 222px;
   font-weight: 800;
   line-height: 260px;
   color: #000;
   margin-left: -15px;
-  background-color: #fff;
-  mix-blend-mode: lighten;
+  /* background-color: #fff; */
+  /* mix-blend-mode: lighten; */
   margin-bottom: 0;
+  background: #4A9BEC;
+  background: linear-gradient(to right, #4A9BEC 0%, #A540ED 81%, #4A9BEC 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .homeBanner h2{
-  font-size: 62px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 77px;
+  line-height: 58px;
   margin-top: 20px;
+}
+
+@media (min-width:768px){
+  .homeBanner h2{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.vdoTextParent{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .vdoText{
@@ -114,39 +135,42 @@
 
 @media (max-width:376px){
   .homeBanner h1{font-size:64px !important;line-height:58px !important;}
-  .homeBanner h2{font-size:28px !important;line-height:38px !important;}
-  .homeBanner{height:90vh!important;}
+  .homeBanner h2{font-size:24px !important;line-height:34px !important;}
+  .homeBanner{height:auto!important;}
   .text1 h2{font-size:26px!important;line-height:36px!important;}
   .lighterText h2{font-size:18px!important;line-height:28px!important;}
 }
 
 @media (max-width:575.98px){
+  .vdoTextParent{position: relative !important;}
   /* .homeBanner{padding-top:60px;} */
-  .homeBanner h1{font-size:94px;margin-left:0;line-height:80px;}
-  .homeBanner h2{font-size:40px;line-height:48px;margin-top:20px;}
+  .homeBanner h1{font-size:64px;margin-left:0;line-height:64px;}
+  .homeBanner h2{font-size:28px;line-height:40px;margin-top:20px;}
   .homeBanner h2 br{display:none;}
   .vdoText video{width:575px;height:310px;}
-  .homeBanner{height:600px;}
+  .homeBanner{height:auto;}
   .lighterText h2{font-size:24px;line-height:36px;}
+
 }
 
 @media (min-width:576px) and (max-width:767.98px){
+  .vdoTextParent{position: relative !important;}
   .homeBanner h1{font-size:84px;margin-left:0;line-height:80px;}
   .homeBanner h2{font-size:28px;line-height:36px;margin-top:15px;}
   .vdoText video{width:575px;height:310px;}
-  .homeBanner{height:100vh;}
+  .homeBanner{height:auto;}
   .lighterText h2{font-size:20px;line-height:30px;}
 }
 
 @media (min-width:768px) and (max-width:991.98px){
-  .homeBanner h1{font-size:150px;line-height:140px;}
-  .homeBanner h2{font-size:38px;line-height:50px;}
+  .homeBanner h1{font-size:110px;line-height:100px;margin-left:0;}
+  .homeBanner h2{font-size:28px;line-height:38px;}
   /* .homeBanner{height:100vh;} */
   .lighterText h2{font-size:28px;line-height:40px;padding:0 80px 0 10px;}
 }
 
 @media (min-width:992px) and (max-width:1199.98px){
-  .homeBanner h1{font-size:200px;line-height:170px;}
+  .homeBanner h1{font-size:165px;line-height:150px;}
   .homeBanner h2{font-size:38px;line-height:50px;}
   /* .homeBanner{height:550px;} */
   .lighterText h2{font-size:32px;line-height:52px;}
@@ -155,7 +179,7 @@
 }
 
 @media (min-width:1200px) and (max-width:1399.98px){
-  .homeBanner h1{font-size:240px;line-height:210px;}
+  .homeBanner h1{font-size:190px;line-height:180px;}
   .homeBanner h2{font-size:42px;line-height:57px;}
   /* .homeBanner{height:600px;} */
   .lighterText h2{font-size:32px;line-height:52px;}

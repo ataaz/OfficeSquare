@@ -19,7 +19,7 @@ export const getServerSideProps = async () => {
 }
 
 export default function About({ repo }) {
-  console.log(repo)
+  // console.log(repo)
   return <>
     <Layout>
       <Head>

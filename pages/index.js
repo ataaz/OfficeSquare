@@ -44,17 +44,19 @@ export default function Home() {
           <title>{page.meta_title}</title>
           <meta name='description' content={page.meta_description}></meta>
         </Head>
-        <div>
-          <HomeBanner heading={page.acf?.hero_heading} content={page.acf?.hero_content} link={page.acf?.hero_button}/>
-        </div>
-        <div>
-          <HomeText1 image1={page.acf?.intro_image_1} image2={page.acf?.intro_image_2} text1={page.acf?.intro_content_1} text2={page.acf?.intro_content_2}/>
-          <HomeText2 image1={page.acf?.after_intro_image1} image2={page.acf?.after_intro_image2} content={page.acf?.after_intro}/>
-          <HomeSolutions heading={page.acf?.our_solution_heading}/>
-          <HomeLogos customClass="default-pb"/>
-          <HomeExp heading={page.acf?.experience_heading} content={page.acf?.experience_content} image1={page.acf?.experience_image1} image2={page.acf?.experience_image2} exp={page.acf?.experiences}/>
-          <HomeBlog/>
-          <CTAText/>
+        <div className="topPadding">
+          <div>
+            <HomeBanner img={page.acf?.home_banner_img} heading={page.acf?.hero_heading} content={page.acf?.hero_content} link={page.acf?.hero_button}/>
+          </div>
+          <div>
+            <HomeText1 image1={page.acf?.intro_image_1} image2={page.acf?.intro_image_2} text1={page.acf?.intro_content_1} text2={page.acf?.intro_content_2} link={page.acf?.intro_content_link}/>
+            <HomeText2 image1={page.acf?.after_intro_image1} image2={page.acf?.after_intro_image2} content={page.acf?.after_intro}/>
+            <HomeSolutions heading={page.acf?.our_solution_heading}/>
+            <HomeLogos customClass="default-pb"/>
+            <HomeExp heading={page.acf?.experience_heading} content={page.acf?.experience_content} image1={page.acf?.experience_image1} image2={page.acf?.experience_image2} exp={page.acf?.experiences}/>
+            <HomeBlog/>
+            <CTAText/>
+          </div>
         </div>
       </Layout>
     )

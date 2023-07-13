@@ -23,6 +23,12 @@ export default class SliderHeader extends Component {
     });
   }
   render() {
+    const settings = {
+      infinite: true,
+      autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 6000,
+    };
     return (
             <section className={styles.SliderHeader + ' position-relative'}>
                 <div className={styles.ContainerAbsolute + ' ' + styles.SliderHeaderText + ' ' + "container position-absolute"}>
@@ -35,11 +41,10 @@ export default class SliderHeader extends Component {
                                 <div className='d-flex flex-wrap align-items-center'>
                                   <Link href={this.props.link.url} className='btn2'>{this.props.link.title}</Link>
                                   <div className='SliderHeaderImagesArrowz customArrows d-flex d-md-none'>
-                                      <Slider
+                                      <Slider {...settings}
                                       asNavFor={this.state.nav1}
                                       ref={slider => (this.slider2 = slider)}
                                       arrows={true}
-                                      autoplaySpeed={6000}
                                       swipeToSlide={true}
                                       focusOnSelect={true}
                                       autoplay={true}
@@ -56,7 +61,7 @@ export default class SliderHeader extends Component {
                     <div className='row justify-content-end'>
                         <div className='col-lg-10 col-xl-8 position-relative'>
                             <div className={styles.SliderHeaderImagesParent} data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
-                              <Slider
+                              <Slider {...settings}
                               asNavFor={this.state.nav2}
                               ref={slider => (this.slider1 = slider)}
                               arrows={this.false}
@@ -66,13 +71,12 @@ export default class SliderHeader extends Component {
                               </Slider>
                             </div>
                             <div className='SliderHeaderImagesArrowz customArrows d-none d-md-flex'>
-                                <Slider
+                                <Slider {...settings}
                                 asNavFor={this.state.nav1}
                                 ref={slider => (this.slider2 = slider)}
                                 arrows={true}
                                 swipeToSlide={true}
                                 focusOnSelect={true}
-                                autoplaySpeed={6000}
                                 autoplay={true}
                                 >
                                   {this.SliderListDiv}

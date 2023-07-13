@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
         {
           smooth: true,
           smartphone: {
-            smooth: true
+            smooth: false
           },
           // reloadOnContextChange:true,
           // ... all available Locomotive Scroll instance options 
