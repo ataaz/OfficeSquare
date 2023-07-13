@@ -5,7 +5,7 @@ export const getCoworkingSpaces = createAsyncThunk(
   "CoworkingSpaces/getCoworkingSpaces",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/services?slug=co-working-spaces"
+      "https://api.officesquare.com/wp-json/wp/v2/services?slug=co-working-spaces"
     );
     const data = await response.data;
     // console.log(data[0]);

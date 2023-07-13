@@ -5,7 +5,7 @@ export const getProManagement = createAsyncThunk(
   "ProManagement/getProManagement",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/services?slug=management"
+      "https://api.officesquare.com/wp-json/wp/v2/services?slug=management"
     );
     const data = await response.data;
     console.log(data[0]);

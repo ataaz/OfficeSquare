@@ -5,7 +5,7 @@ export const getEventSpaces = createAsyncThunk(
   "EventSpaces/getEventSpaces",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/services?slug=event-spaces"
+      "https://api.officesquare.com/wp-json/wp/v2/services?slug=event-spaces"
     );
     const data = await response.data;
     // console.log(data[0]);

@@ -5,7 +5,7 @@ export const getPrivateWorkspaces = createAsyncThunk(
   "PrivateWorkspaces/getPrivateWorkspaces",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/services?slug=private-workspaces"
+      "https://api.officesquare.com/wp-json/wp/v2/services?slug=private-workspaces"
     );
     const data = await response.data;
     // console.log(data[0].acf.header_images[0].image.url);

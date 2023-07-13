@@ -5,7 +5,7 @@ export const getBusinessSetup = createAsyncThunk(
   "BusinessSetup/getBusinessSetup",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/services?slug=business-setup"
+      "https://api.officesquare.com/wp-json/wp/v2/services?slug=business-setup"
     );
     const data = await response.data;
     console.log(data[0]);

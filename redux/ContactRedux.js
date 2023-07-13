@@ -5,7 +5,7 @@ export const getContactPage = createAsyncThunk(
   "ContactPage/getContactPage",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/api/v4/getcontact"
+      "https://api.officesquare.com/wp-json/api/v4/getcontact"
     );
     const data = await response.data;
     // console.log(data);

@@ -5,7 +5,7 @@ export const getVirtualOffices = createAsyncThunk(
   "VirtualOffices/getVirtualOffices",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/services?slug=virtual-office"
+      "https://api.officesquare.com/wp-json/wp/v2/services?slug=virtual-office"
     );
     const data = await response.data;
     console.log(data[0]);

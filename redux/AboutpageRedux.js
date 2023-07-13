@@ -5,7 +5,7 @@ export const getAboutpage = createAsyncThunk(
   "Aboutpage/getAboutpage",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/api/v4/getabout"
+      "https://api.officesquare.com/wp-json/api/v4/getabout"
     );
     const data = await response.data;
     // console.log(data);

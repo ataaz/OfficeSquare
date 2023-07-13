@@ -13,10 +13,9 @@ import AOS from  'aos';
 import 'aos/dist/aos.css';
 
 export const getServerSideProps = async () => {
-  const res = await fetch('https://officesquare.com/apis/wp-json/api/v4/getabout')
+  const res = await fetch('https://api.officesquare.com/wp-json/api/v4/getabout')
   const repo = await res.json()
   return { props: { repo } }
-console.log(repo)
 }
 
 export default function About({ repo }) {

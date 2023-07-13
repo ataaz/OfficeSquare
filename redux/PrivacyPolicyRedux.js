@@ -5,7 +5,7 @@ export const getPrivacypage = createAsyncThunk(
   "Privacypage/getPrivacypage",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/pages/3"
+      "https://api.officesquare.com/wp-json/wp/v2/pages/3"
     );
     const data = await response.data;
     // console.log(data);

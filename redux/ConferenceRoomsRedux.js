@@ -5,7 +5,7 @@ export const getConferenceRooms = createAsyncThunk(
   "ConferenceRooms/getConferenceRooms",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/wp/v2/services?slug=conference-rooms"
+      "https://api.officesquare.com/wp-json/wp/v2/services?slug=conference-rooms"
     );
     const data = await response.data;
     // console.log(data[0]);

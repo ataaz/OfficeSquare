@@ -5,7 +5,7 @@ export const getHomepage = createAsyncThunk(
   "Homepage/getHomepage",
   async () => {
     const response = await axios.get(
-      "https://officesquare.com/apis/wp-json/api/v4/gethome"
+      "https://api.officesquare.com/wp-json/api/v4/gethome"
     );
     const data = await response.data;
     // console.log(data);
