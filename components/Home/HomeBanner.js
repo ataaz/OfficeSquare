@@ -6,11 +6,23 @@ import Slider from 'react-slick';
 
 export default function HomeBanner(props) {
     const { scroll } = useLocomotiveScroll()
+    const sliderzMobile= props.slider?.map((el,i)=> <div key={i}><Image priority src={el.image.url} alt={el.image.alt} width={260} height={265} style={{width:`100%`,height:`100%`}}/></div>);
+    const sliderzDesktop= props.slider?.map((el,i)=> <div key={i}><Image priority src={el.image.url} alt={el.image.alt} width={626} height={645} style={{width:`100%`,height:`100%`}}/></div>);
     return <section className={styles.homeBanner + ' homeBannerGlobal'} style={{position:`relative`}}>
     <div className='container position-relative containerH100'>
       <div className='row justify-content-end d-none d-md-flex'>
         <div className='col-md-6'>
-          <Image src={props.img.url} alt={props.img.alt} width={626} height={645} data-aos="fade" data-aos-delay="200" data-aos-duration="300" style={{width:`100%`,height:`100%`}}/>
+          <Slider
+          className='homeBannerSlider homeBannerSliderDesktop customDots overflow-hidden'
+          arrows={false}
+          dots={true}
+          swipeToSlide={true}
+          focusOnSelect={true}
+          autoplay={true}
+          >
+            {sliderzDesktop}
+          </Slider>
+          {/* <Image src={props.img.url} alt={props.img.alt} width={626} height={645} data-aos="fade" data-aos-delay="200" data-aos-duration="300" style={{width:`100%`,height:`100%`}}/> */}
         </div>
       </div>
       <div className={styles.vdoTextParent} style={{position:`absolute`}}>
@@ -27,10 +39,10 @@ export default function HomeBanner(props) {
         {/* <h2 dangerouslySetInnerHTML={{__html: props.content}}></h2> */}
         {/* <Link className='mobileHeaderBtn d-inline-block' href={props.link?.url}>{props.link?.title}</Link> */}
         <h2 className="text-center text-md-start" dangerouslySetInnerHTML={{__html: props.content}} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300"></h2>
-        <Link className='mobileHeaderBtn d-none d-md-inline-block mt-5 me-3' href={props.link?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link?.title}</Link>
-        <div className='d-block text-center d-md-none mt-5'>
-          <Link className='mobileHeaderBtn d-inline-block mt-0 me-3' href={props.link?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link?.title}</Link>
-          <Link className='btn3 d-inline-block' href={props.link2?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link2?.title}</Link>
+        <div className='d-flex align-items-center justify-content-center justify-content-md-start flex-wrap text-center mt-5'>
+          <Link className='mobileHeaderBtn d-inline-block mt-0 me-3 ms-0' href={props.link?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link?.title}</Link>
+          <Link className='btn3 d-inline-block d-md-none' href={props.link2?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link2?.title}</Link>
+          <Link className='underlineBtn d-none d-md-inline-block ms-md-2 ms-lg-4' href={props.link2?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">Learn More About Us</Link>
         </div>
       </div>
       <Slider
@@ -41,9 +53,7 @@ export default function HomeBanner(props) {
       focusOnSelect={true}
       autoplay={true}
       >
-        <div><Image src={props.img.url} alt={props.img.alt} width={260} height={265} style={{width:`100%`,height:`100%`}}/></div>
-        <div><Image src={props.img.url} alt={props.img.alt} width={260} height={265} style={{width:`100%`,height:`100%`}}/></div>
-        <div><Image src={props.img.url} alt={props.img.alt} width={260} height={265} style={{width:`100%`,height:`100%`}}/></div>
+        {sliderzMobile}
       </Slider>
     </div>
     <a className={styles.svgHome + ' d-none'} href="#Intro">

@@ -179,6 +179,11 @@ marquee span{
   height: 258px;
 }
 
+@media (min-width:1921px){
+  .imgAbs2{width:350px;height:353px;}
+  .imgAbs3{width:350px;height:353px;}
+}
+
 .text2 h2{
   font-size: 36px;
   font-weight: 700;
@@ -1131,11 +1136,31 @@ body .phoneNum a:hover{
   padding-bottom: 30px;
 }
 
+.homeBannerSliderDesktop.customDots .slick-dots{
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.homeBannerSliderDesktop.customDots .slick-dots li:nth-last-child(1){
+  margin-right: 0 !important;
+}
+
+.twoImgs{
+  position: relative;
+}
+
+.twoImgs .posImg{
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+}
+
 @media (max-width:376px){
   .topBar a{font-size:13px;}
   .text2 h2{font-size:26px;line-height:40px;}
   .iconBox span{font-size:14px;line-height:20px;}
-  body .mobileHeaderBtn{margin-right: 0 !important;margin-bottom:20px;padding:19px 20px !important;}
+  .mobileHeaderBtn{margin-right:0 !important;margin-bottom:15px;}
+  /* body .mobileHeaderBtn{margin-right: 0 !important;margin-bottom:20px;padding:19px 20px !important;} */
 }
 
 
@@ -1190,13 +1215,16 @@ body .phoneNum a:hover{
 }
 
 @media (max-width:575.98px){
+  .relImg{width:80% !important;}
+  .twoImgs .posImg{right:0;bottom:-50px;}
+  .text1Sec .text1_h2Mb h2{margin-bottom:20px;}
   .mobileHeaderBtn{width:170px;padding:19px 20px !important;font-size:15px;}
   .btn3{width:170px;font-size:15px;padding:18px 20px;}
   .topPadding.homePage{padding-top:120px;}
   .topBar{display:none;}
   .text1Sec.default-pt{padding-top:60px;}
   .homeBannerSlider{overflow: hidden;}
-  .mobileHeaderBtn{margin-left:auto;margin-right:auto;}
+  /* .mobileHeaderBtn{margin-left:auto;margin-right:auto;} */
   .socialIcons a svg{width:24px;}
   .socialIcons a{margin-right:10px;}
   .scrollingBg svg{position:relative !important;}
@@ -1322,17 +1350,21 @@ body .phoneNum a:hover{
   .contactPage .default-pt1{padding-top:50px !important;}
   .text4Contact h2{font-size:22px;line-height:32px;}
   .text4Contact p{font-size:14px!important;line-height:24px!important;}
+  .slick-dots li button:before{width:12px;height:12px;}
 }
 
 
 @media (min-width:576px) and (max-width:767.98px){
-  .mobileHeaderBtn{width:170px;padding:19px 20px;font-size:15px;}
+  .slick-dots li button:before{width:12px;height:12px;}
+  .relImg{width:80% !important;}
+  .twoImgs .posImg{right:0;bottom:-50px;}
+  .mobileHeaderBtn{width:170px;padding:18px 20px;font-size:15px;}
   .btn3{width:170px;font-size:15px;}
   .mobileHeaderBtn{width:auto;padding:18px 20px;}
   .topPadding.homePage{padding-top:120px;}
   .topBar{display:none;}
   .imgAbs1{display:none;}
-  .mobileHeaderBtn{margin-left:auto;margin-right:auto;}
+  /* .mobileHeaderBtn{margin-left:auto;margin-right:auto;} */
   .homeBannerSlider{overflow: hidden;}
   .locName span{margin:0 3px;}
   .socialIcons a svg{width:28px;}
@@ -1506,8 +1538,8 @@ body .phoneNum a:hover{
   .default-pt{padding-top: 120px;}
   .text1 h2{font-size:36px;line-height:48px;}
   .text1 h3{font-size:26px;line-height:40px;}
-  .imgAbs3{right:0;width:195px;height:198px;}
-  .imgAbs2{left:0;width:185px;height:185px;}
+  .imgAbs3{right:0;width:155px;height:155px;}
+  .imgAbs2{left:0;width:135px;height:135px;}
   .serBoxImg img{height:350px;}
   .serBoxText h3{font-size:18px;}
   .serBoxText span{padding:6px 8px;font-size:13px}
@@ -1616,3 +1648,7 @@ body .phoneNum a:hover{
 }
 
 .h-80{height:80%;}
+
+@media (min-width:1400px) and (max-width:1600px){
+  .imgAbs2{width:190px;height:200px;}
+}

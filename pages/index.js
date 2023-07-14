@@ -91,7 +91,7 @@ export default function Home() {
         </Head>
         <div className="topPadding homePage">
           <div>
-            <HomeBanner img={page.acf?.home_banner_img} heading={page.acf?.hero_heading} content={page.acf?.hero_content} link={page.acf?.hero_button} link2={page.acf?.hero_button_2}/>
+            <HomeBanner slider={page.acf?.slider_mobile} img={page.acf?.home_banner_img} heading={page.acf?.hero_heading} content={page.acf?.hero_content} link={page.acf?.hero_button} link2={page.acf?.hero_button_2}/>
           </div>
           <div>
             <HomeText1 image1={page.acf?.intro_image_1} image2={page.acf?.intro_image_2} text1={page.acf?.intro_content_1} text2={page.acf?.intro_content_2} link={page.acf?.intro_content_link}/>

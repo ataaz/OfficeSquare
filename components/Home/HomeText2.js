@@ -2,6 +2,8 @@ import styles from '../../styles/Home.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import img1 from '../../images/text-center-1.jpg';
+import img2 from '../../images/text-center-2.jpg';
 
 export default function HomeText2(props) {
     const [Gototop, setScrollTop] = useState(false);
@@ -16,20 +18,22 @@ export default function HomeText2(props) {
         <Image
         className='imgAbs2 d-sm-block d-none'
         priority
-        src={props.image1?.url}
-        alt={props.image1?.alt}
-        width={250}
-        height={250}
-        data-scroll data-scroll-speed="-3"
+        src={img1}
+        // src={props.image1?.url}
+        // alt={props.image1?.alt}
+        width={350}
+        height={353}
+        data-scroll data-scroll-speed="3"
         />
         {/* only mobile visible */}
         <Image
         className='imgAbs2 d-none d-sm-none'
         priority
-        src={props.image1?.url}
-        alt={props.image1?.alt}
-        width={250}
-        height={250}
+        src={img1}
+        // src={props.image1?.url}
+        // alt={props.image1?.alt}
+        width={350}
+        height={353}
         data-scroll data-scroll-speed="-10"
         />
         <div className='container'>
@@ -44,8 +48,9 @@ export default function HomeText2(props) {
         <Image
         className='imgAbs3 d-none d-sm-block'
         priority
-        src={props.image2?.url}
-        alt={props.image2?.url}
+        src={img2}
+        // src={props.image2?.url}
+        // alt={props.image2?.url}
         width={250}
         height={250}
         data-scroll data-scroll-speed="3"
