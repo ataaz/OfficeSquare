@@ -10,15 +10,15 @@ import React, { Component, useState } from "react";
 import Slider from "react-slick";
 
 export default function HomeSolutions(props) {
-  function scrollToTop() {
-  const elements = document.getElementsByClassName('btn1');
-  for (let i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', function() {
-              document.body.scrollTop = 0; // For Safari
-              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-          });
-      }
-  }
+  // function scrollToTop() {
+  // const elements = document.getElementsByClassName('btn1');
+  // for (let i = 0; i < elements.length; i++) {
+  //     elements[i].addEventListener('click', function() {
+  //             document.body.scrollTop = 0; // For Safari
+  //             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  //         });
+  //     }
+  // }
   const { scroll } = useLocomotiveScroll()
     return <section className='HomeSol default-pt default-pb'>
     <div className='container'>
@@ -40,7 +40,7 @@ export default function HomeSolutions(props) {
                 alt="Co-working"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/co-working-spaces" className='serBoxText'>
+              <Link href="/co-working-spaces" className='serBoxText'>
                 <span>Work in open landscape</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Co-working</h3>
@@ -59,7 +59,7 @@ export default function HomeSolutions(props) {
                 alt="Offices"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/virtual-offices" className='serBoxText'>
+              <Link href="/virtual-offices" className='serBoxText'>
                 <span>Teams of 1-20</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Offices</h3>
@@ -78,7 +78,7 @@ export default function HomeSolutions(props) {
                 alt="Conferences"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/conference-rooms" className='serBoxText'>
+              <Link href="/conference-rooms" className='serBoxText'>
                 <span>Meeting rooms</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Conferences</h3>
@@ -97,7 +97,7 @@ export default function HomeSolutions(props) {
                 alt="Licensing"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/business-setup" className='serBoxText'>
+              <Link href="/business-setup" className='serBoxText'>
                 <span>Start your business</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Licensing</h3>
@@ -127,7 +127,7 @@ export default function HomeSolutions(props) {
                 alt="Co-working"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/co-working-spaces" className='serBoxText'>
+              <Link href="/co-working-spaces" className='serBoxText'>
                 <span>Work in open landscape</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Co-working</h3>
@@ -146,7 +146,7 @@ export default function HomeSolutions(props) {
                 alt="Offices"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/virtual-offices" className='serBoxText'>
+              <Link href="/virtual-offices" className='serBoxText'>
                 <span>Teams of 1-20</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Offices</h3>
@@ -165,7 +165,7 @@ export default function HomeSolutions(props) {
                 alt="Conferences"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/conference-rooms" className='serBoxText'>
+              <Link href="/conference-rooms" className='serBoxText'>
                 <span>Meeting rooms</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Conferences</h3>
@@ -184,7 +184,7 @@ export default function HomeSolutions(props) {
                 alt="Licensing"
                 />
               </div>
-              <Link onClick={scrollToTop()} href="/business-setup" className='serBoxText'>
+              <Link href="/business-setup" className='serBoxText'>
                 <span>Start your business</span>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
                   <h3>Licensing</h3>

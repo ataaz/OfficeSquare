@@ -1135,6 +1135,7 @@ body .phoneNum a:hover{
   .topBar a{font-size:13px;}
   .text2 h2{font-size:26px;line-height:40px;}
   .iconBox span{font-size:14px;line-height:20px;}
+  body .mobileHeaderBtn{margin-right: 0 !important;margin-bottom:20px;padding:19px 20px !important;}
 }
 
 
@@ -1177,7 +1178,22 @@ body .phoneNum a:hover{
   transition: 0.5s;
 }
 
+.btn3{
+  border:1px solid#E35B5B;
+  color: #E35B5B;
+  font-weight: 600;
+  line-height: 15px;
+  display: inline-block;
+  padding: 18px 20px;
+  text-align: center;
+  width: auto;
+}
+
 @media (max-width:575.98px){
+  .mobileHeaderBtn{width:170px;padding:19px 20px !important;font-size:15px;}
+  .btn3{width:170px;font-size:15px;padding:18px 20px;}
+  .topPadding.homePage{padding-top:120px;}
+  .topBar{display:none;}
   .text1Sec.default-pt{padding-top:60px;}
   .homeBannerSlider{overflow: hidden;}
   .mobileHeaderBtn{margin-left:auto;margin-right:auto;}
@@ -1310,6 +1326,11 @@ body .phoneNum a:hover{
 
 
 @media (min-width:576px) and (max-width:767.98px){
+  .mobileHeaderBtn{width:170px;padding:19px 20px;font-size:15px;}
+  .btn3{width:170px;font-size:15px;}
+  .mobileHeaderBtn{width:auto;padding:18px 20px;}
+  .topPadding.homePage{padding-top:120px;}
+  .topBar{display:none;}
   .imgAbs1{display:none;}
   .mobileHeaderBtn{margin-left:auto;margin-right:auto;}
   .homeBannerSlider{overflow: hidden;}

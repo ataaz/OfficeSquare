@@ -10,7 +10,7 @@ export default function HomeBanner(props) {
     <div className='container position-relative containerH100'>
       <div className='row justify-content-end d-none d-md-flex'>
         <div className='col-md-6'>
-          <Image src={props.img.url} alt={props.img.alt} width={626} height={645} data-aos="fade" data-aos-delay="800" data-aos-duration="500" style={{width:`100%`,height:`100%`}}/>
+          <Image src={props.img.url} alt={props.img.alt} width={626} height={645} data-aos="fade" data-aos-delay="200" data-aos-duration="300" style={{width:`100%`,height:`100%`}}/>
         </div>
       </div>
       <div className={styles.vdoTextParent} style={{position:`absolute`}}>
@@ -26,10 +26,11 @@ export default function HomeBanner(props) {
         </div>
         {/* <h2 dangerouslySetInnerHTML={{__html: props.content}}></h2> */}
         {/* <Link className='mobileHeaderBtn d-inline-block' href={props.link?.url}>{props.link?.title}</Link> */}
-        <h2 className="text-center text-md-start" dangerouslySetInnerHTML={{__html: props.content}} data-aos="fade-up" data-aos-delay="200" data-aos-duration="500"></h2>
-        <Link className='mobileHeaderBtn d-inline-block' href={props.link?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">{props.link?.title}</Link>
-        <div className='d-block text-center d-md-none mt-3'>
-          <Link href="/contact-us" className='underlineBtn d-inline' data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">Learn more about us</Link>
+        <h2 className="text-center text-md-start" dangerouslySetInnerHTML={{__html: props.content}} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300"></h2>
+        <Link className='mobileHeaderBtn d-none d-md-inline-block mt-5 me-3' href={props.link?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link?.title}</Link>
+        <div className='d-block text-center d-md-none mt-5'>
+          <Link className='mobileHeaderBtn d-inline-block mt-0 me-3' href={props.link?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link?.title}</Link>
+          <Link className='btn3 d-inline-block' href={props.link2?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link2?.title}</Link>
         </div>
       </div>
       <Slider

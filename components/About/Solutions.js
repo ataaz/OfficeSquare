@@ -2,9 +2,6 @@ import Image from 'next/image';
 import text4 from '../../styles/About/Text4.module.css';
 import Link from 'next/link';
 import styles from '../../styles/About/Solutions.module.css';
-import PrivateWorkspaces from "../../images/private-workspaces.jpg";
-import CoworkingWorkSpaces from "../../images/co-working-workspaces.jpg";
-import ConferenceRoom from "../../images/conference-rooms.jpg";
 
 export default function SolutionsAbout(props) {
     const solutionsList= props.solutions?.map((el,i)=> <div className='col-md-4 col-sm-6 mb-5' key={i}>
