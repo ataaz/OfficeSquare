@@ -1217,6 +1217,7 @@ body .phoneNum a:hover{
 
 @media (max-width:575.98px){
   .HeaderScrolled.siteHeaderParent .siteHeader{background-color:#fff;}
+  .siteHeader{background-color:#fff;}
   .relImg{width:80% !important;}
   .twoImgs .posImg{right:0;bottom:-50px;}
   .text1Sec .text1_h2Mb h2{margin-bottom:20px;}
@@ -1357,6 +1358,7 @@ body .phoneNum a:hover{
 
 
 @media (min-width:576px) and (max-width:767.98px){
+  .siteHeader{background-color:#fff;}
   .slick-dots li button:before{width:12px;height:12px;}
   .relImg{width:80% !important;}
   .twoImgs .posImg{right:0;bottom:-50px;}
