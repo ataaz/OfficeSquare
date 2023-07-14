@@ -1160,6 +1160,7 @@ body .phoneNum a:hover{
   .text2 h2{font-size:26px;line-height:40px;}
   .iconBox span{font-size:14px;line-height:20px;}
   .mobileHeaderBtn{margin-right:0 !important;margin-bottom:15px;}
+  .media376px{margin-top:10px !important;}
   /* body .mobileHeaderBtn{margin-right: 0 !important;margin-bottom:20px;padding:19px 20px !important;} */
 }
 
@@ -1220,7 +1221,7 @@ body .phoneNum a:hover{
   .text1Sec .text1_h2Mb h2{margin-bottom:20px;}
   .mobileHeaderBtn{width:170px;padding:19px 20px !important;font-size:15px;}
   .btn3{width:170px;font-size:15px;padding:18px 20px;}
-  .topPadding.homePage{padding-top:120px;}
+  .topPadding.homePage{padding-top:90px;}
   .topBar{display:none;}
   .text1Sec.default-pt{padding-top:60px;}
   .homeBannerSlider{overflow: hidden;}
@@ -1361,7 +1362,7 @@ body .phoneNum a:hover{
   .mobileHeaderBtn{width:170px;padding:18px 20px;font-size:15px;}
   .btn3{width:170px;font-size:15px;}
   .mobileHeaderBtn{width:auto;padding:18px 20px;}
-  .topPadding.homePage{padding-top:120px;}
+  .topPadding.homePage{padding-top:90px;}
   .topBar{display:none;}
   .imgAbs1{display:none;}
   /* .mobileHeaderBtn{margin-left:auto;margin-right:auto;} */
