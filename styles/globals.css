@@ -1216,6 +1216,7 @@ body .phoneNum a:hover{
 }
 
 @media (max-width:575.98px){
+  .HeaderScrolled.siteHeaderParent .siteHeader{background-color:#fff;}
   .relImg{width:80% !important;}
   .twoImgs .posImg{right:0;bottom:-50px;}
   .text1Sec .text1_h2Mb h2{margin-bottom:20px;}
