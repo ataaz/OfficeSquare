@@ -38,11 +38,11 @@ export default function HomeBanner(props) {
         </div>
         {/* <h2 dangerouslySetInnerHTML={{__html: props.content}}></h2> */}
         {/* <Link className='mobileHeaderBtn d-inline-block' href={props.link?.url}>{props.link?.title}</Link> */}
-        <h2 className="text-center text-md-start" dangerouslySetInnerHTML={{__html: props.content}} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300"></h2>
+        <h2 className="text-center text-md-start" dangerouslySetInnerHTML={{__html: props.content}}></h2>
         <div className='d-flex align-items-center justify-content-center justify-content-md-start flex-wrap text-center mt-5 media376px'>
-          <Link className='mobileHeaderBtn d-inline-block mt-0 me-3 ms-0' href={props.link?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link?.title}</Link>
-          <Link className='btn3 d-inline-block d-md-none' href={props.link2?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">{props.link2?.title}</Link>
-          <Link className='underlineBtn d-none d-md-inline-block ms-md-2 ms-lg-4' href={props.link2?.url} data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">Learn More About Us</Link>
+          <Link className='mobileHeaderBtn d-inline-block mt-0 me-3 ms-0' href={props.link?.url}>{props.link?.title}</Link>
+          <Link className='btn3 d-inline-block d-md-none' href={props.link2?.url}>{props.link2?.title}</Link>
+          <Link className='underlineBtn d-none d-md-inline-block ms-md-2 ms-lg-4' href={props.link2?.url}>Learn More About Us</Link>
         </div>
       </div>
       <Slider
