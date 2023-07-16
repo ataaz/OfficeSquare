@@ -29,7 +29,7 @@ export default function VirtualOffices({ page }) {
       <Head>
         <title>{page[0]?.yoast_head_json.title}</title>
         <meta name='description' content={page[0]?.yoast_head_json.description}></meta>
-        <meta property="og:image" content={page[0]?.yoast_head_json.og_image.url} />
+        <meta property="og:image" content={page[0]?.yoast_head_json.og_image[0].url} />
       </Head>
       <div className='topPadding'>
         <SliderHeader label={page[0]?.acf.header_label} title={page[0]?.acf.header_title} content={page[0]?.acf.header_content} link={page[0]?.acf.header_link} slider={page[0]?.acf.header_images} sliderDiv={page[0]?.acf.header_images}></SliderHeader>
