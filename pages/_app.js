@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
     <LocomotiveScrollProvider
       options={
         {
-          smooth: false,
+          smooth: true,
           smartphone: {
             smooth: false
           },
