@@ -106,7 +106,7 @@
     .SliderHeader{display:flex;flex-direction:column;}
     .SliderHeader .SliderHeaderImg{order:1;}
     .SliderHeader .SliderHeaderText{order:2;top:-40px;left:20px;}
-    .SliderHeader .SliderHeaderBox{padding:20px;margin-bottom:-30px;}
+    .SliderHeader .SliderHeaderBox{padding:30px 40px;margin-bottom:-30px;}
     .SliderHeaderImagesParent img{height:320px;object-fit:cover;}
     .SliderHeaderText p{font-size:16px;line-height:25px;}
 }

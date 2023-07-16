@@ -14,6 +14,9 @@ export default function PostPreview({
   return (
     <div>
       <div className="mb-5">
+        <div className="text-lg mb-4">
+          <Date dateString={date} />
+        </div>
         {coverImage && (
           <CoverImage title={title} coverImage={coverImage} slug={slug} />
         )}
@@ -25,9 +28,6 @@ export default function PostPreview({
           dangerouslySetInnerHTML={{ __html: title }}
         ></Link>
       </h3>
-      <div className="text-lg mb-4">
-        <Date dateString={date} />
-      </div>
       <div
         className="text-lg leading-relaxed mb-4"
         dangerouslySetInnerHTML={{ __html: excerpt }}

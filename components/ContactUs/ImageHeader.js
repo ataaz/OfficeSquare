@@ -8,7 +8,8 @@ export default function ImageHeader(props) {
     <div>
         <div className='container d-inline-block d-sm-none mb-2'>
             <div className={styles.SliderHeaderText + ' ' + text4.text4 + ' ' + text4.text4Label + ' ' + styles.SliderHeaderBox + ' ' + text4.text4_fszP16}>
-                <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><em>{props.label}</em></span>
+                <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><em>
+                    </em></span>
             </div>
         </div>
         <section className={styles.ImageHeader + ' ' + ' '}>
@@ -16,7 +17,7 @@ export default function ImageHeader(props) {
                 <div className='row align-items-center h-100'>
                     <div className='col-md-7 col-8'>
                         <div className={styles.SliderHeaderText + ' ' + text4.text4 + ' ' + text4.text4Label + ' ' + styles.SliderHeaderBox + ' ' + text4.text4_fszP16}>
-                            <span className='d-sm-inline-block d-none' data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><em>Contact Us</em></span>
+                            <span className='d-sm-inline-block d-none' data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><em>{props.label}</em></span>
                             <h1 className='mb-0' dangerouslySetInnerHTML={{ __html: props.heading }} data-aos="fade-up" data-aos-delay="700" data-aos-duration="800"></h1>
                         </div>
                     </div>

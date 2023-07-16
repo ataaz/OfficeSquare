@@ -33,7 +33,7 @@ export default function HomeBanner(props) {
             Your browser does not support HTML video.
           </video> */}
           <div className={styles.vdoTextBox}>
-            <h1 className="text-center text-md-start" data-aos="fade" data-aos-delay="200">{props.heading}</h1>
+            <h1 className="text-center text-md-start">{props.heading}</h1>
           </div>
         </div>
         {/* <h2 dangerouslySetInnerHTML={{__html: props.content}}></h2> */}

@@ -55,7 +55,7 @@ export default class Gallery extends Component {
                             <p className='mb-0'>{this.props.content}</p>
                             </div>
                         </div>
-                        <div className='col-md-3 text-md-end'>
+                        <div className='col-md-4 col-lg-4 col-xl-3 text-md-end'>
                             <Link className="btn1" href={this.props.link.url}>{this.props.link.title}</Link>
                         </div>
                     </div>

@@ -10,36 +10,19 @@ import Features from '../components/Service/Features';
 import Gallery from '../components/Service/Gallery';
 import FAQs from '../components/Service/FAQs';
 import SliderHeader from '../components/Service/SliderHeader';
-import { useDispatch, useSelector } from "react-redux";
-import { getConferenceRooms } from "../redux/ConferenceRoomsRedux";
-import { useEffect } from 'react';
-import AOS from  'aos';
-import 'aos/dist/aos.css';
+// import { useDispatch, useSelector } from "react-redux";
+// import { getConferenceRooms } from "../redux/ConferenceRoomsRedux";
+// import { useEffect } from 'react';
+// import AOS from  'aos';
+// import 'aos/dist/aos.css';
 
-export default function ConferenceRooms() {
-  // Fetching State
-  const dispatch = useDispatch();
-  const { page } = useSelector((state) => state.ConferenceRooms);
-  const { status } = useSelector((state) => state.ConferenceRooms);
-  // const params = useParams();
+export const getServerSideProps = async () => {
+  const res = await fetch('https://api.officesquare.com/wp-json/wp/v2/services?slug=conference-rooms')
+  const page = await res.json()
+  return { props: { page } }
+}
 
-  useEffect(() => {
-    ////Passing page ID reference
-    if (status !== "success") {
-      dispatch(getConferenceRooms());
-      AOS.init({ mirror: true, once: false });
-      // AOS TRIGGER FIX
-      var init = [];
-      var x = setInterval(function () {
-        init.push(AOS.init({ mirror: true, once: false }));
-        if (init.length >= 2) {
-          clearInterval(x);
-        }
-      }, 1000);
-    }
-    }, [dispatch]);
-  if (status === "success") {
-    // console.log(page[0].acf.gallery);
+export default function ConferenceRooms({ page }) {
   return (
     <>
     <Layout>
@@ -62,5 +45,4 @@ export default function ConferenceRooms() {
     </Layout>
     </>
     )
-  };
 }

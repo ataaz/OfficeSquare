@@ -43,6 +43,11 @@
   /* background: rgba(255,255,255,0.9); */
 }
 
+.navbar-nav li:nth-child(2) a{
+  position: relative;
+  top: -2px;
+}
+
 .topPadding{
   padding-top:168px;
 }
@@ -1030,7 +1035,7 @@ main{
   .EvenOrderRow .row:nth-child(even) .col-md-6{
     order:2;
   }
-  .EvenOrderRow .row:nth-child(even) .col-md-5{
+  .EvenOrderRow .row:nth-child(even) .col-lg-5{
     order:1;
   }
   .gallerySecGlobal .btn1{ position: relative; top: -8px; }
@@ -1215,11 +1220,20 @@ body .phoneNum a:hover{
   width: auto;
 }
 
+/* .siteHeader{
+  background-color: #fff;
+} */
+
+.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
 @media (max-width:575.98px){
+  .socialIconsMobile a svg{width:34px !important;}
   .HeaderScrolled.siteHeaderParent .siteHeader{background-color:#fff;}
   .siteHeader{background-color:#fff;}
   .relImg{width:80% !important;}
   .twoImgs .posImg{right:0;bottom:-50px;}
+  .posImg img{width:173px;height:193px;}
   .text1Sec .text1_h2Mb h2{margin-bottom:20px;}
   .mobileHeaderBtn{width:170px;padding:19px 20px !important;font-size:15px;}
   .btn3{width:170px;font-size:15px;padding:18px 20px;}
@@ -1354,10 +1368,13 @@ body .phoneNum a:hover{
   .text4Contact h2{font-size:22px;line-height:32px;}
   .text4Contact p{font-size:14px!important;line-height:24px!important;}
   .slick-dots li button:before{width:12px;height:12px;}
+  .topPadding{padding-top:100px;}
+  .centerText h2 br{display:none;}
 }
 
 
 @media (min-width:576px) and (max-width:767.98px){
+  .posImg img{width:173px;height:193px;}
   .siteHeader{background-color:#fff;}
   .slick-dots li button:before{width:12px;height:12px;}
   .relImg{width:80% !important;}
@@ -1620,6 +1637,7 @@ body .phoneNum a:hover{
     height: 100%;
     position: fixed;
     background-color: #fff;
+    overflow: scroll;
     transition: 0.5s;
   }
   .navbar-nav li a{
@@ -1632,7 +1650,7 @@ body .phoneNum a:hover{
   .siteHeader{position:fixed;}
   .siteHeader.active .mobileHeaderBtn{opacity: 0;}
   .siteHeader.active main, .siteHeader.active .container{height:100%;}
-  .siteHeader.active .socialIcons{display:none;}
+  /* .siteHeader.active .socialIcons{display:none;} */
   .siteHeader.active .mobileHeaderContent{display:flex !important;}
   .siteHeader.active .mobileHeaderContent .navbar-collapse{display:block;}
   .subMenuMobile li a span{position:relative;top:-2px;margin-right:5px;}
@@ -1654,5 +1672,5 @@ body .phoneNum a:hover{
 .h-80{height:80%;}
 
 @media (min-width:1400px) and (max-width:1600px){
-  .imgAbs2{width:190px;height:200px;}
+  .imgAbs2{width:190px;height:200px;} 
 }

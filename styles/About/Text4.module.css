@@ -107,9 +107,17 @@
     .posTop110px{top:29px;}
     .text4Label span{margin-bottom:10px;padding-left:30px;}
     .text4HideLabel span{display:none;}
+    .imgAbs4, .imgAbs5{display:none;}
+    .centerText.default-pt1{
+        padding: 50px 0 !important;
+    }
 }
 
 @media (min-width:576px) and (max-width:767.98px){
+    .centerText.default-pt1{
+        padding: 50px 0 !important;
+    }
+    .imgAbs4, .imgAbs5{display:none;}
     .text4_fszP16 p{
         font-size: 14px !important;
         line-height: 24px !important;

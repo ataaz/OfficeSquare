@@ -10,7 +10,7 @@ export default function Benefits(props) {
                 <Image src={el.image.url} alt={el.image.alt} width={636} height={676} data-scroll-speed="-1.5" data-scroll/>
             </div>
         </div>
-        <div className='col-md-5'>
+        <div className='col-md-6 col-lg-5'>
             <div className={text4.text4 + ' ' + text4.text4Label + ' '  + text4.text4_fszP16 + ' ' + text4.text4HideLabel}>
                 <span><em>{el.content_label}</em></span>
                 <h2 className='mt-3 mt-md-0 mb-2 mb-xl-4 text4MobileBenefits'>{el.heading}</h2>

@@ -29,7 +29,7 @@
 }
 
 @media (max-width:575.98px){
-    .imgAbs6{width:150px;height:99px;}
+    .imgAbs6{width:150px;height:99px;top:10px}
     .OfferSpans span{font-size:24px;}
     .OfferSpans span br{display:none;}
 }

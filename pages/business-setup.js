@@ -6,41 +6,25 @@ import Text2Cols from '../components/Service/Text2Cols';
 import Benefits from '../components/Service/Benefits';
 import Amenities from '../components/Service/Amenities';
 import LocationCTA from '../components/Service/LocationCTA';
-import Features from '../components/Service/Features';
+// import Features from '../components/Service/Features';
 import Gallery from '../components/Service/Gallery';
 import FAQs from '../components/Service/FAQs';
 import SliderHeader from '../components/Service/SliderHeader';
 import Features2 from '../components/Service/Features2';
-import { useDispatch, useSelector } from "react-redux";
-import { getBusinessSetup } from "../redux/BusinessSetupRedux";
-import { useEffect } from 'react';
-import AOS from  'aos';
-import 'aos/dist/aos.css';
+// import { useDispatch, useSelector } from "react-redux";
+// import { getBusinessSetup } from "../redux/BusinessSetupRedux";
+// import { useEffect } from 'react';
+// import AOS from  'aos';
+// import 'aos/dist/aos.css';
 
-export default function BusinessSetup() {
-  // Fetching State
-  const dispatch = useDispatch();
-  const { page } = useSelector((state) => state.BusinessSetup);
-  const { status } = useSelector((state) => state.BusinessSetup);
-  // const params = useParams();
+export const getServerSideProps = async () => {
+  const res = await fetch('https://api.officesquare.com/wp-json/wp/v2/services?slug=business-setup')
+  const page = await res.json()
+  return { props: { page } }
+}
 
-  useEffect(() => {
-    ////Passing page ID reference
-    if (status !== "success") {
-      dispatch(getBusinessSetup());
-      AOS.init({ mirror: true, once: false });
-      // AOS TRIGGER FIX
-      var init = [];
-      var x = setInterval(function () {
-        init.push(AOS.init({ mirror: true, once: false }));
-        if (init.length >= 2) {
-          clearInterval(x);
-        }
-      }, 1000);
-    }
-    }, [dispatch]);
-  if (status === "success") {
-    // console.log(page[0].acf.gallery);
+export default function BusinessSetup({ page }) {
+  // console.log(page);
   return (
     <>
     <Layout>
@@ -66,5 +50,4 @@ export default function BusinessSetup() {
     </Layout>
     </>
     )
-  };
 }

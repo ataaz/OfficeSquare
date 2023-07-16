@@ -2,37 +2,20 @@ import Layout from '../components/Layout/layout';
 import HomeLogos from '../components/Home/HomeLogos';
 import HomeCTA from '../components/Home/HomeCTA';
 import Head from 'next/head';
-import { useDispatch, useSelector } from "react-redux";
-import { getPrivacypage } from "../redux/PrivacyPolicyRedux";
-import { useEffect } from 'react';
 import styles from '../styles/About/Text4.module.css';
-import AOS from  'aos';
-import 'aos/dist/aos.css';
+// import { useDispatch, useSelector } from "react-redux";
+// import { getPrivacypage } from "../redux/PrivacyPolicyRedux";
+// import { useEffect } from 'react';
+// import AOS from  'aos';
+// import 'aos/dist/aos.css';
 
-export default function Privacy() {
-  // Fetching State
-  const dispatch = useDispatch();
-  const { page } = useSelector((state) => state.Privacypage);
-  const { status } = useSelector((state) => state.Privacypage);
-  // const params = useParams();
+export const getServerSideProps = async () => {
+  const res = await fetch('https://api.officesquare.com/wp-json/wp/v2/pages/3')
+  const page = await res.json()
+  return { props: { page } }
+}
 
-  useEffect(() => {
-    ////Passing page ID reference
-    if (status !== "success") {
-      dispatch(getPrivacypage());
-      AOS.init({ mirror: true, once: false });
-      // AOS TRIGGER FIX
-      var init = [];
-      var x = setInterval(function () {
-        init.push(AOS.init({ mirror: true, once: false }));
-        if (init.length >= 2) {
-          clearInterval(x);
-        }
-      }, 1000);
-    }
-    }, [dispatch]);
-  console.log(page);
-  if (status === "success") {
+export default function Privacy({ page }) {
   return (
     <>
     <Layout>
@@ -59,5 +42,4 @@ export default function Privacy() {
     </Layout>
     </>
     )
-  };
 }

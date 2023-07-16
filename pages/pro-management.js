@@ -10,36 +10,19 @@ import Features2 from '../components/Service/Features2';
 import Gallery from '../components/Service/Gallery';
 import FAQs from '../components/Service/FAQs';
 import SliderHeader from '../components/Service/SliderHeader';
-import { useDispatch, useSelector } from "react-redux";
-import { getProManagement } from "../redux/ProManagementRedux";
-import { useEffect } from 'react';
-import AOS from  'aos';
-import 'aos/dist/aos.css';
+// import { useDispatch, useSelector } from "react-redux";
+// import { getProManagement } from "../redux/ProManagementRedux";
+// import { useEffect } from 'react';
+// import AOS from  'aos';
+// import 'aos/dist/aos.css';
 
-export default function ProManagement() {
-  // Fetching State
-  const dispatch = useDispatch();
-  const { page } = useSelector((state) => state.ProManagement);
-  const { status } = useSelector((state) => state.ProManagement);
-  // const params = useParams();
+export const getServerSideProps = async () => {
+  const res = await fetch('https://api.officesquare.com/wp-json/wp/v2/services?slug=management')
+  const page = await res.json()
+  return { props: { page } }
+}
 
-  useEffect(() => {
-    ////Passing page ID reference
-    if (status !== "success") {
-      dispatch(getProManagement());
-      AOS.init({ mirror: true, once: false });
-      // AOS TRIGGER FIX
-      var init = [];
-      var x = setInterval(function () {
-        init.push(AOS.init({ mirror: true, once: false }));
-        if (init.length >= 2) {
-          clearInterval(x);
-        }
-      }, 1000);
-    }
-    }, [dispatch]);
-  if (status === "success") {
-    // console.log(page[0].acf.gallery);
+export default function ProManagement({ page }) {
   return (
     <>
     <Layout>
@@ -62,5 +45,4 @@ export default function ProManagement() {
     </Layout>
     </>
     )
-  };
 }
