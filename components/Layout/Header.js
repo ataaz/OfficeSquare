@@ -20,6 +20,34 @@ export default function Header() {
         }
       })
     })
+    const [scroll2, setScroll2] = useState(0);
+    useEffect(() => {
+    let prevScrollY = window.pageYOffset;
+
+    const handleScroll = () => {
+        const currentScrollY = window.pageYOffset;
+        const isScrollingUp = currentScrollY < prevScrollY;
+
+        if (isScrollingUp) {
+        // Add your logic here to add a class or perform any other actions
+        // For example, you can add a class to the body element:
+        document.body.classList.add('scroll-up');
+        } else {
+        // Add your logic here to remove the class or perform any other actions
+        // For example, you can remove the class from the body element:
+        document.body.classList.remove('scroll-up');
+        }
+
+        prevScrollY = currentScrollY;
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+        document.removeEventListener("scroll", handleScroll);
+    };
+    }, []);
+
     const [isActive, setIsActive] = useState(false);
     const handleClick = event => {
         setIsActive(current => !current);
@@ -39,15 +67,14 @@ export default function Header() {
     const pathname = usePathname();
     const getPathName = pathname.replace(/^\//, '');
     useEffect(() => {
-        // When the user scrolls down 50px from the top of the document, resize the header's font size
-        window.onscroll = function() {scrollFunction()};
-        function scrollFunction() {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            document.getElementById("topBar").style.display = "none";
-        } else {
-            document.getElementById("topBar").style.display = "block";
-        }
-        }
+        // window.onscroll = function() {scrollFunction()};
+        // function scrollFunction() {
+        // if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        //     document.getElementById("topBar").style.display = "none";
+        // } else {
+        //     document.getElementById("topBar").style.display = "block";
+        // }
+        // }
         var s = skrollr.init();
     });
     return <div className={scroll ? "HeaderScrolled siteHeaderParent " + getPathName + 'Header' : "siteHeaderParent " + getPathName + 'Header'} id="header">

@@ -15,8 +15,17 @@
 }
 
 .HeaderScrolled.siteHeaderParent{
-  /* top: -200px; */
+  top: -200px;
+  transition: 0.5s; 
+}
+
+.scroll-up .HeaderScrolled.siteHeaderParent{
+  top: 0;
   transition: 0.5s;
+}
+
+.scroll-up .HeaderScrolled.aboutHeader .siteHeader{
+  background-color: #fff;
 }
 
 /* .HeaderScrolled .topBar{
