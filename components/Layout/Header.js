@@ -38,72 +38,18 @@ export default function Header() {
     };
     const pathname = usePathname();
     const getPathName = pathname.replace(/^\//, '');
-    // useEffect(() => {
-    //     var $ = jQuery.noConflict();
-    //     let scroll = null;
-    //     $(document).ready(function() {
-    //         setTimeout(function() {
-    //             let e = {
-    //                 el: document.querySelector("[data-scroll-container]"),
-    //                 smooth: true,
-    //                 getSpeed: true,
-    //                 getDirection: true,
-    //                 reloadOnContextChange: true,
-    //                 smartphone: {
-    //                     smooth: true,
-    //                     reloadOnContextChange: true
-    //                 },
-    //                 tablet: {
-    //                     smooth: true,
-    //                     reloadOnContextChange: true
-    //                 }
-    //             };
-    //             const n = document.getElementById("header ");
-    //             let r = false,
-    //                 i = true;
-    //             scroll = new LocomotiveScroll(e);
-    //             const t = document.body;
-    //             scroll.on("scroll ", e => {
-    //                 let t = $("header ").outerHeight(true) / 2;
-    //                 let o = n.getBoundingClientRect().height - t;
-    //                 if (e.direction === "down " && i) {
-    //                     if (e.scroll.y > o) {
-    //                         n.classList.add("pinned ");
-    //                         if (n.classList.contains("fixed - top ")) i = false
-    //                     }
-    //                 }
-    //                 if (e.direction === "up " && !i) {
-    //                     if (e.scroll.y <= o) {
-    //                         n.classList.remove("pinned ");
-    //                         i = true
-    //                     }
-    //                 }
-    //                 if (e.direction === "down " && !r) {
-    //                     if (e.scroll.y > o + 0) {
-    //                         n.classList.remove("pinned ");
-    //                         n.classList.add("unpinned ");
-    //                         r = true
-    //                     }
-    //                 }
-    //                 if (e.direction === "up " && r) {
-    //                     n.classList.remove("unpinned ");
-    //                     n.classList.add("pinned ");
-    //                     r = false
-    //                 }
-    //                 if (typeof sectionBgChange == "function ") {
-    //                     sectionBgChange()
-    //                 }
-    //                 if (typeof returntoTop == "function ") {
-    //                     returntoTop()
-    //                 }
-    //             });
-    //             document.documentElement.classList.add("is - ready ")
-    //         }, 600);
-    //         setTimeout(() => {
-    //             new ResizeObserver(() => scroll.update()).observe(document.querySelector(" [data - scroll - container]"))
-    //         }, 700)
-    //     });
-    //   });
+    useEffect(() => {
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("topBar").style.display = "none";
+        } else {
+            document.getElementById("topBar").style.display = "block";
+        }
+        }
+        var s = skrollr.init();
+    });
     return <div className={scroll ? "HeaderScrolled siteHeaderParent " + getPathName + 'Header' : "siteHeaderParent " + getPathName + 'Header'} id="header">
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -114,8 +60,9 @@ export default function Header() {
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-MFJ537D');`}}></script>
+            <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
         </Head>
-        <div className="topBar">
+        <div className="topBar" id="topBar">
             <div className="container">
                 <div className="row justify-content-between align-items-center">
                     <div className="col-md-5 col-5">

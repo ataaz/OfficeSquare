@@ -20,7 +20,7 @@ export default function HomeText1(props) {
                             height="684"
                             style={{width:`100%`,height:`100%`}}
                             />
-                            <div className='posImg' data-scroll data-scroll-speed="4" style={{transition:`0.5s`}}>
+                            <div className='posImg' data-800="bottom:-100px" data-1800="bottom:200px" data-scroll data-scroll-speed="4">
                                 <Image
                                 priority
                                 src={img2}
@@ -58,6 +58,7 @@ export default function HomeText1(props) {
             width="250"
             height="250"
             /> */}
+
         </div>
     </section>
 };

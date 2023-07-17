@@ -23,7 +23,8 @@ export default function HomeText2(props) {
         // alt={props.image1?.alt}
         width={350}
         height={353}
-        data-scroll data-scroll-speed="3"
+        data-1800="top:50%" data-2500="top:100%"
+        data-scroll data-scroll-speed="-5"
         />
         {/* only mobile visible */}
         <Image
@@ -53,6 +54,7 @@ export default function HomeText2(props) {
         // alt={props.image2?.url}
         width={250}
         height={250}
+        data-1200="top:25%" data-2500="top:-25%"
         data-scroll data-scroll-speed="3"
         />
     </section>

@@ -32,7 +32,11 @@ export default function App({ Component, pageProps }) {
           font-family: ${jk.style.fontFamily};
         }
       `}</style>
-    <LocomotiveScrollProvider
+    <Header/>
+    <main>
+        <Component {...pageProps} />
+    </main>
+    {/* <LocomotiveScrollProvider
       options={
         {
           smooth: true,
@@ -45,23 +49,17 @@ export default function App({ Component, pageProps }) {
       }
       watch={
         [
-          //..all the dependencies you want to watch to update the scroll.
-          //  Basicaly, you would want to watch page/location changes
-          //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
         ]
-      }
-      // location={asPath}
-      // onLocationChange={scroll => scroll.scrollTo(0, { duration: 0, disableLerp: true })} // If you want to reset the scroll position to 0 for example
-      // onUpdate={() => console.log('Updated, but not on location change!')} // Will trigger on 
+      } 
       containerRef={containerRef}
     >
     <Header/>
     <main ref={containerRef} data-scroll-container>
-        <Provider store={store}>
+        <Provider>
           <Component {...pageProps} />
         </Provider>
     </main>
-    </LocomotiveScrollProvider>
+    </LocomotiveScrollProvider> */}
     </>
 );
 }

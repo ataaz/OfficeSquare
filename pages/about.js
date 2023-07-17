@@ -25,6 +25,7 @@ export default function About({ repo }) {
       <Head>
         <title>{repo.meta_title}</title>
         <meta name='description' content={repo.meta_description}></meta>
+        <meta property='og:image' content={repo.acf?.offer_image} />
       </Head>
       <div className='aboutPage'>
         <AboutHeader heading={repo.acf?.sub_header_heading} content={repo.acf?.sub_header_content}></AboutHeader>
