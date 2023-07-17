@@ -9,7 +9,7 @@ export default function CenterText(props) {
     return (
       <>
       <section className="centerText default-pt1 default-pb1 position-relative LargeScreenWidth">
-        <Image priority src={props.img1?.url} alt={props.img2?.alt} className={styles.imgAbs4} data-scroll data-scroll-speed="4" width="259" height="266"/>
+        <Image priority src={props.img1?.url} alt={props.img2?.alt} className={styles.imgAbs4} data-600="top:130px" data-900="top:-50px" data-scroll data-scroll-speed="4" width="259" height="266"/>
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-9 col-lg-7">
@@ -18,7 +18,7 @@ export default function CenterText(props) {
                 </div>
             </div>
         </div>
-        <Image priority src={props.img2?.url} alt={props.img2?.alt} className={styles.imgAbs5} data-scroll data-scroll-speed="4" width="215" height="207"/>
+        <Image priority src={props.img2?.url} alt={props.img2?.alt} className={styles.imgAbs5} data-scroll data-scroll-speed="4" data-800="bottom:80px" data-1200="bottom:350px" width="215" height="207"/>
       </section>
       </>
     );

@@ -43,8 +43,8 @@ export default function Footer() {
                 <div className='col-md-6 col-lg-6'>
                     <div className='siteFooterLinks text-start text-lg-end'>
                         <Link onClick={Gototop} href='#' className='linkMargin'>Blog</Link>
-                        <Link onClick={Gototop} href='/contact-us' className='linkMargin'>Contact Us</Link>
-                        <Link onClick={Gototop} href='/privacy-policy' className='linkMargin'>Privacy Policy</Link>
+                        <Link onClick={Gototop} href='contact-us' className='linkMargin'>Contact Us</Link>
+                        <Link onClick={Gototop} href='privacy-policy' className='linkMargin'>Privacy Policy</Link>
                         <span className='copyrightText d-block d-md-none'>© 2023  Office Square | All Rights Reserved</span>
                         <span><a href='https://arenacapital.com/website-design-development/' target='_blank'>Website</a> by <a href='https://arenacapital.com/' target='_blank'><strong>ARENA</strong></a></span>
                     </div>
