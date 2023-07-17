@@ -9,9 +9,34 @@
   /* height: 112.6px; */
   transition: 0.5s;
 }
+/* .skrollr-mobile body */
+.skrollr-mobile{
+  overflow-y: scroll !important;
+}
 
-.skrollr-mobile, .skrollr-mobile body{
-  overflow: scroll !important;
+.HeaderScrolled .activeSubmenu .subMenu.active{
+  display: none;
+}
+
+.scroll-up .HeaderScrolled .activeSubmenu .subMenu.active{
+  display: block;
+}
+
+.HeaderScrolled .topBar{
+  display: none;
+}
+
+/* .HeaderScrolled .activeSubmenu{
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.HeaderScrolled .activeSubmenu .subMenu.active{
+  display: none !important;
+} */
+
+.activeBodyRoot{
+  overflow: hidden;
 }
 
 .HeaderScrolled.siteHeaderParent{

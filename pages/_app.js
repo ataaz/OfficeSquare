@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.css';
 import '../styles/locomotive-scroll.min.css';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+// import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { Plus_Jakarta_Sans } from 'next/font/google';
-import { Provider } from "react-redux";
-import store from "../store.js";
+// import { Provider } from "react-redux";
+// import store from "../store.js";
 import Header from "../components/Layout/Header";
 const jk = Plus_Jakarta_Sans({ 
     subsets: ['latin'],

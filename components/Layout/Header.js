@@ -1,5 +1,5 @@
 import headerLogo from "../../images/logo-office-square.svg";
-import headerMobileLogo from "../../images/header-mobile-logo.svg";
+// import headerMobileLogo from "../../images/header-mobile-logo.svg";
 import whiteLogo from "../../images/white-logo.svg";
 import SubmenuImage from "../../images/submenu-image.webp";
 import Image from 'next/image'
@@ -17,17 +17,20 @@ export default function Header() {
         const scrollCheck = window.scrollY > 100
         if (scrollCheck !== scroll) {
           setScroll(scrollCheck)
+        //   const divHeader = document.getElementById("siteHeader");
+        //   const divSubMenu = document.getElementById("subMenu");
+        //   divHeader.classList.remove("activeSubmenu");
+        //   divSubMenu.classList.remove("active");
         }
       })
     })
-    const [scroll2, setScroll2] = useState(0);
+    // const [scroll2, setScroll2] = useState(0);
     useEffect(() => {
     let prevScrollY = window.pageYOffset;
 
     const handleScroll = () => {
         const currentScrollY = window.pageYOffset;
         const isScrollingUp = currentScrollY < prevScrollY;
-
         if (isScrollingUp) {
         // Add your logic here to add a class or perform any other actions
         // For example, you can add a class to the body element:
@@ -55,6 +58,8 @@ export default function Header() {
     const [isSubmenuActive, setSubmenuIsActive] = useState(false);
     const handleClickSubMenu = event => {
         setSubmenuIsActive(current => !current);
+        // const divHeader = document.getElementById("bodyRoot");
+        // divHeader.classList.add("activeBodyRoot");
     };
     const [isSubmenuChildActive, setSubmenuChildIsActive] = useState(false);
     const handleClickSubMenuChild = event => {
@@ -106,7 +111,7 @@ export default function Header() {
                 </div>
             </div>
         </div>
-        <header className={isActive ? 'siteHeader active' : isSubmenuActive ? 'siteHeader activeSubmenu' : 'siteHeader'}>
+        <header className={isActive ? 'siteHeader active' : isSubmenuActive ? 'siteHeader activeSubmenu' : 'siteHeader'} id="siteHeader">
         <main>
             <div className="container">
                 <div className="row justify-content-between align-items-center">
@@ -147,7 +152,7 @@ export default function Header() {
                     <div className="col-8 col-md-9 col-lg-9 col-xl-8 d-none d-md-flex flex-wrap justify-content-end">
                         <ul className="navbar-nav list-inline">
                             <li className="nav-item list-inline-item"><Link className="nav-link active" aria-current="page" href="about">About</Link></li>
-                            <li className="nav-item list-inline-item"><Link className="nav-link d-flex align-items-end" href="#"
+                            <li className="nav-item list-inline-item"><Link className="nav-link d-flex align-items-end" href=""
                             onClick={() => {
                                 handleClickSubMenu();
                             }}
@@ -157,7 +162,7 @@ export default function Header() {
                             :
                             <svg fill="#000000" style={{marginLeft:`5px`,position:`relative`,top:`3px`}} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve"> <g> <path d="M78.466,35.559L50.15,63.633L22.078,35.317c-0.777-0.785-2.044-0.789-2.828-0.012s-0.789,2.044-0.012,2.827L48.432,67.58 c0.365,0.368,0.835,0.563,1.312,0.589c0.139,0.008,0.278-0.001,0.415-0.021c0.054,0.008,0.106,0.021,0.16,0.022 c0.544,0.029,1.099-0.162,1.515-0.576l29.447-29.196c0.785-0.777,0.79-2.043,0.012-2.828S79.249,34.781,78.466,35.559z"/> </g> </svg>
                             }</Link></li>
-                            <li className="nav-item list-inline-item"><Link className="nav-link" aria-current="page" href="#">Blog</Link></li>
+                            <li className="nav-item list-inline-item"><Link className="nav-link" aria-current="page" href="">Blog</Link></li>
                             <li className="nav-item list-inline-item HdrBtn"><Link className="nav-link" href="contact-us">
 <svg id="Layer_1" className="bookUR" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688.26 20.42">
   <defs>
@@ -258,7 +263,7 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarsExample01">
                         <ul className="navbar-nav me-auto mb-2">
                             <li className="nav-item"><Link onClick={handleClick} className="nav-link active" aria-current="page" href="about">About</Link></li>
-                            <li className="nav-item"><Link className="nav-link solMobileAnchor" href="#" onClick={handleClickDesktopSubMenu}>Solutions 
+                            <li className="nav-item"><Link className="nav-link solMobileAnchor" href="" onClick={handleClickDesktopSubMenu}>Solutions 
                             {isDesktopSubmenuActive ? 
                             <svg width="17" height="2" viewBox="0 0 17 2" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="17" height="2" fill="black"/> </svg>
                             :
@@ -270,7 +275,9 @@ export default function Header() {
                                     <li className="nav-item"><Link onClick={handleClick} className={isDesktopSubmenuActive ? 'nav-link fade-in' : 'nav-link'} aria-current="page" href="conference-rooms" style={{animationDelay:`450ms`}}>Meeting/Conference Room</Link></li>
                                     <li className="nav-item"><Link onClick={handleClick} className={isDesktopSubmenuActive ? 'nav-link fade-in' : 'nav-link'} aria-current="page" href="event-spaces" style={{animationDelay:`600ms`}}>Event Space</Link></li>
                                     <li className="nav-item"><Link onClick={handleClick} className={isDesktopSubmenuActive ? 'nav-link fade-in' : 'nav-link'} aria-current="page" href="virtual-offices" style={{animationDelay:`550ms`}}>Virtual Office</Link></li>
-                                    <li className="nav-item dropdown"><a className={isDesktopSubmenuActive ? 'nav-link fade-in' : 'nav-link'} aria-current="page" href="#" onClick={handleClickSubMenuChild} style={{animationDelay:`700ms`}}>Additional Services
+                                    <li className="nav-item"><Link onClick={handleClick} className={isDesktopSubmenuActive ? 'nav-link fade-in' : 'nav-link'} style={{animationDelay:`700ms`}} aria-current="page" href="pro-management">PRO Management</Link></li>
+                                    <li className="nav-item"><Link onClick={handleClick} className={isDesktopSubmenuActive ? 'nav-link fade-in' : 'nav-link'} style={{animationDelay:`850ms`}} aria-current="page" href="business-setup">Business Set Up</Link></li>
+                                    {/* <li className="nav-item dropdown"><a className={isDesktopSubmenuActive ? 'nav-link fade-in' : 'nav-link'} aria-current="page" href="#" onClick={handleClickSubMenuChild} style={{animationDelay:`700ms`}}>Additional Services
                                     {isSubmenuChildActive ? 
                                     <svg style={{marginLeft:`10px`,transition:`0.5s`}} width="17" height="2" viewBox="0 0 17 2" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="17" height="2" fill="black"/> </svg>
                                     :
@@ -281,10 +288,10 @@ export default function Header() {
                                             <li className="nav-item"><Link onClick={handleClick} className={isSubmenuChildActive ? 'nav-link fade-in' : 'nav-link'} style={{animationDelay:`150ms`}} aria-current="page" href="pro-management">PRO Management</Link></li>
                                             <li className="nav-item"><Link onClick={handleClick} className={isSubmenuChildActive ? 'nav-link fade-in' : 'nav-link'} style={{animationDelay:`300ms`}} aria-current="page" href="business-setup">Business Set Up</Link></li>
                                         </ul>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </li>
-                            <li className="nav-item list-inline-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="#">Blog</Link></li>
+                            <li className="nav-item list-inline-item"><Link onClick={handleClick} className="nav-link" aria-current="page" href="">Blog</Link></li>
                             <li className="nav-item list-inline-item"><Link onClick={handleClick} className="nav-link" href="contact-us">Contact</Link></li>
                         </ul>
                     </div>
@@ -299,7 +306,7 @@ export default function Header() {
             </div>
         </main>
 
-        <div className={isSubmenuActive ? 'subMenu active' : 'subMenu'} style={{height:`0px`,opacity:`0`,zIndex:`-1`,transition:`0.5s`}}>
+        <div className={isSubmenuActive ? 'subMenu active' : 'subMenu'} style={{height:`0px`,opacity:`0`,zIndex:`-1`,transition:`0.5s`}} id="subMenu">
             <div className="container">
                 <div className="row align-items-center justify-content-between">
                     <div className={isSubmenuActive ? "fade-in-left col-sm-4 col-md-5 col-lg-4" : "col-sm-4 col-md-5 col-lg-4"} style={{animationDelay:`400ms`}}>
@@ -309,12 +316,14 @@ export default function Header() {
                             <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="conference-rooms">Meeting/Conference Room</Link></li>
                             <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="event-spaces">Event Space</Link></li>
                             <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="virtual-offices">Virtual Office</Link></li>
-                            <li className="nav-item dropdown"><Link className="nav-link" aria-current="page" href="#" onClick={handleClickSubMenuChild}>Additional Services</Link>
+                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="pro-management">PRO Management</Link></li>
+                            <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="business-setup">Business Set Up</Link></li>
+                            {/* <li className="nav-item dropdown"><Link className="nav-link" aria-current="page" href="#" onClick={handleClickSubMenuChild}>Additional Services</Link>
                                 <ul className={isSubmenuChildActive ? 'childSubMenu active' : 'childSubMenu'} style={{height:`0`, opacity:`0`,transition:`opacity 2s ease-out`,listStyle:`none`}}>
                                     <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="pro-management">PRO Management</Link></li>
                                     <li className="nav-item"><Link onClick={handleClickSubMenu} className="nav-link" aria-current="page" href="business-setup">Business Set Up</Link></li>
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className={isSubmenuActive ? "fade-in-left col-sm-8 col-md-6 col-lg-8" : "col-sm-8 col-md-6 col-lg-8"} style={{animationDelay:`400ms`}}>
