@@ -113,7 +113,8 @@
 }
 
 .navbar-nav li.HdrBtn a{
-  background: rgba(227, 91, 91, 1);
+  /* background: rgba(227, 91, 91, 1); */
+  background: #e5d0b1;
   color: #fff;
   display: inline-block;
   padding: 16px 0;
@@ -281,7 +282,8 @@ a{
 }
 
 .serBoxText:hover{
-  background: rgba(229, 91, 89, 0.7);
+  /* background: rgba(229, 91, 89, 0.7); */
+  background: rgba(229, 208, 177, 0.75);
   transform: scale(1.1);
   transition: 0.5s;
   z-index: 1;
@@ -618,8 +620,13 @@ a{
   transition:0.5s;
 }
 
+@media (min-width:1400px){
+  .mobileHeaderBtn{width:200px;}
+}
+
 .mobileHeaderBtn{
-  background-color: #E35B5B;
+  /* background-color: #E35B5B; */
+  background-color: #e5d0b1;
   color: #fff;
   /* font-size: 12px; */
   font-weight: 600;
@@ -659,7 +666,7 @@ a{
   position: absolute;
   content: "";
   right: 0;
-  background:rgba(0,0,0,0.3);
+  /* background:rgba(0,0,0,0.3); */
   width: 1px;
   height: 100%;
   top: 0;
@@ -720,11 +727,21 @@ a{
 
 .underlineBtn{
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 25px;
   color: #E35B5B;
   border-bottom: 1px solid #E35B5B;
   display: inline-block;
+}
+
+.underlineBtn.underlineBtnBlack{
+  color: #000;
+  border-color: #000;
+}
+
+.text1Sec .underlineBtn{
+  color: #e5d0b1;
+  border-bottom: transparent;
 }
 
 .underlineBtn:hover{
@@ -1200,6 +1217,24 @@ body .phoneNum a:hover{
   right: -100px;
 }
 
+.text1Sec{
+  background-color: #fcf7f0;
+  margin:100px 0 150px 0;
+}
+
+.HomeBlog{
+  background: #fcf7f0;
+  padding: 150px 0 150px 0;
+  margin:150px 0 0 0;
+}
+
+.pvSvg{
+  position: absolute;
+  top: 0;
+  left: 15%;
+  transform: translate(15%, 0%);
+}
+
 @media (max-width:376px){
   .topBar a{font-size:13px;}
   .text2 h2{font-size:26px;line-height:40px;}
@@ -1243,10 +1278,14 @@ body .phoneNum a:hover{
 
 .slick-dots li.slick-active button:before{
   border: none;
-  background-color: #E35B5B;
+  background-color: #e5d0b1;
   content: "";
-  border: 1px solid #E35B5B;
+  border: 1px solid #e5d0b1;
   transition: 0.5s;
+}
+
+.slick-dots li button:before{
+  content: "" !important;
 }
 
 .btn3{

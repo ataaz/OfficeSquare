@@ -3,11 +3,13 @@ import Link from 'next/link'
 import styles from '../../styles/About/Text4.module.css';
 import img1 from '../../images/img-sec-2-1.jpg';
 import img2 from '../../images/img-sec-2-2.png';
+import pvSvg from '../../images/private-text.svg';
 
 export default function HomeText1(props) {
     return <section className='posRev text1Sec default-pb default-pt LargeScreenWidth  overflow-hidden' id="Intro">
         <div className='d-block d-lg-block'>
             <div className='container'>
+                <Image src={pvSvg} alt="Private Workspaces svg" className='pvSvg' data-600="top:-100px" data-2200="top:-1200px"/>
                 <div className='row align-items-center justify-content-between'>
                     <div className='col-md-6 col-xl-5 mt-5 mt-md-0 order-2 order-md-1'>
                         <div className={'twoImgs'}>

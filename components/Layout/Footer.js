@@ -17,7 +17,7 @@ export default function Footer() {
                         <Link href="mailto:info@officesquare.com">info@officesquare.com</Link>
                     </div>
                 </div>
-                <div className='col-md-4 col-lg-4 col-sm-6'>
+                <div className='col-md-5 col-lg-4 col-sm-6'>
                     <div className='widget mb-4 mb-md-0'>
                         <h3>Find Us</h3>
                         <p className='locName'><Link onClick={Gototop} href="/contact-us">Dubai</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Abu Dhabi</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Doha</Link></p>
@@ -37,10 +37,10 @@ export default function Footer() {
             </div>
 
             <div className='row justify-content-between mt-5 mb-4'>
-                <div className='col-md-6 col-lg-5 d-none d-md-block'>
+                <div className='col-md-12 col-lg-5 d-none d-md-block'>
                     <span className='copyrightText'>© 2023  Office Square | All Rights Reserved</span>
                 </div>
-                <div className='col-md-6 col-lg-6'>
+                <div className='col-md-12 col-lg-6 mt-md-3 mt-lg-0'>
                     <div className='siteFooterLinks text-start text-lg-end'>
                         <Link onClick={Gototop} href='#' className='linkMargin'>Blog</Link>
                         <Link onClick={Gototop} href='contact-us' className='linkMargin'>Contact Us</Link>

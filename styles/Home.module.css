@@ -33,22 +33,22 @@
 
 .homeBanner h1{
   font-size: 222px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 260px;
   color: #000;
   margin-left: -15px;
   /* background-color: #fff; */
   /* mix-blend-mode: lighten; */
   margin-bottom: 0;
-  background: #4A9BEC;
-  background: linear-gradient(to right, #4A9BEC 0%, #A540ED 81%, #4A9BEC 100%);
+  background: #c8ad7f;
+  background: linear-gradient(to right, #c8ad7f 0%, #f09681 81%, #c8ad7f 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .homeBanner h2{
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 58px;
   margin-top: 20px;
 }

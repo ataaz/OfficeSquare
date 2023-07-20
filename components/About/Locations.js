@@ -34,7 +34,7 @@ export default function Locations() {
             <div className='col-md-4 col-sm-6 mb-5 mb-sm-4 mb-md-0'>
                 <div className={styles.locBox + ' imgMagnify'}>
                     <div className='fullImg'>
-                        <Image src={AbuDhabiImg} data-scroll-speed="-1.5" data-scroll/>
+                        <Image src={AbuDhabiImg} alt="Abu Dhabi Image" data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Abu Dhabi</span>
@@ -48,7 +48,7 @@ export default function Locations() {
             <div className='col-md-4 col-sm-6 mb-5 mb-sm-4 mb-md-0'>
                 <div className={styles.locBox + ' imgMagnify'}>
                     <div className='fullImg'>
-                        <Image src={DubaiImg} data-scroll-speed="-1.5" data-scroll/>
+                        <Image src={DubaiImg} alt="Dubai Image" data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Dubai</span>
@@ -62,7 +62,7 @@ export default function Locations() {
             <div className='col-md-4 col-sm-6'>
                 <div className={styles.locBox + ' imgMagnify'}>
                     <div className='fullImg'>
-                        <Image src={QatarImg} data-scroll-speed="-1.5" data-scroll/>
+                        <Image src={QatarImg} alt="Qatar Image" data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Doha</span>

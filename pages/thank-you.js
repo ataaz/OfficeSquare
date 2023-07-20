@@ -12,7 +12,7 @@ export default function ThankYou(props) {
       <Head>
         <title>Thank You | Office Square</title>
       </Head>
-    <div className='default-pb'>
+    <div className='default-pb topPadding'>
         <div className='container d-inline-block d-sm-none mb-2'>
             <div className={styles.SliderHeaderText + ' ' + text4.text4 + ' ' + text4.text4Label + ' ' + styles.SliderHeaderBox + ' ' + text4.text4_fszP16}>
                 <span><em>We have recieved your inquiry</em></span>
