@@ -23,7 +23,7 @@ export default function ContactUs({ page }) {
         <Head>
           <title>{page.meta_title}</title>
           <meta name='description' content={page.meta_description}></meta>
-          <meta property='og:image' content={page.acf?.contact_header_image} />
+          <meta property='og:image' content={page.acf?.contact_header_image.url} />
         </Head>
         <div className='topPadding contactPage'>
             <ImageHeader label={page.acf?.header_label} heading={page.acf?.contact_heading} img={page.acf?.contact_header_image}/>

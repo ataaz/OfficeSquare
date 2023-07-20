@@ -18,7 +18,8 @@ select.formControl{
 }
 
 .submitInput{
-    background: #E35B5B;
+    background: #e5d0b1;
+    /* background: #E35B5B; */
     color: #fff;
     font-size: 20px;
     font-weight: 400;

@@ -26,7 +26,7 @@ export default function About({ page }) {
       <Head>
         <title>{page.meta_title}</title>
         <meta name='description' content={page.meta_description}></meta>
-        <meta property='og:image' content={page.acf?.experience_image1} />
+        <meta property='og:image' content={page.acf?.experience_image1.url} />
       </Head>
       <div className="topPadding homePage">
         <div>

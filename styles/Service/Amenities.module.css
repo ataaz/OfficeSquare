@@ -6,17 +6,18 @@
 }
 
 .whiteBox:hover{
-    background: rgba(227, 91, 91, 1);
+    background-color: #e5d0b1;
+    /* background: rgba(227, 91, 91, 1); */
     transition:0.5s;
 }
 
 .whiteBox:hover h3, .whiteBox:hover p{
-    color: #fff;
+    color: #000;
     transition: 0.5s;
 }
 
 .whiteBox:hover svg path{
-    stroke: #fff;
+    stroke: #000;
     transition: 0.5s;
 }
 

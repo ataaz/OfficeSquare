@@ -43,7 +43,8 @@
 
 .text4Label span em{
     position: relative;
-    color: rgba(227, 91, 91, 1);
+    /* color: rgba(227, 91, 91, 1); */
+    color: #e5d0b1;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -63,7 +64,8 @@
 .text4Label span:after{
     position: absolute;
     content: "";
-    background-color: rgba(227, 91, 91, 1);
+    /* background-color: rgba(227, 91, 91, 1); */
+    background-color: #e5d0b1;
     height: 1px;
     width: 100%;
     top: 50%;

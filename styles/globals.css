@@ -251,7 +251,9 @@ a{
 }
 
 .btn1:hover{
-  background: rgba(227, 91, 91, 1);
+  /* background: rgba(227, 91, 91, 1); */
+  background: #e5d0b1;
+  border-color: #e5d0b1;
   color: #fff;
   transition: 0.5s;
 }
@@ -577,8 +579,9 @@ a{
 }
 
 .socialIcons a:hover path{
-  fill:rgba(227, 91, 91, 1);
-  stroke:#fff;
+  /* fill:rgba(227, 91, 91, 1); */
+  fill: #e5d0b1;
+  stroke:#000;
   transition: 0.5s;
 }
 
@@ -729,8 +732,10 @@ a{
   font-size: 18px;
   font-weight: 600;
   line-height: 25px;
-  color: #E35B5B;
-  border-bottom: 1px solid #E35B5B;
+  /* color: #E35B5B;
+  border-bottom: 1px solid #E35B5B; */
+  color: #e5d0b1;
+  border-bottom: 1px solid #e5d0b1;
   display: inline-block;
 }
 
@@ -814,7 +819,8 @@ a{
 }
 
 .btn2{
-  background: #E35B5B;
+  /* background: #E35B5B; */
+  background-color: #e5d0b1;
   display: inline-block;
   color: #fff;
   font-size: 16px;
@@ -1233,6 +1239,11 @@ body .phoneNum a:hover{
   top: 0;
   left: 15%;
   transform: translate(15%, 0%);
+  z-index: 2;
+}
+
+.homePage .comLogos{
+  display: none;
 }
 
 @media (max-width:376px){

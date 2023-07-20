@@ -2,7 +2,8 @@
     font-size: 64px;
     font-weight: 700;
     line-height: 45px;
-    color: rgba(227, 91, 91, 1);
+    /* color: rgba(227, 91, 91, 1); */
+    color: #e5d0b1;
     display: block;
 }
 

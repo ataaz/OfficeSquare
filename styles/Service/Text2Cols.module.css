@@ -25,27 +25,28 @@
 }
 
 .col2Text:hover{
-    background: #E35B5B;
+    /* background: #E35B5B; */
+    background: #e5d0b1;
     transition: 0.5s;
 }
 
 .col2Text:hover h3{
-    color: #fff;
+    color: #000;
     transition: 0.5s;
 }
 
 .col2Text:hover p{
-    color: #fff;
+    color: #000;
     transition: 0.5s;
 }
 
 .col2Text:hover svg path:nth-child(2){
-    stroke: #fff;
+    stroke: #000;
     transition: 0.5s;
 }
 
 .col2Text:hover svg path:nth-child(1){
-    stroke: #fff;
+    stroke: #000;
     transition: 0.5s;
 }
 
