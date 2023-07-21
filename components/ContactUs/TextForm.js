@@ -39,13 +39,13 @@ export default function TextForm(props) {
         setEmail("")
         setServices("")
         setMessage("")
-        try {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://hooks.zapier.com/hooks/catch/4438683/3d7xpwy/");
-            xhr.send(JSON.stringify({Name: name, Phone: phone, Email: email, Message: message, Services: services}));
-          } catch(e) {
-            console.error(e);
-          }
+        // try {
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open("POST", "https://hooks.zapier.com/hooks/catch/4438683/3d7xpwy/");
+        //     xhr.send(JSON.stringify({Name: name, Phone: phone, Email: email, Message: message, Services: services}));
+        //   } catch(e) {
+        //     console.error(e);
+        //   }
         window.location.href = "/thank-you";
     }
   return (
