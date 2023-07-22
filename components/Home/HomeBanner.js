@@ -63,7 +63,7 @@ export default function HomeBanner(props) {
     return <section className={styles.homeBanner + ' homeBannerGlobal'} style={{position:`relative`}}>
     <div className='container position-relative containerH100'>
       <div className='row justify-content-end d-none d-md-flex'>
-        <div className='col-md-6'>
+        <div className='col-md-6 fade-in'>
           <Slider
           className='homeBannerSlider homeBannerSliderDesktop customDots overflow-hidden'
           arrows={false}

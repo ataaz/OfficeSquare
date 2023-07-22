@@ -110,7 +110,8 @@
 }
 
 .lighterText h2 a:hover{
-  border-bottom: 3px solid rgba(229, 91, 89, 1);
+  /* border-bottom: 3px solid rgba(229, 91, 89, 1); */
+  border-bottom: 3px solid #e5d0b1;
   transition: 0.5s;
 }
 
@@ -124,7 +125,8 @@
 .lighterText h2 a:hover:before{
   position: absolute;
   content: "";
-  background: rgba(229, 91, 89, 1);
+  /* background: rgba(229, 91, 89, 1); */
+  background-color: #e5d0b1;
   height: 30%;
   width: 100%;
   z-index: -1;
