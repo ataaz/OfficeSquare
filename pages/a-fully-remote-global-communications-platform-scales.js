@@ -7,8 +7,8 @@ import Image from 'next/image';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FacebookShareButton, FacebookIcon,} from 'next-share';
-import { TwitterShareButton, TwitterIcon,} from 'next-share';
+// import { FacebookShareButton, FacebookIcon,} from 'next-share';
+// import { TwitterShareButton, TwitterIcon,} from 'next-share';
 const jk = Plus_Jakarta_Sans({ 
     subsets: ['latin'],
     weight: ['400', '500', '700', '800'],
@@ -66,7 +66,7 @@ export default function BusinessSetup({ page }) {
                             </div>
 
                             <div className='socialIcons socialIconsBig d-flex flex-wrap mt-5'>
-                                <FacebookShareButton
+                                {/* <FacebookShareButton
                                 url={'https://officesquare.com' + asPath}
                                 >
                                 <FacebookIcon size={32} round className='me-2'/>
@@ -75,7 +75,7 @@ export default function BusinessSetup({ page }) {
                                 url={'https://officesquare.com' + asPath}
                                 >
                                 <TwitterIcon size={32} round />
-                                </TwitterShareButton>
+                                </TwitterShareButton> */}
                             </div>
 
                             <div className='tagLinks d-flex flex-wrap mt-4 pt-2'>
