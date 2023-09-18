@@ -1,5 +1,4 @@
 import headerLogo from "../../images/logo-office-square.svg";
-// import headerMobileLogo from "../../images/header-mobile-logo.svg";
 import whiteLogo from "../../images/white-logo.svg";
 import SubmenuImage from "../../images/submenu-image.png";
 import Image from 'next/image'
@@ -7,8 +6,6 @@ import Link from 'next/link';
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-// import $ from "jquery";
-// import LocomotiveScroll from 'locomotive-scroll';
 
 export default function Header() {
     const [scroll, setScroll] = useState(0)

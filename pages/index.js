@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
   return { props: { page } }
 }
 
-export default function About({ page }) {
+export default function Home({ page }) {
   // console.log(repo)
   return <> <Layout>
       <Head>

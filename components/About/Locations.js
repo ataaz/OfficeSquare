@@ -65,9 +65,9 @@ export default function Locations() {
                         <Image src={QatarImg} alt="Qatar Image" data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
-                        <span>Doha</span>
+                        <span>Riyadh</span>
                         <div className='textBelow'>
-                            <p>West Bay</p>
+                            <p>Saudi Arabia</p>
                             <h4>Surrounded by numerous multinational companies</h4>
                         </div>
                     </Link>

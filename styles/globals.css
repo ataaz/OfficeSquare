@@ -1317,6 +1317,207 @@ body .phoneNum a:hover{
 .fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
 @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 
+.blogBoxDate{
+  position:relative;
+}
+
+.blogBoxDate span{
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 32px;
+  color: #000;
+  top: -40px;
+  left:5%;
+  text-align: center;
+  background-color: #fff;
+  padding: 14px 20px;
+}
+
+.blogBoxDate span em{
+  display: block;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.catLink{
+  font-size: 16px;
+  padding: 12px 12px;
+}
+
+.blogTitle{
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: block;
+  margin:15px 0 20px 0;  
+}
+
+.blogBoxLarge p{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 143.75% */
+}
+
+.mr20{
+  margin-right: 100px;
+}
+
+.blogListing .blogBoxLarge{
+  margin-bottom: 120px;
+}
+
+.blogListing .blogBoxLarge:nth-last-child(1){
+  margin-bottom: 0;
+}
+
+.searchBox input{
+  border-radius: 0px;
+  border: 1px solid #D3D3D3;
+  padding: 10px 20px;
+  width: 100%;
+  color: #000;
+}
+
+.widgetSidebar h4{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  color: #000;
+  position: relative;
+  border-bottom: 1px solid #D3D3D3;
+  padding: 15px 0 15px 25px;
+  margin-bottom: 20px;
+}
+
+.widgetSidebar h4:before{
+  position: absolute;
+  content: "";
+  background: #e5d0b1;
+  width: 10px;
+  height: 10px;
+  bottom: 25px;
+  left: 0;
+}
+
+.catLinks{
+  list-style: none;
+  padding-left: 0;
+}
+
+.catLinks li{
+  margin-bottom: 10px !important;
+}
+
+.catLinks li a{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.catLinks li a:hover{
+  text-decoration: underline;
+}
+
+.mr150{
+  margin-right: 150px;
+}
+
+.singlePostBox{
+  margin-top: -150px;
+  background: #fff;
+  padding: 30px 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.socialIconsBig svg{
+  width: 36px;
+  height: 36px;
+}
+
+.borderBottom{
+  border-bottom: 1px solid #D3D3D3;
+  padding-bottom: 150px;
+}
+
+.btn4{
+  border: 1px solid #D3D3D3;
+  color: #4E4E4E;
+  display: inline-block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  padding: 12px 28px;
+  transition: 0.5s;
+}
+
+.btn4:hover{
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.tagLinks .btn4{
+  margin-right: 20px;
+}
+
+.tagLinks .btn4:nth-last-child(1){
+  margin-right: 0;
+}
+
+.dateBox{
+  margin-bottom: 30px !important;
+}
+
+.singleText p, .singleText ul, .singleText ol{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.singleText h2{
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  margin:20px 0 30px 0;
+}
+
+.singleText ul, .singleText ol{
+  padding-left: 25px;
+  margin-left: 0;
+  list-style: none;
+}
+
+.singleText ul li{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.singleText ul li:before{
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background:#E35B5B;
+  top: 8px;
+  left: -25px;
+  border-radius: 100%;
+}
+
 @media (max-width:575.98px){
   .socialIconsMobile a svg{width:34px !important;}
   .HeaderScrolled.siteHeaderParent .siteHeader{background-color:#fff;}

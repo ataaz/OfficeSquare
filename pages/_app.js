@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.css';
 import '../styles/locomotive-scroll.min.css';
