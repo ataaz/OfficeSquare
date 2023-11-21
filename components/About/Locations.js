@@ -2,7 +2,7 @@ import Image from 'next/image';
 import text4 from '../../styles/About/Text4.module.css';
 import styles from '../../styles/About/Locations.module.css';
 import DubaiImg from "../../images/dubai-loc.jpg";
-import AbuDhabiImg from "../../images/abudhabi-location.jpg";
+import AbuDhabiImg from "../../images/abudhabi-loc.jpg";
 import QatarImg from "../../images/qatar.jpg";
 import Link from 'next/link';
 import { useState } from 'react';
