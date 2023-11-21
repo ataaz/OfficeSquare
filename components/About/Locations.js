@@ -2,7 +2,7 @@ import Image from 'next/image';
 import text4 from '../../styles/About/Text4.module.css';
 import styles from '../../styles/About/Locations.module.css';
 import DubaiImg from "../../images/dubai-loc.jpg";
-import AbuDhabiImg from "../../images/abudhabi-loc.jpg";
+import AbuDhabiImg from "../../images/abudhabi-location.jpg";
 import QatarImg from "../../images/qatar.jpg";
 import Link from 'next/link';
 import { useState } from 'react';
@@ -39,7 +39,7 @@ export default function Locations() {
                     <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Abu Dhabi</span>
                         <div className='textBelow'>
-                            <p>Al Maryah Island</p>
+                            <p>Al Raha Beach</p>
                             <h4>Home to Abu Dhabi’s <br className='d-none d-sm-block'></br>business district</h4>
                         </div>
                     </Link>
