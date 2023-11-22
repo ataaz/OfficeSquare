@@ -3,7 +3,7 @@ import text4 from '../../styles/About/Text4.module.css';
 import styles from '../../styles/About/Locations.module.css';
 import DubaiImg from "../../images/dubai-loc.jpg";
 import AbuDhabiImg from "../../images/abudhabi-loc.jpg";
-import QatarImg from "../../images/qatar.jpg";
+import RiyadhImg from "../../images/riyadh-loc.jpg";
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -62,7 +62,7 @@ export default function Locations() {
             <div className='col-md-4 col-sm-6'>
                 <div className={styles.locBox + ' imgMagnify'}>
                     <div className='fullImg'>
-                        <Image src={QatarImg} alt="Qatar Image" data-scroll-speed="-1.5" data-scroll/>
+                        <Image src={RiyadhImg} alt="Riyadh Image" data-scroll-speed="-1.5" data-scroll/>
                     </div>
                     <Link href="/contact-us" onClick={doScrollTop} className={styles.locBoxText}>
                         <span>Riyadh</span>

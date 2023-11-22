@@ -20,7 +20,7 @@ export default function Footer() {
                 <div className='col-md-5 col-lg-4 col-sm-6'>
                     <div className='widget mb-4 mb-md-0'>
                         <h3>Find Us</h3>
-                        <p className='locName'><Link onClick={Gototop} href="/contact-us">Dubai</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Abu Dhabi</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Riyadh</Link></p>
+                        <p className='locName'><Link onClick={Gototop} href="/contact-us">Abu Dhabi</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Dubai</Link> <span>|</span> <Link onClick={Gototop} href="/contact-us">Riyadh</Link></p>
                     </div>
                 </div>
                 <div className='col-md-4 col-lg-3 mt-sm-4 mt-md-0 d-none'>
