@@ -96,7 +96,7 @@ export default function Locations() {
                                 <div className='textBelow2'>
                                     <h4>Al Raha Beach - Abu Dhabi</h4>
                                     <p>Level 3/301 - HQ <br></br>Al Shahama, Abu Dhabi Rd <br></br>Al Raha - Abu Dhabi</p>
-                                    <a href='#'>View Location Map</a>
+                                    <a href='https://www.google.com/maps/place/Aldar+headquarters+building+-+Al+Rahah+-+Abu+Dhabi+-+United+Arab+Emirates/@24.4411514,54.572777,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5e45d017f01e73:0x94b41713098b13b!8m2!3d24.4411465!4d54.5753519!16s%2Fm%2F0dsdytw?entry=ttu'>View Location Map</a>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@ export default function Locations() {
                                 <div className='textBelow2'>
                                     <h4>Abu Dhabi Corniche - Abu Dhabi</h4>
                                     <p>Level 31 - Lanadmark Towers <br></br>Al HisnAl 116 Khalid Bin Waleed St <br></br>Al Hisn - Al Markaziyah West, Abu Dhabi</p>
-                                    <a href='#'>View Location Map</a>
+                                    <a href='https://www.google.com/maps/place/The+Landmark+-+Al+Hisn+-+Al+Markaziyah+West+-+Abu+Dhabi+-+United+Arab+Emirates/@24.4849599,54.3481851,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5e6679c296fc7d:0xa41f5d7c388f1606!8m2!3d24.484955!4d54.35076!16s%2Fm%2F051yhln?entry=ttu'>View Location Map</a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@ export default function Locations() {
                                 <div className='textBelow2'>
                                     <h4>Al  Maryah Island - Abu Dhabi</h4>
                                     <p>ADGM Square <br></br>Al Maryah Island, PO Box 111999<br></br> Abu Dhabi</p>
-                                    <a href='#'>View Location Map</a>
+                                    <a href='https://www.google.com/maps/place/Abu+Dhabi+Global+Market/@24.5011366,54.3861382,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5e6654ed46c84f:0x2f5bcb81cc2ed32b!8m2!3d24.5011317!4d54.3887131!16s%2Fm%2F012z89xb?entry=ttu'>View Location Map</a>
                                 </div>
                             </div>
                         </div>
