@@ -42,10 +42,28 @@
 
 .LocationSecGlobal.default-pt1{padding-top:0;}
 
-@media (max-width:575.98px){
+.locBox2 h3{
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+@media (min-width:1400px){
+    .locBox2 h3{font-size: 25px;}
+}
+
+@media (max-width:1400px){
+    .locBox2 h3{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 10px;
+    }
 }
 
 @media (min-width:576px) and (max-width:767.98px){
+    .locBox2 h3{font-size:12px;margin-bottom:10px;}
     .locBoxText{padding:20px 20px;}
     .locBoxText span{font-size:22px;line-height:24px;}
     .locBoxText p{font-size:12px;}

@@ -29,7 +29,7 @@ export default function ContactUs({ page }) {
             <ImageHeader label={page.acf?.header_label} heading={page.acf?.contact_heading} img={page.acf?.contact_header_image}/>
             <TextForm content={page.acf?.form_content}/>
             <Locations/>
-            <GoogleMap mapCode={page.acf?.map_code}/>
+            {/* <GoogleMap mapCode={page.acf?.map_code}/> */}
         </div>
     </Layout>
     </>

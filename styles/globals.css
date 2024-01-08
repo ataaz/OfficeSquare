@@ -1518,7 +1518,57 @@ body .phoneNum a:hover{
   border-radius: 100%;
 }
 
+.slideColz .col-11{
+  overflow: hidden;
+}
+
+.locColz .slick-list{
+  padding-left: 0 !important;
+}
+
+.locColz .slick-slide{
+  margin-right:40px;
+}
+
+.textBelow2 h4 {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.textBelow2 p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.textBelow2 {
+  margin-top: 30px;
+}
+
+.textBelow2 a{
+  font-weight: 500;
+  font-size: 16px;
+  color: #e5d0b1;
+  border-bottom: 1px solid #e5d0b1;
+}
+
+@media (max-width:1400px){
+  .locColz .slick-slide{margin-right:15px;}
+}
+
+@media (min-width:575.98px) and (max-width:1399.98px){
+  .textBelow2 h4{font-size:15px;}
+  .textBelow2 p{font-size: 12px;}
+  .textBelow2 a{font-size:12px;}
+  .locColz .fullImg img{height:220px;}
+}
+
 @media (max-width:575.98px){
+  .textBelow2 h4{font-size:12px;margin-bottom:10px;}
+  .textBelow2 p{font-size:12px;}
+  .textBelow2 a{font-size:12px;}
   .socialIconsMobile a svg{width:34px !important;}
   .HeaderScrolled.siteHeaderParent .siteHeader{background-color:#fff;}
   .siteHeader{background-color:#fff;}
