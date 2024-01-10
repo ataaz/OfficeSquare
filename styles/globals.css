@@ -1527,7 +1527,7 @@ body .phoneNum a:hover{
 }
 
 .locColz .slick-slide{
-  margin-right:40px;
+  margin-right:60px;
 }
 
 .textBelow2 h4 {
@@ -1541,6 +1541,7 @@ body .phoneNum a:hover{
   color: #000;
   font-size: 16px;
   font-weight: 400;
+  line-height: 26px;
 }
 
 .textBelow2 {
@@ -1548,10 +1549,17 @@ body .phoneNum a:hover{
 }
 
 .textBelow2 a{
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
   color: #e5d0b1;
-  border-bottom: 1px solid #e5d0b1;
+  border-bottom: solid #e5d0b1;
+  transition: 0.5s;
+}
+
+.textBelow2 a:hover{
+  border-bottom: 1px solid transparent;
+  transition: 0.5s;
 }
 
 @media (max-width:1400px){

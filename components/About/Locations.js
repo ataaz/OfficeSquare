@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import text4 from '../../styles/About/Text4.module.css';
 import styles from '../../styles/About/Locations.module.css';
-import DubaiImg from "../../images/dubai-new.webp";
+import DubaiImg from "../../images/dubai-neww.webp";
 import AbuDhabiImg from "../../images/abudhabi-loc.jpg";
-import RiyadhImg from "../../images/riyadh-new.png";
-import ADGM from "../../images/adgm.webp";
-import Aldar from "../../images/aldar-hq.webp";
-import Landmark from "../../images/landmark.webp";
+import RiyadhImg from "../../images/riyadh-new.webp";
+import ADGM from "../../images/adgm-new.webp";
+import Aldar from "../../images/al-raha-new.webp";
+import Landmark from "../../images/landmark-new.webp";
 import Link from 'next/link';
 import { useState } from 'react';
 import Slider from 'react-slick';

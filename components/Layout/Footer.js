@@ -42,7 +42,8 @@ export default function Footer() {
                 </div>
                 <div className='col-md-12 col-lg-6 mt-md-3 mt-lg-0'>
                     <div className='siteFooterLinks text-start text-lg-end'>
-                        <Link onClick={Gototop} href='#' className='linkMargin'>Blog</Link>
+                        {/* <Link onClick={Gototop} href='#' className='linkMargin'>Blog</Link> */}
+                        <Link onClick={Gototop} href='locations' className='linkMargin'>Our Locations</Link>
                         <Link onClick={Gototop} href='contact-us' className='linkMargin'>Contact Us</Link>
                         <Link onClick={Gototop} href='privacy-policy' className='linkMargin'>Privacy Policy</Link>
                         <span className='copyrightText d-block d-md-none'>© 2023  Office Square | All Rights Reserved</span>
