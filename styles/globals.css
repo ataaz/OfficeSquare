@@ -1570,7 +1570,7 @@ body .phoneNum a:hover{
   .textBelow2 h4{font-size:15px;}
   .textBelow2 p{font-size: 12px;}
   .textBelow2 a{font-size:12px;}
-  .locColz .fullImg img{height:220px;}
+  .locColz .fullImg img{height:220px;width:100%;object-fit:cover;}
 }
 
 @media (max-width:575.98px){
