@@ -16,7 +16,7 @@ export const getServerSideProps = async () => {
   return { props: { page } }
 }
 
-export default function Privacy({ page }) {
+export default function LocationP({ page }) {
   return (
     <>
     <Layout>

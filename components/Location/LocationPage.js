@@ -5,6 +5,7 @@ import DubaiImg from "../../images/dubai-neww.webp";
 import AbuDhabiImg from "../../images/abudhabi-loc.jpg";
 import RiyadhImg from "../../images/riyadh-new.webp";
 import ADGM from "../../images/adgm-new.webp";
+import NationTower from "../../images/nations-tower.webp";
 import Aldar from "../../images/al-raha-new1.webp";
 import Landmark from "../../images/landmark-new1.webp";
 import Link from 'next/link';
@@ -61,15 +62,15 @@ export default function Locations() {
                 </div>
                 <div className='col-md-4 col-sm-6 mb-5 mb-sm-4 mb-md-5 pb-xl-5'>
                     <div className={styles.locBox2 + ' imgMagnify'}>
-                        <h3>Abu Dhabi Global Markets</h3>
+                        <h3>Nations Tower</h3>
                         <div className='fullImg overflow-hidden'>
-                            <Image src={ADGM} alt="Abu Dhabi Image" data-scroll-speed="-1.5" data-scroll/>
+                            <Image src={NationTower} alt="Abu Dhabi Image" data-scroll-speed="-1.5" data-scroll/>
                         </div>
                         <div onClick={doScrollTop} className={styles.locBoxText2}>
                             <div className='textBelow2'>
-                                <h4>Al  Maryah Island - Abu Dhabi</h4>
-                                <p>ADGM Square <br></br>Al Maryah Island, PO Box 111999<br></br> Abu Dhabi</p>
-                                <a href='https://www.google.com/maps/place/Abu+Dhabi+Global+Market/@24.5011366,54.3861382,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5e6654ed46c84f:0x2f5bcb81cc2ed32b!8m2!3d24.5011317!4d54.3887131!16s%2Fm%2F012z89xb?entry=ttu'>View Location Map</a>
+                                <h4>Nations Tower - Abu Dhabi</h4>
+                                <p>The Mall Level <br></br>Al Bateen <br></br> Abu Dhabi</p>
+                                <a href='https://www.google.com/maps/place/Nation+Towers+-+8005566+-+1st+St+-+Al+Bateen+-+Abu+Dhabi+-+United+Arab+Emirates/data=!4m2!3m1!1s0x3e5e65ebaca08597:0x78c6320dd9d0636e?sa=X&ved=1t:242&ictx=111'>View Location Map</a>
                             </div>
                         </div>
                     </div>
