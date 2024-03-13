@@ -38,7 +38,7 @@ export default function Home({ page }) {
           <HomeSolutions heading={page.acf?.our_solution_heading}/>
           <HomeLogos customClass="default-pb"/>
           <HomeExp heading={page.acf?.experience_heading} content={page.acf?.experience_content} image1={page.acf?.experience_image1} image2={page.acf?.experience_image2} exp={page.acf?.experiences}/>
-          <HomeBlog/>
+          {/* <HomeBlog/> */}
           <CTAText/>
         </div>
       </div>
