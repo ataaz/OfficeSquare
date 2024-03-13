@@ -2,8 +2,8 @@ import styles from '../../styles/Home.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import img1 from '../../images/text-center-1.jpg';
-import img2 from '../../images/text-center-2.jpg';
+import img1 from '../../images/center2.jpg';
+import img2 from '../../images/center1.jpg';
 
 export default function HomeText2(props) {
     const [Gototop, setScrollTop] = useState(false);

@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className='col-md-4 col-lg-3 col-sm-6'>
                     <div className='widget mb-5 mb-sm-0 pb-1 pb-sm-0'>
                         <h3>Chat With Us</h3>
-                        <Link href='tel:+971 4 123 4567'>+971 4 123 4567</Link>
+                        {/* <Link href='tel:+971 4 123 4567'>+971 4 123 4567</Link> */}
                         <Link href="mailto:info@officesquare.com">info@officesquare.com</Link>
                     </div>
                 </div>

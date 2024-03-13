@@ -95,7 +95,7 @@ export default function Header() {
             <div className="container">
                 <div className="row justify-content-between align-items-center">
                     <div className="col-md-5 col-5">
-                        <Link href="tel:+971 4 123 4567">+971 4 123 4567</Link>
+                        {/* <Link href="tel:+971 4 123 4567">+971 4 123 4567</Link> */}
                     </div>
                     <div className="col-md-5 col-lg-5 col-7">
                         <div className='socialIcons d-flex flex-wrap justify-content-end'>

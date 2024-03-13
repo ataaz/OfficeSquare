@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../styles/About/Text4.module.css';
-import img1 from '../../images/img-sec-2-1.jpg';
-import img2 from '../../images/img-sec-2-2.png';
+import img1 from '../../images/premium-workspaces.webp';
+import img2 from '../../images/prem-2.jpg';
 import pvSvg from '../../images/private-text.svg';
 
 export default function HomeText1(props) {
